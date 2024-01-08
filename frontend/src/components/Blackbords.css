@@ -1,0 +1,19 @@
+.video-wrapper {
+    margin-top: 3%;
+    margin-left: 3.3%;
+    width: 100%; /* Set the width of the container */
+    max-width: 1413px; /* Set the maximum width if needed */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent images from wrapping to the next line */
+  }
+  
+ 
+  
+  video  {
+    width: 442px; /* Set the width of individual images */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 42px; /* Add spacing between images */
+    margin-bottom:20px;
+    border: 3.3px solid #000;
+  }
+

@@ -1,0 +1,56 @@
+.full-width-containerarticle {
+ 
+    height: auto;
+    background-color: rgb(232, 52, 52);
+    
+
+  }
+
+  .container.article {
+    width: auto;
+    height: auto;
+    background-color: rgb(246, 244, 238);
+
+  }
+
+  .row{
+  
+  }
+  .col.descarticle {
+  
+    padding: 0; /* Reset padding */
+    margin: 0; /* Reset margin */
+
+    
+  }
+  .col.descarticle img{
+    width: 80%; /* Set width to 100% */
+    /* Ensure the image does not exceed its original size */
+    height: auto; /* Allow the image height to adjust proportionally */
+    display: block; 
+    padding: 0; /* Reset padding */
+    margin: 60px; /* Reset margin */
+
+
+    
+  }
+  .titletextarticle{
+    text-align: left;
+    width: 88%;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-top: 10%;
+    
+
+  }
+
+  .paratextarticle{
+    text-align: left;
+
+    width: 40%;
+    
+    margin-top: 10%;
+
+  }

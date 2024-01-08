@@ -1,0 +1,52 @@
+/* Navbar.css */
+#LogoText {
+    
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+  }
+  
+  .nav-list {
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Media Queries for responsiveness */
+  @media (max-width: 768px) {
+    #LogoText {
+      font-size: 18px; /* Adjust logo font size for smaller screens */
+      line-height: 25px; /* Adjust logo line height for smaller screens */
+      margin-left: 5px; /* Adjust left margin for smaller screens */
+    }
+  
+    .nav-list {
+      font-size: 14px; /* Adjust nav list font size for smaller screens */
+      line-height: 22px; /* Adjust nav list line height for smaller screens */
+      
+    }
+  }
+
+  .navbar-toggler {
+
+
+  /* Modify the text color of the icon or text inside the button */
+  color: #ffffff; /* Change to your desired color */
+
+  /* Additional modifications (padding, border, etc.) */
+ /* Change padding as needed */
+  border: none; /* Remove or modify the border */
+}
+.navbar-toggler-icon {
+    /* Change the color of the hamburger icon's bars */
+    background-color: #ff0000; /* Change to your desired color */
+  }

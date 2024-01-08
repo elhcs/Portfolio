@@ -1,0 +1,195 @@
+.full-width-container {
+ 
+    height: auto;
+    background-color: rgb(0, 0, 0);
+    
+
+  }
+
+  .container {
+    width: auto;
+    height: auto;
+    background-color: rgb(0, 0, 0);
+    max-width: 95%
+
+  }
+  .full-width-container2 {
+ 
+    height: 210px;
+    background-color: rgb(255, 255, 255);
+
+
+  }
+  .full-width-container4 {
+ 
+    height: 210px;
+    background-color: rgb(255, 255, 255);
+    outline: 4px solid rgb(0, 0, 0);
+
+  }
+
+  .row{
+  
+  }
+  .col.desc {
+  
+    padding: 0; /* Reset padding */
+    margin: 0; /* Reset margin */
+
+    
+  }
+  .col.desc img{
+    width: 100%; /* Set width to 100% */
+    /* Ensure the image does not exceed its original size */
+    height: auto; /* Allow the image height to adjust proportionally */
+    display: block; 
+    padding: 0; /* Reset padding */
+    margin: 0; /* Reset margin */
+
+    
+  }
+  .titletext{
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    margin-top: 102px;
+    font-size: 78px;
+    font-weight: 900;
+    line-height: 1.2;
+    
+
+  }
+
+  .paratext{
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+
+    margin-top: 92px;
+
+  }
+
+  .titletext2{
+    padding-top: 1.4%;
+    padding-left: 4%;
+    padding-bottom: 1%;
+    text-align: left;
+    width: auto;
+    font-size: 68px;
+    font-weight: 900;
+    line-height: 1.2;
+    
+
+  }
+
+  .paratext2{
+    padding-left: 4.3%;
+
+    text-align: left;
+    width: 40%;
+   
+    
+
+  }
+  .arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid rgb(255, 255, 255); /* Adjust color and size as needed */
+  }
+  .full-width-container3 {
+    
+    height: 214px;
+    background-color: rgb(0, 0, 0);
+
+
+  }
+
+  .arrow-up {
+    margin-top: 22%;
+
+  }
+  .col-md-2 {
+    background-color: rgb(0, 0, 0);
+    
+  }
+
+  .col-12.col-md-6{
+   
+    background-color: rgb(255, 255, 255);
+    
+  }
+  .paratextfooter{
+    padding-left: 4.3%;
+    margin-top: 10.1%;
+    margin-left: 40%;
+
+
+    text-align: left;
+    width: 40%;
+   
+    
+
+  }
+
+  .linktextfooter{
+    padding-left: 4.3%;
+    margin-top: 1.9%;
+    margin-left: 40%;
+    font-weight: bold;
+
+    text-align: left;
+    width: 40%;
+   
+    
+
+  }
+  @media screen and (max-width: 768px) {
+  .titletext {
+    font-size: 48px; /* Adjust font size for smaller screens */
+    width: 70%;
+  }
+
+  .paratext {
+    width: 80%; /* Adjust width for smaller screens */
+    margin-top: 50px; /* Adjust margin for smaller screens */
+    padding: 30px;
+  }
+
+  .titletext2 {
+    font-size: 48px; /* Adjust font size for smaller screens */
+  }
+
+  .paratext2 {
+    width: 80%; /* Adjust width for smaller screens */
+  }
+
+  /* Add more responsive styles as needed for smaller screens */
+}
+  @media screen and (max-width: 768px) {
+    /* Apply changes for smaller screens (adjust the breakpoint as needed) */
+    .row {
+      flex-direction: column; /* Stack columns vertically on smaller screens */
+    }
+  
+    .col.desc {
+      order: 2; /* Set the image column to appear below content */
+    }
+  
+    .col.text {
+      order: 1; /* Set the content column to appear above image */
+    }
+  }
+  
+  /* Example CSS to hide the right arrow */
+.slick-next {
+  display: none !important; /* Hide the right arrow */
+}
+
+
+/* Example CSS to change the color of the dots to white */
+.slick-dots li button::before {
+
+  color: #ffffff !important; /* Change the color to white */
+}
