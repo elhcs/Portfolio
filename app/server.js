@@ -41,7 +41,7 @@ app.use(passport.initialize());
 // Passport config
 require("./config/passport")(passport);
 // Routes
-app.use("https://portfoliox-vdrp.onrender.com/api/testconnection", testconnection);
+app.use("/api/testconnection", testconnection);
 app.use("https://portfoliox-vdrp.onrender.com/api/users", users);
 app.use("https://portfoliox-vdrp.onrender.com/api/projects", projects);
 app.use("https://portfoliox-vdrp.onrender.com/api/blogs", blogs);
