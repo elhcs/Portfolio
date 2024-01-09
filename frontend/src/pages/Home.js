@@ -14,7 +14,7 @@ import { useDispatch } from "react-redux";
 import { setlight, setdark } from "../reducers/themeReducer";
 import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import image from "./394709091_359688783151169_5143872337014891556_n.mp4";
+import shortyy from "./394709091_359688783151169_5143872337014891556_n.mp4";
 import Contactfooter from "../components/Contactfooter";
 function Home() {
    
@@ -62,7 +62,7 @@ function Home() {
         <div className="col desc">
         <div
               style={{
-                backgroundImage: `url(${image})`, // Use the imported image variable here
+                backgroundImage: `url(${shortyy})`, // Use the imported image variable here
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center',
