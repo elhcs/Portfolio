@@ -8,11 +8,11 @@ const passport = require("passport");
 
 const port = process.env.PORT || 5000;
 
-const users = require("./routes/api/users");
-const projects = require("./routes/api/projects");
-const blogs = require("./routes/api/blogs");
-const messages = require("./routes/api/messages");
-const testconnection = require("./routes/api/connectionTest");
+const users = require("https://portfoliox-vdrp.onrender.com/routes/api/users");
+const projects = require("https://portfoliox-vdrp.onrender.com/routes/api/projects");
+const blogs = require("https://portfoliox-vdrp.onrender.com/routes/api/blogs");
+const messages = require("https://portfoliox-vdrp.onrender.com/routes/api/messages");
+const testconnection = require("https://portfoliox-vdrp.onrender.com/routes/api/connectionTest");
 
 
 app.use(cors());
@@ -41,11 +41,11 @@ app.use(passport.initialize());
 // Passport config
 require("./config/passport")(passport);
 // Routes
-app.use("/api/testconnection", testconnection);
-app.use("/api/users", users);
-app.use("/api/projects", projects);
-app.use("/api/blogs", blogs);
-app.use("/api/messages", messages);
+app.use("https://portfoliox-vdrp.onrender.com/api/testconnection", testconnection);
+app.use("https://portfoliox-vdrp.onrender.com/api/users", users);
+app.use("https://portfoliox-vdrp.onrender.com/api/projects", projects);
+app.use("https://portfoliox-vdrp.onrender.com/api/blogs", blogs);
+app.use("https://portfoliox-vdrp.onrender.com/api/messages", messages);
 
 
 
