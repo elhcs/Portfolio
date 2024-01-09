@@ -8,11 +8,11 @@ const passport = require("passport");
 
 const port = process.env.PORT || 5000;
 
-const users = require("https://portfoliox-vdrp.onrender.com/routes/api/users");
-const projects = require("https://portfoliox-vdrp.onrender.com/routes/api/projects");
-const blogs = require("https://portfoliox-vdrp.onrender.com/routes/api/blogs");
-const messages = require("https://portfoliox-vdrp.onrender.com/routes/api/messages");
-const testconnection = require("https://portfoliox-vdrp.onrender.com/routes/api/connectionTest");
+const users = require("./routes/api/users");
+const projects = require("./routes/api/projects");
+const blogs = require("./routes/api/blogs");
+const messages = require("./routes/api/messages");
+const testconnection = require(".routes/api/connectionTest");
 
 
 app.use(cors());
