@@ -64,8 +64,8 @@ const Admin = () => {
   const [loading, setLoading] = useState(true);
   const [projects, setProjects] = useState([]);
   const [blogs, setBlogs] = useState([]);
-  const api_url_blog = "https://portfoliox-vdrp.onrender.comhttps://portfoliox-vdrp.onrender.com/api/blogs/getbyonwer/" + userInfo.id;
-  const api_url_project = "https://portfoliox-vdrp.onrender.comhttps://portfoliox-vdrp.onrender.com/api/projects/getbyowner/" + userInfo.id;
+  const api_url_blog = "https://portfoliox-vdrp.onrender.com/api/blogs/getbyonwer/" + userInfo.id;
+  const api_url_project = "https://portfoliox-vdrp.onrender.com/api/projects/getbyowner/" + userInfo.id;
 
   useEffect(() => {
     dispatch(setlight());
