@@ -9,7 +9,7 @@ export const registerUser = createAsyncThunk(
   "user/register",
   async (userData, { rejectWithValue, dispatch }) => {
     try {
-      await axios.post("/api/users/register", userData).then((res) => {
+      await axios.post("https://portfoliox-vdrp.onrender.com/api/users/register", userData).then((res) => {
         console.log(res);
         dispatch(setErrors({}));
       });

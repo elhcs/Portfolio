@@ -213,7 +213,7 @@ const tlines = (
 );
 function Project() {
   const output = useParams();
-  const api_url = "/api/projects/get/" + output.prjId;
+  const api_url = "https://portfoliox-vdrp.onrender.com/api/projects/get/" + output.prjId;
   const [loading, setLoading] = useState(true);
   const [project, setProject] = useState({});
   const dispatch = useDispatch();
