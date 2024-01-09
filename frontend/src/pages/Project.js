@@ -268,7 +268,7 @@ function Project() {
 
 {!(output.prjId === "6441bbd8ef41920a6e6ba9dd") && (
         <div style={{
-  backgroundImage: `url(${project.imgs[0].path_url})`,
+  backgroundImage: "url(" +"https://portfoliox-vdrp.onrender.com"+ project.imgs[0].path_url + ")",
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
   backgroundPosition: 'center',
