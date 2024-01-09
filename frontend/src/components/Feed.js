@@ -13,7 +13,7 @@ function Feed(props) {
     const fetchData = async () => {
       setLoading(true);
       const resp = await axios
-        .get("/api/projects/getall/-1")
+        .get("https://portfoliofront-zkat.onrender.com/api/projects/getall/-1")
         .then((resp) => {
           return resp.data;
         })
