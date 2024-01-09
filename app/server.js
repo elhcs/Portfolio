@@ -42,10 +42,10 @@ app.use(passport.initialize());
 require("./config/passport")(passport);
 // Routes
 app.use("/api/testconnection", testconnection);
-app.use("https://portfoliox-vdrp.onrender.com/api/users", users);
-app.use("https://portfoliox-vdrp.onrender.com/api/projects", projects);
-app.use("https://portfoliox-vdrp.onrender.com/api/blogs", blogs);
-app.use("https://portfoliox-vdrp.onrender.com/api/messages", messages);
+app.use("/api/users", users);
+app.use("/api/projects", projects);
+app.use("/api/blogs", blogs);
+app.use("/api/messages", messages);
 
 
 
