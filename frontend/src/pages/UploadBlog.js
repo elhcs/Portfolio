@@ -39,7 +39,7 @@ const UploadBlog = () => {
     dispatch(setdark());
   }, []);
   const submitForm = (data) => {
-    const api_url = "http://localhost:5000/api/blogs/add";
+    const api_url = "http://localhost:5000https://portfoliox-vdrp.onrender.com/api/blogs/add";
 
     data.author = userInfo.id;
     axios

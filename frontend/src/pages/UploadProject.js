@@ -60,7 +60,7 @@ const UploadProject = () => {
     }
 
     axios
-      .post("/api/projects/add", form)
+      .post("https://portfoliox-vdrp.onrender.com/api/projects/add", form)
       .then((res) => {
         if (res.status == 200) {
           navigate("/admin");
