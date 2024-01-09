@@ -32,7 +32,7 @@ function Article() {
           <div className="paratext"style={{ color: '#ffffff' }}>{"ELX is a creative design studio based in Rabat and Founded in 2020 by El Houssaine CHAHBOUN."}</div>
         </div>
         <div className="col desc">
-        <img src="E5BF0995-85D5-41B6-A3D4-689B7BEBF7BC.jpg" alt="Description of the image" />
+        <img src="./E5BF0995-85D5-41B6-A3D4-689B7BEBF7BC.jpg" alt="Description of the image" />
         </div>
       </div>
       <div className="row">
