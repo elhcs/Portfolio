@@ -12,7 +12,7 @@ function Autoartc(props) {
 
   if (props.isImg === true) {
         const url_img = props.imgUrl;
-        const back_img = "url(" + url_img + ")";
+        const back_img = "url(" +"https://portfoliox-vdrp.onrender.com"+ url_img + ")";
     } 
  
     return (
