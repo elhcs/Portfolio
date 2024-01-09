@@ -12,7 +12,7 @@ const users = require("./routes/api/users");
 const projects = require("./routes/api/projects");
 const blogs = require("./routes/api/blogs");
 const messages = require("./routes/api/messages");
-const testconnection = require(".routes/api/connectionTest");
+const testconnection = require("./routes/api/connectionTest");
 
 
 app.use(cors());
