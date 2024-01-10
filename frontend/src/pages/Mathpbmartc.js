@@ -34,7 +34,7 @@ function Project() {
       <div className="row">
         <div className="col text">
           <div className="titletext"style={{ color: '#ffffff', padding: 7,width:'60%' }}>{"SEQUENCE CONVERGENCE PROBLEM"}</div>
-          <div className="paratext"style={{ color: '#ffffff', width:'60%', padding: 90}}>{"while solving this problem a number of important math results have been used like Bolzano-Weierstrass theorem, Euclidian division, and basic sequence manipulation techniques."}</div>
+          <div className="paratext"style={{ color: '#ffffff', width:'60%', padding: 90}}>{"In the process of solving this problem a number of important math results have been used like Bolzano-Weierstrass theorem, Euclidian division, and basic sequence manipulation techniques."}</div>
         </div>
      
 
