@@ -29,7 +29,7 @@ function Autoartc(props) {
     </div>
     <div className="col-md-6">
       <div className="desc">
-        <img src={"url(" +"https://portfoliox-vdrp.onrender.com"+props.imgUrl+ ")"} alt="Description of the image" style={{width:'102%'}}/>
+        <img src={"https://portfoliox-vdrp.onrender.com"+props.imgUrl} alt="Description of the image" style={{width:'102%'}}/>
       </div>
     </div>
   </div>
