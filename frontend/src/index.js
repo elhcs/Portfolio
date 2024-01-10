@@ -24,12 +24,14 @@ import Adminlayout from "./pages/Adminlayout";
 import Account from "./pages/Account";
 import Register from "./pages/Register";
 import AdminRestrict from "./components/auth/AdminRestrict";
+import ScrollToTop from './ScrollToTop';
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
     <BrowserRouter>
+    <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
