@@ -50,8 +50,8 @@ function Home() {
 
 
 
-
-        <a href="/shortfilm">
+      <NavLink to={"/shortfilm"}>
+       
     <div className="container">
 
       <div className="row">
@@ -71,9 +71,10 @@ function Home() {
               }}
               className="col desc"
             ></div>        </div>
+             
       </div>
       </div>
-      </a>
+      </NavLink>
       <br></br><br></br>
 
 
