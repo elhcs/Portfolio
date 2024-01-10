@@ -7,7 +7,7 @@ import "./FAQ.css";
 function FAQ() {
 
   return (
-    <a href="/article">
+    <NavLink to={"/article"}>
     <div className="container">
 
       <div className="row">
@@ -20,7 +20,7 @@ function FAQ() {
         </div>
       </div>
       </div>
-      </a>
+      </NavLink>
   );
 }
 
