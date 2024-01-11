@@ -265,8 +265,26 @@ function Project() {
 
   
 )}
+ {output.prjId === "65a02dac2204224ad6100427" && (
+        <div style={{
+  backgroundImage: `url('/robotics.gif')`,
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'center',
+  height: '730px',
+  width:"auto",
+  border: "3px solid black",
+}} className="col desc">
+</div>
 
-{!(output.prjId === "6441bbd8ef41920a6e6ba9dd") && (
+
+
+  
+)}
+
+
+
+{!(output.prjId === "6441bbd8ef41920a6e6ba9dd"|| output.prjId === "65a02dac2204224ad6100427")  && (
         <div style={{
   backgroundImage: "url(" +"https://portfoliox-vdrp.onrender.com"+ project.imgs[0].path_url + ")",
   backgroundSize: 'cover',
