@@ -44,6 +44,7 @@ function ContentRec(props) {
           </div>
         </div>
       </div>
+      <br></br>
     </NavLink>
     
    
