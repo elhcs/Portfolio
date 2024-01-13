@@ -105,7 +105,7 @@ function Home() {
                 
        <br></br><br></br>
         <Mathpbm />
-        <NavLink to={"/eje"}>
+        <NavLink to={"/biomed"}>
       <div
         className="RecContent container full-height d-flex flex-column"
         style={Styles}
