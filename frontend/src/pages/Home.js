@@ -112,7 +112,7 @@ function Home() {
       >
         <div className="row title__RecContent">{"BIOMEDICAL ENGINEERING PROJECT"}</div>
         <div className="row mt-auto">
-          <div className="col subtitle__RecContent">{"An interesting mathematics problem about sequence convergence that merges arithematics, topology and sequence manipulation"}</div>
+          <div className="col subtitle__RecContent">{"The surfactant diffusion at the alveolar surface, a crucial phenomenon in the respiratory process."}</div>
           <div className="col subtitle__RecContent">
             {}
           </div>

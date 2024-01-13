@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import store from "./store";
 import "./index.css";
 import Home from "./pages/Home";
-import Eje from "./pages/Eje"
+import Biomed from "./pages/Biomed";
 
 import Layout from "./pages/Layout";
 import Project from "./pages/Project";
@@ -65,7 +65,7 @@ root.render(
           <Route path="shortfilm" element={<Shortfilm />}></Route>
           <Route path="about" element={<About />}></Route>
           <Route path="mathartc" element={<Mathpbmartc />}></Route>
-          <Route path="eje" element={<Eje />}></Route>
+          <Route path="biomed" element={<Biomed />}></Route>
           <Route path="*" element={<Nopage />}></Route>
         </Route>
       </Routes>
