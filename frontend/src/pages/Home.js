@@ -105,7 +105,7 @@ function Home() {
                 
        <br></br><br></br>
         <Mathpbm />
-        <NavLink to={"/mathartc"}>
+        <NavLink to={"/eje"}>
       <div
         className="RecContent container full-height d-flex flex-column"
         style={Styles}
