@@ -32,7 +32,12 @@ function Home() {
       
     });
   };
- 
+  let Styles = {
+    color: "white",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundColor: "black",
+  };
   return (
     <div className="App">
       <div className="App-body">
