@@ -38,8 +38,8 @@ function Article() {
       <div className="row">
         <div className="col">
           <div className="full-width-container4">
-            <div className="titletext2"style={{ color: '#000000' }}>{"Recent Projects"}</div>
-            <div className="paratext2"style={{ color: '#000000' }}>{"ELX is a creative design studio based in Rabat and Founded in 2020 by El Houssaine CHAHBOUN."}</div></div>
+            <div className="titletext2"style={{ color: '#000000' }}>{"Design Club"}</div>
+            <div className="paratext2"style={{ color: '#000000' }}>{"I am president and founder of UDC, UM6P's Design Club, scroll through exciting projects i got to work on as a club president and member. "}</div></div>
         </div>
         <div className="col-md-2">
               
@@ -60,30 +60,37 @@ function Article() {
   
        
         <div className="col text">
-          <div className="titletext"style={{ color: '#000000',  textAlign: 'left', marginLeft:"3.5%",marginTop:50 }}>{"MATHEMATICS, DATASCIENCE & GRAPHICS"}</div>
+          <div className="titletext"style={{ color: '#000000',  textAlign: 'left', marginLeft:"3.5%",marginTop:50 }}>{"FROM PERSONAL PROJECTS TO UM6P'S BIGGEST EVENTS"}</div>
           <div className="paratext"style={{ color: '#000000' ,  textAlign: 'left', marginLeft:"4%",marginTop:30, width: "70%"}}>{"In 2023, my journey through motion design ranged from crafting vibrant and captivating content for the University Graphic Design Club (UDC) to producing high-stakes, grand-scale videos and teasers for the university's most significant events. It was a year brimming with diverse and engaging projects that showcased the breadth of motion design's creative possibilities."}</div>
-          <div className="paratext"style={{ color: '#000000' ,  textAlign: 'left', marginLeft:"4%",marginTop:30, width: "70%"}}>{"It’s been six years since Beyoncé released “Lemonade,” an album (andect."}</div>
+          <div className="paratext"style={{ color: '#000000' ,  textAlign: 'left', marginLeft:"4%",marginTop:30, width: "70%"}}>{"In the same year, a whirlwind of events unfolded, all centered around Motion Design. It proved to be an exhilarating period, marked by the official launch and remarkable success of my university's graphic design club. We not only cultivated a thriving community of graphic designers and enthusiasts but also exceeded our expectations by conducting engaging design workshops for students. Amidst these achievements, another pivotal moment unfolded at SOLE's office, where I formalized the graphic design club. Simultaneously, the university's Department for Student Affairs presented me with a valuable and lucratively rewarding student job opportunity. Joining SOLE's graphic design team opened the door to a plethora of projects, and I've since crafted numerous graphic and motion design visuals. Highlights include designing teaser videos for major university events featuring luminaries like L'ARTISTE, a North African superstar, and hosting concerts for prominent artists such as Tagne and 7ari."}</div>
         
         </div>
         <br></br>
         <FAQ />
-        <br></br>
+  
+        <Blackbords />
         <video style={{width:"95.2%", marginLeft:"2.4%"}}  controls autoPlay muted>
           <source  src="https://elx.onrender.com/udcvideo.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-
-        <div className="titletext"style={{ color: '#000000',  textAlign: 'left', marginLeft:"3.5%",marginTop:50 }}>{"CLUB MISSION"}</div>
+                <div className="titletext"style={{ color: '#000000',  textAlign: 'left', marginLeft:"3.5%",marginTop:50 }}>{"ABOUT THE CLUB"}</div>
    
-        <div className="paratext"style={{ color: '#000000' ,  textAlign: 'left', marginLeft:"4%",marginTop:30, width: "70%"}}>{"It’s been six years since Beyoncé released “Lemonade,” an album (and film) on which she laid bare her marital strife, and subsequent reconciliation, with Jay-Z. The album was a feat of storytelling so ambitious that it made us reconsider what a modern pop star could accomplish. For years after its release, Beyoncé worked to expand the cultural footprint of “Lemonade,” first touring it in arenas around the world. In 2018, at Coachella, she blew it out into a baroque theatrical production honoring the legacy of Black collegiate marching bands. She followed that performance with a documentary about her preparation for the show, along with an accompanying live album called “Homecoming.” That year, she and Jay-Z released “Everything Is Love,” a joint album that was more a “Lemonade” victory lap than a new musical chapter. And yet the “Lemonade” era was so monumental that its long tail felt justified. Each iteration seemed to pump new fuel into the project."}</div>
-        <div className="titletext"style={{ color: '#000000',  textAlign: 'left', marginLeft:"3.5%",marginTop:50 }}>{"CLUB ACTIVITIES"}</div>
+        <div className="paratext"style={{ color: '#000000' ,  textAlign: 'left', marginLeft:"4%",marginTop:30, width: "70%"}}>{"In the vibrant community of our university, the Graphic Design Club stands as a dynamic hub for creativity and collaboration. Established with a passion for visual storytelling and design excellence, our club has quickly become a haven for both seasoned graphic designers and budding enthusiasts. Throughout the year, we've embarked on an exciting journey, organizing engaging workshops that not only hone design skills but also foster a sense of artistic community. Our club is not just about creating stunning visuals; it's about sharing knowledge, inspiring creativity, and pushing the boundaries of design innovation. Join us as we explore the vast realm of graphic design, where every stroke and pixel has the power to convey a compelling message. Let's transform ideas into impactful visuals and celebrate the artistry that lies at the intersection of imagination and design."}</div>
+        <div className="titletext"style={{ color: '#000000',  textAlign: 'left', marginLeft:"3.5%",marginTop:50 ,width: "70%"}}>{"CLUB ACTIVITIES"}</div>
         <br></br> <br></br>
         <img style={{width:"94.2%", marginLeft:"", outline: "4px solid rgb(0, 0, 0)"}} 
           source  src="https://elx.onrender.com/ezgif.com-gif-maker.gif" />
-   
-        
+        <br></br><br></br>
+        <div className="titletext"style={{ color: '#000000',  textAlign: 'left', marginLeft:"3.5%",marginTop:50 }}>{"XIBITION EVENT"}</div>
+        <div className="paratext"style={{ color: '#000000' ,  textAlign: 'left', marginLeft:"4%",marginTop:30, width: "88%"}}>{"Undoubtedly, XIBITION stands as the university's paramount social event, drawing students and clubs together in a celebration of creativity and community. For the last two editions, I had the distinct honor of crafting the visual identity for these remarkable gatherings. Beyond designing captivating motion videos and teasers, I also assumed the role of a club president, contributing actively to the success of the event. Being present during XIBITION allowed me to showcase not only my work but also the incredible creations that emerged from our club's support and workshops. The event buzzed with excitement, and the response was overwhelming—I received a multitude of applications from individuals eager to join our creative community. Here's a glimpse into the event and some of the visual elements I had the privilege of creating for this unforgettable occasion."}</div>
+
+        <br></br>
+        <iframe width="1444" height="815" src="https://www.youtube.com/embed/LO6xnL0Sme8?si=-itctKkOuuTttUcc&amp;start=4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <br></br><br></br>
+        <iframe width="1444" height="815" src="https://www.youtube.com/embed/48_0llaGPCw?si=SHaWYLmW7O_gB30M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <br></br> <br></br>
-        
+        <iframe width="1444" height="815" src="https://www.youtube.com/embed/Pek5COBvRU4?si=YzfKHtbbxB39YrPp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <br></br> <br></br>
         <Parteners />
         <br></br>
         <br></br>

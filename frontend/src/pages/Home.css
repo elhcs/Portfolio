@@ -39,3 +39,46 @@
     width: 18px; /* Set desired width */
  /* Set desired height */
   }
+
+/* Add/Update this to your styles.css or App.css file */
+.load-more-container {
+  border: 2px solid black; /* Add border */
+  display: flex;
+  background-color: black;
+  color: white;
+  padding: 20px;
+  width: 95%; /* Adjust the maximum width as needed */
+  margin: 0 auto; /* Center the container */
+  transition: background-color 0.3s, color 0.3s; /* Add smooth transition */
+}
+
+.left-column {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.left-column p {
+  font-size: 22px; /* Adjust the font size as needed */
+}
+
+.right-column {
+  display: flex;
+  align-items: center;
+}
+
+.right-column svg {
+  width: 60px; /* Adjust the size as needed */
+  height: 60px; /* Adjust the size as needed */
+  margin-left: 10px;
+}
+
+/* Hover effect */
+.load-more-container:hover {
+  background-color: white;
+  color: black;
+}
+
+.load-more-container:hover svg {
+  fill: black; /* Adjust the color as needed */
+  filter: invert(1); /* Invert the colors on hover */
+}
