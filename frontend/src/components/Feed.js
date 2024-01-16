@@ -2,7 +2,7 @@ import React from "react";
 import ContentRec from "./ContentRec";
 import axios from "axios";
 import { useEffect, useState } from "react";
-
+import "../pages/Home.css";
 function Feed(props) {
   const n = props.number;
 
@@ -52,7 +52,13 @@ function Feed(props) {
       </div>
     );
   } else {
-    return <div>No articles found or still loading</div>;
+    return  
+    <div className="loading-spinner">
+    <div className="spinner-circle"></div>
+    <br></br>
+    <div>No articles found or still loading</div>
+    </div>
+;
   }
 }
 

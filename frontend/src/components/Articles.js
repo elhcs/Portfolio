@@ -51,7 +51,11 @@ function Articles(props) {
       </div>
     );
   } else {
-    return <div>No projects found or still loading</div>;
+    return <div className="loading-spinner">
+    <div className="spinner-circle"></div>
+    <br></br>
+    <div>No projects found or still loading</div>
+    </div>;
   }
 }
 
