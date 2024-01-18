@@ -82,3 +82,25 @@
   fill: black; /* Adjust the color as needed */
   filter: invert(1); /* Invert the colors on hover */
 }
+
+/* Add this to your CSS file */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1vh; /* Adjust as needed to center vertically */
+}
+
+.spinner-circle {
+  width: 30px;
+  height: 30px;
+  border: 5px solid #000000; /* Change the border color as needed */
+  border-top: 5px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

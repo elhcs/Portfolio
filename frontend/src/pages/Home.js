@@ -20,11 +20,16 @@ import Modal from '../components/Modal';
 import React, { useState } from 'react';
 function Home() {
    
+
+
+    
   const [isModalOpen, setIsModalOpen] = useState(true);
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
   };
+
+
 
 
   
@@ -46,6 +51,7 @@ function Home() {
     backgroundColor: "black",
   };
   return (
+    
     <div className="App">
       <div className="App-body">
         <MainRec />
@@ -59,13 +65,13 @@ function Home() {
       />
         <FAQ />
 
-
+      
         
         <Blackbords />
         <br></br>
 
 
-
+      
       <NavLink to={"/shortfilm"}>
        
     <div className="container">
@@ -186,11 +192,12 @@ function Home() {
        <br></br><br></br>
        <NavLink to="/about">
         <Parteners /></NavLink>
+        
         <br></br>
-
+       
        
          <br></br><br></br><br></br>
-   
+              
 
             <Contactfooter />
       </div>
