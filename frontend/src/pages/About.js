@@ -35,7 +35,7 @@ function Article() {
       <div className="row">
         <div className="col text">
           <div className="titletext"style={{ color: '#ffffff' }}>{"ABOUT EL HOUSSAINE CHAHBOUN"}</div>
-          <div className="paratext"style={{ color: '#ffffff' }}>{"ELX is a creative design studio based in Rabat and Founded in 2020 by El Houssaine CHAHBOUN."}</div>
+          <div className="paratext"style={{ color: '#ffffff' }}>{"I am a final year engineering student at EMINES School of Industrial Management with a special interest for Data Science and Machine Learning."}</div>
         </div>
         <div className="col desc">
         <img src="./image.png" alt="Description of the image" />
