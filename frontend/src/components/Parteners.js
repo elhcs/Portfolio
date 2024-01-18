@@ -15,7 +15,7 @@ function FAQ() {
         <div className="col text">
           <br></br>
           <div className="titletext"style={{ color: '#ffffff' }}>{"EL HOUSSAINE CHAHBOUN"}</div> <br></br><br></br><br></br><br></br>
-          <div className="paratext"style={{ color: '#ffffff',width:'70%' }}>{"I was born and raised in Rabat, Morocco. I’m a recent graduate of Mohamed VI Polytechnic University, where I studied Industrial Management, Data Science, and Computer Science."}</div>
+          <div className="paratext"style={{ color: '#ffffff',width:'70%' }}>{"I was born and raised in Rabat, Morocco. I’m a final year engineering studenat tMohamed VI Polytechnic University, where I studied Industrial Management, Data Science, and Computer Science."}</div>
         </div>
        
       </div>
