@@ -52,10 +52,9 @@ function Feed(props) {
       </div>
     );
   } else {
-    return  
-    <div className="loading-spinner">
+    return  <div className="loading-spinner">
     <div className="spinner-circle"></div>
-    <br></br>
+    <br></br><br></br>
     <div>No articles found or still loading</div>
     </div>
 ;
