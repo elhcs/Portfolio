@@ -7,7 +7,7 @@ import Contact from "../components/Contact";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { setlight, setdark } from "../reducers/themeReducer";
-import image from "./394709091_359688783151169_5143872337014891556_n.mp4";
+import image from "./394709091_359688783151169_5143872337014891556_n-ezgif.com-video-to-gif-converter.gif";
 import Contactfooter from "../components/Contactfooter";
 
 
