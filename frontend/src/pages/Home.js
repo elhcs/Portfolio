@@ -30,6 +30,18 @@ function Home() {
   };
 
 
+const [showModal, setShowModal] = useState(false);
+
+  useEffect(() => {
+    // Set a timeout to show the modal after 45 seconds
+    const timeoutId = setTimeout(() => {
+      setShowModal(true);
+    }, 5000); // 15 seconds in milliseconds
+
+    // Clear the timeout if the component unmounts or the modal is shown earlier
+    return () => clearTimeout(timeoutId);
+  }, []); // Empty dependency array ensures the effect runs only once
+
 
 
   
@@ -58,11 +70,11 @@ function Home() {
         <br></br>
 
         <br></br>
-        <Modal
+      {showModal && <Modal
         isOpen={isModalOpen}
         handleClose={handleCloseModal}
         message="Hello, this is EL Houssaine! Thank you for visiting my portfolio. I'd like to apologize in advance for any delay in loading the projects and articles. I am actively exploring better database service providers to address this issue. Your understanding is greatly appreciated. Thank you!"
-      />
+      />}
         <FAQ />
 
       
