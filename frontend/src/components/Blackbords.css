@@ -1,19 +1,29 @@
-.video-wrapper {
-    margin-top: 3%;
-    margin-left: 3.3%;
-    width: 100%; /* Set the width of the container */
-    max-width: 1413px; /* Set the maximum width if needed */
-    overflow-x: auto; /* Enable horizontal scrolling */
-    white-space: nowrap; /* Prevent images from wrapping to the next line */
-  }
-  
- 
-  
-  video  {
-    width: 442px; /* Set the width of individual images */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 42px; /* Add spacing between images */
-    margin-bottom:20px;
-    border: 3.3px solid #000;
+/* Default styles for desktop */
+.video-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust min width as needed */
+  gap: 20px; /* Spacing between videos */
+  padding: 2.4%;
+  justify-items: center; /* Center items in the grid */
+}
+
+video {
+  width: 100%;
+  max-width: 442px;
+  height: auto;
+  border: 2.3px solid #000;
+}
+
+/* Styles for mobile */
+@media only screen and (max-width: 600px) {
+  .video-list {
+    grid-template-columns: 1fr; /* One video per row */
+
   }
 
+  video {
+    width: 100%; /* Ensure video takes full width */
+    max-width: none; /* Remove max-width constraint */
+    
+  }
+}

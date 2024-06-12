@@ -15,6 +15,7 @@ import Admin from "./pages/Admin";
 import Article from "./pages/Article";
 import Shortfilm from "./pages/Shortfilm";
 import About from "./pages/About";
+import Newhome from "./pages/newhome";
 import Mathpbmartc from "./pages/Mathpbmartc";
 import RequireAuth from "./components/auth/RequireAuth";
 import RequireSudo from "./components/auth/RequireSudo";
@@ -64,6 +65,7 @@ root.render(
           <Route path="article" element={<Article />}></Route>
           <Route path="shortfilm" element={<Shortfilm />}></Route>
           <Route path="about" element={<About />}></Route>
+          <Route path="newhome" element={<Newhome />}></Route>
           <Route path="mathartc" element={<Mathpbmartc />}></Route>
           <Route path="biomed" element={<Biomed />}></Route>
           <Route path="*" element={<Nopage />}></Route>

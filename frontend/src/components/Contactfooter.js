@@ -60,15 +60,15 @@ function Contactfooter() {
    
 return (
     <div className="row">
-        
-        <div className="col">
-          <div className="full-width-container4">
-            <div className="titletext2"style={{ color: '#000000' }}>{"Contact"}</div>
-            <div className="paratext2"style={{ color: '#000000', width:"60%" }}>{"I'd like to share that I am actively seeking a research internship in machine learning, aiming to merge theoretical concepts with practical applications for my end-of-year project."}<br></br></div>
-            <div className="paratext2" style={{ color: 'green',marginBottom:'10%'}}><a href="mailto:elhoussaine.chahboun@emines.um6p.ma">elhoussaine.chahboun@emines.um6p.ma</a>
-            <br></br></div>
-            </div>
-                        <div className="row">
+     <div  style={{height:"240px"}}className="full-width-container4">
+        <div style={{ textAlign:"left",marginLeft:"3%"}} className="col">
+         
+            
+            <div style={{ fontSize: '96px',textAlign:"left"}}className="col">{"CAREER"}</div>
+            <div className="paraxext2"style={{ color: '#000000', width:"44%",textAlign:"left" }}>{"I am actively seeking a research internship in machine learning, aiming to merge theoretical concepts with practical applications for my end-of-year project."}<br></br></div>
+                  </div>    
+    <br></br><br></br>
+      <div className="row">
         <div className="col-12 col-md-2">
         <div className="full-width-container3" onClick={scrollToTop} style={{ display: 'flex', justifyContent: 'center'}}>
   <svg className="arrow-up" xmlns="http://www.w3.org/2000/svg" width="45" height="86" viewBox="0 0 45 86" fill="none">

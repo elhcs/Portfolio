@@ -56,7 +56,7 @@ function Navbar() {
           className="navbar-brand"
           style={{ color: light ? "white" : "white" }}
         >
-          ELX
+          EL HOUSSAINE
         </NavLink>
         <button
           className="navbar-toggler"
@@ -78,7 +78,7 @@ function Navbar() {
                 aria-current="page"
                 style={{ color: light ? "white" : "white" }}
               >
-                About
+                ABOUT
               </NavLink>
               </li>
             <li className="nav-item ms-auto p-2">
@@ -87,7 +87,7 @@ function Navbar() {
                 className="nav-link active"
                 style={{ color: light ? "white" : "white" }}
               >
-                Portfolio
+                PORTFOLIO
               </NavLink>
             </li>
             <li
@@ -101,7 +101,7 @@ function Navbar() {
                 className="nav-link active"
                 style={{ color: light ? "white" : "white" }}
               >
-                Contact
+                CONTACT
               </NavLink>
             </li>
             {!isAuthenticated && (
@@ -111,7 +111,7 @@ function Navbar() {
                   className="nav-link active"
                   style={{ color: light ? "white" : "white" }}
                 >
-                  Login
+                  LOGIN
                 </NavLink>
               </li>
             )}

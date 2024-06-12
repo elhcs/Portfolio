@@ -98,7 +98,7 @@ const Login = () => {
       </div>
       
       <div className="col desc">
-        <img src="https://i.ibb.co/sKQw6jd/Frame-6802.png" alt="Description of the image" />
+        <img src="https://i.ibb.co/pJLyjpM/ezgif-com-video-to-gif-converted.gif" alt="Description of the image" />
         </div>
       </div>
     </div>
