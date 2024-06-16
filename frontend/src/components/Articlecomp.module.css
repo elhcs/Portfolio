@@ -190,6 +190,20 @@
   .container {
     flex-direction: column-reverse;
   }
+  .cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Align to the start of the container */
+    align-items: stretch; /* Stretch the items to fill the container */
+    gap: 1.5rem; /* Adjust the space between the cards */
+  }
+
+  .card {
+    flex: 1 1 auto; /* Grow and shrink as needed, basis is auto */
+    min-width: 345px; /* Minimum width of the card */
+    max-width: 440px; /* Maximum width of the card */
+    /* Rest of your card styling */
+  }
 }
 
 
