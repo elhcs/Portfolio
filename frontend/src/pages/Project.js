@@ -10,7 +10,7 @@ import { setlight, setdark } from "../reducers/themeReducer";
 import { NavLink } from "react-router-dom";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism'; // Choose a style you prefer
-import Contactfooter from "../components/Contactfooter";
+import Footer from "../components/footer_new";
 
 
 const customVscDarkPlus = {
@@ -398,7 +398,7 @@ function Project() {
         {!(output.prjId === "6441bbd8ef41920a6e6ba9dd") && (
           <div>
             <br></br><br></br><br></br>
-  <Contactfooter />
+  <Footer />
               </div>
         
 

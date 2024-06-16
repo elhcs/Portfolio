@@ -74,40 +74,6 @@ const MyComponent = () => {
         </div>
       </div>
 
-      {/* Two additional columns */}
-      <div className={styles.additionalColumnsContainer}>
-        <div className={styles.additionalColumnLeft} style={{ width: '85%' }}>
-          {/* Content for left column */} 
-          <div className={styles.bio} >
-            <div className={styles.biotitle} >{'About'}
-            </div>
-            <div className={styles.bioparag} >{'I am a final year engineering student at EMINES School of Industrial Management with a special interest for Data Science and Machine Learning.'}
-            </div>
-
-          </div>
-        </div>
-        <div className={styles.additionalColumnRight} style={{ width: '295px' }}>
-          {/* Content for right column */} 
-          <div style={{ width: '100%', height: '100%', backgroundColor: 'black' }}
-          >
-            <div className={styles.rightArrow}>
-            <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="214"
-          height="214"
-          viewBox="0 0 224 224"
-          fill="none"
-        >
-          <rect width="214" height="214" fill="none" />
-          <path
-            d="M109.379 157.621C110.55 158.793 112.45 158.793 113.621 157.621L132.713 138.529C133.885 137.358 133.885 135.458 132.713 134.287C131.542 133.115 129.642 133.115 128.471 134.287L111.5 151.257L94.5294 134.287C93.3579 133.115 91.4584 133.115 90.2868 134.287C89.1152 135.458 89.1152 137.358 90.2868 138.529L109.379 157.621ZM108.5 70V155.5H114.5V70H108.5Z"
-            fill="white"
-          />
-        </svg>
-    </div>
-          </div>
-        </div>
-      </div>
       
       <Articlecomp />
       

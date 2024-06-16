@@ -365,13 +365,13 @@
   flex: 1;
   font-weight: 900;
   line-height: 1.2;
-  font-size: 55px;
+  font-size: 38px;
   
 }
 
 .bottomText {
   flex: 1;
-  margin-top: 20%;
+  margin-top: 10%;
 }
 
 }

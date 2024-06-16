@@ -109,7 +109,7 @@ const MyComponent = () => {
         </div>
       </div>
       
-      <Articlecomp />
+
       
       <section className={styles.newReleases}>
         <header className={styles.header}>
