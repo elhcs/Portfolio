@@ -80,3 +80,48 @@ span {
     margin-top: 10px;
     text-align: start;
 }
+
+
+/* Login.css - Additions for mobile view */
+
+/* This media query targets screens with a max-width of 768px (common breakpoint for mobile devices) */
+@media (max-width: 768px) {
+    .loginSection {
+        padding: 20px; /* Adds padding for smaller screens for better spacing */
+        text-align: center; /* Centers text for mobile readability */
+    }
+
+    .loginSection form {
+        margin-left: 0; /* Removes the desktop-specific margin */
+        padding: 0 15px; /* Adds padding to keep form within viewable area */
+    }
+
+    .title_admin {
+        font-size: 32px; /* Adjusts the font size for smaller screens */
+        margin-left: 0; /* Removes the left margin */
+        margin-top: 10px; /* Reduces the top margin to save space */
+    }
+
+    .loginSection input {
+        width: 100%; /* Ensures inputs use the full width of the form */
+        margin-top: 10px; /* Adjusts the top margin for a tighter layout */
+    }
+
+    .subtitle_login {
+        margin-top: 10%; /* Adjusts the top margin to bring the text closer to the form */
+        margin-left: 0; /* Removes the left margin */
+        font-size: 14px; /* Slightly increases font size for better readability */
+        padding: 10px 0; /* Adds padding above and below for better separation */
+    }
+
+    .loginSection button {
+        width: 100%; /* Adjusts button width to be full within the form */
+        margin-top: 20px; /* Ensures sufficient spacing above the button */
+    }
+
+    span {
+        margin-left: 0; /* Aligns error messages directly under the inputs */
+    }
+}
+
+/* Ensure these styles are added at the end of your existing Login.css file to override specific styles for mobile */

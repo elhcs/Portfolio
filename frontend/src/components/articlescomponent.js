@@ -50,7 +50,7 @@ const NewReleases = () => {
       tag: 'MUSIC',
       imageUrl: 'https://portfoliox-vdrp.onrender.com/public/images/ba4a495fd3c16fdd83340acf4039e960.jpg',
       isFeatured: true,
-      article : '../644310db0e626d1b2192ea40'
+      article : '../project/644310db0e626d1b2192ea40'
     },
     {
       title: 'Logos that never made it',
