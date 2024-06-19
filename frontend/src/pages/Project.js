@@ -336,7 +336,7 @@ function Project() {
           <div className="titletext"style={{ color: '#000000',  textAlign: 'left', marginLeft:50,marginTop:50 }}>{"ROSALIA IS A CULTURAL RESET"}</div>
           <div className="paratext"style={{ color: '#000000' ,  textAlign: 'left', marginLeft:55,marginTop:30, width: "70%"}}>{"It’s been six years since Beyoncé released “Lemonade,” an album (and film) on which she laid bare her marital strife, and subsequent reconciliation, with Jay-Z. The album was a feat of storytelling so ambitious that it made us reconsider what a modern pop star could accomplish. For years after its release, Beyoncé worked to expand the cultural footprint of “Lemonade,” first touring it in arenas around the world. In 2018, at Coachella, she blew it out into a baroque theatrical production honoring the legacy of Black collegiate marching bands. She followed that performance with a documentary about her preparation for the show, along with an accompanying live album called “Homecoming.” That year, she and Jay-Z released “Everything Is Love,” a joint album that was more a “Lemonade” victory lap than a new musical chapter. And yet the “Lemonade” era was so monumental that its long tail felt justified. Each iteration seemed to pump new fuel into the project."}</div>
           <div className="paratext"style={{ color: '#000000' ,  textAlign: 'left', marginLeft:55,marginTop:30, width: "70%"}}>{"The album was a feat of storytelling so ambitious that it made us reconsider what a modern pop star could accomplish. For years after its release, Beyoncé worked to expand the cultural footprint of “Lemonade,” first touring it in arenas around the world. In 2018, at Coachella, she blew it out into a baroque theatrical production honoring the legacy of Black collegiate marching bands. She followed that performance with a documentary about her preparation for the show, along with an accompanying live album called “Homecoming.” That year, she and Jay-Z released “Everything Is Love,” a joint album that was more a “Lemonade” victory lap than a new musical chapter. And yet the “Lemonade” era was so monumental that its long tail felt justified. Each iteration seemed to pump new fuel into the project."}</div>
-        
+          <br></br><br></br><br></br>
         </div>
         </div>
   )}
@@ -349,6 +349,7 @@ function Project() {
          <br></br>
           <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQ7J1OnjYV1gr0xambRK-VMUs6EY9B_6aKLWPUXHzA6Wng3lp5xgsWlJQA_GksyQIT1Pj75Zb8FdIUH/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1440" height="839" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
         </div>
+        <br></br><br></br><br></br>
         </div>
   )}
 
@@ -389,7 +390,7 @@ function Project() {
   
   
     </div>  
-    
+    <br></br><br></br><br></br>
           </div>
           
         )}
@@ -397,7 +398,7 @@ function Project() {
        
         {!(output.prjId === "6441bbd8ef41920a6e6ba9dd") && (
           <div>
-            <br></br><br></br><br></br>
+            
   <Footer />
               </div>
         

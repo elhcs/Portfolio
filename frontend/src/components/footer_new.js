@@ -10,13 +10,16 @@ const Footer = () => {
                         {/* Replace with the actual path to your logo image */}
                         
                     </div>
+                    
                     <p className="paragraphfooter">My name is El Houssaine CHAHBOUN, I am an engineering student, a maths enthusiast, a graphics programmer and a graphic designer.</p>
                     <div className="social-icons">
+                        
                         <a href="your-youtube-link"><i className="fab fa-youtube"></i></a>
                         <a href="your-x-link"><i className="fab fa-twitter"></i></a>
                         <a href="your-instagram-link"><i className="fab fa-instagram"></i></a>
                         <a href="your-tiktok-link"><i className="fab fa-tiktok"></i></a>
                     </div>
+                    
                 </div>
                 <div className="footer-column">
                     

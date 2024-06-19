@@ -45,8 +45,16 @@ const NewReleases = () => {
       article : ''
     },
     {
+      title: 'Meet Gao Hang!',
+      description: 'Gao Hang is an artist who seamlessly blends the contemporary with the classi...',
+      tag: 'ART',
+      imageUrl: "7587fd9a6393f3326ac9802c3ef6afe1.png",
+      isFeatured: true,
+      article : '../project/66718936219f0d12d16680cf'
+    },
+    {
       title: "Rosalia's Third Album: MOTOMAMI",
-      description: 'Explore the latest album by Rosalia.',
+      description: 'Rosalia s third and latest album',
       tag: 'MUSIC',
       imageUrl: 'https://portfoliox-vdrp.onrender.com/public/images/ba4a495fd3c16fdd83340acf4039e960.jpg',
       isFeatured: true,
