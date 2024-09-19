@@ -79,4 +79,3 @@ In hac habitasse platea dictumst. In vulputate hendrerit tincidunt. Erat. Cras r
 }
 
 export default MyComponent;
-

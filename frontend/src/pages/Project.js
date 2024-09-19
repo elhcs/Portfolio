@@ -13,6 +13,7 @@ import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism'; //
 import Footer from "../components/footer_new";
 
 
+// Custom theme based on VS Code Dark Plus
 const customVscDarkPlus = {
   ...vscDarkPlus,
   'code[class*="language-"]': {
@@ -20,12 +21,20 @@ const customVscDarkPlus = {
     color: '#f8f8f2', // Set text color for code
     backgroundColor: '#282a36', // Set background color for code
   },
-  // You can customize other token colors as needed
-  // For example, to modify the color for comments:
+  // Customizing token colors
   'token.comment': {
     ...vscDarkPlus['token.comment'],
-    color: '#6272a4',
+    color: '#6272a4', // Custom color for comments
   },
+  'token.keyword': {
+    ...vscDarkPlus['token.keyword'],
+    color: '#ff79c6', // Custom color for keywords
+  },
+  'token.string': {
+    ...vscDarkPlus['token.string'],
+    color: '#f1fa8c', // Custom color for strings
+  },
+  // Add more customizations as needed
 };
 
 const CppCodeSnippet2 = () => {

@@ -37,8 +37,8 @@ const NewReleases = () => {
   // Example data, this should come from your state or props
   const cardsData = [
     {
-      title: 'University Design Club Founded by me',
-      description: 'MLYSF is a clothing brand design concept inspired by moulay youssef CPGE.',
+      title: 'University Design Club Founded By Me',
+      description: "Monetizing students creativity, UM6P's first Graphic Design club: a fresh alternative to traditional design agencies. ",
       tag: 'UNIVERSITY',
       imageUrl: 'https://elx.onrender.com/udcvideo.mp4',
       isFeatured: true,
@@ -61,15 +61,15 @@ const NewReleases = () => {
       article : '../project/644310db0e626d1b2192ea40'
     },
     {
-      title: 'Logos that never made it',
+      title: 'Logos That Never Made it',
       description: 'Logos and visual designs that got scrapped',
       tag: 'DESIGN',
       imageUrl: 'https://i.ibb.co/DbSMJY8/345654099-219362074136514-1256384178040045729-n.jpg',
       isFeatured: true,
       article : ''
     },{
-      title: 'Collaboration Secrets: Design X Engineering',
-      description: 'Learn how engineers and designers collaborate at Spotify.',
+      title: 'Short Film Starring me As a Frog!',
+      description: 'Houssaine the frog is stunned by technology, which uses increasingly invasive techniques to get attention. He turns his screen off in an attempt to escape and connect with real life, only to realize its all under his control.',
       tag: 'BEHIND THE SCENES',
       imageUrl: ("/static/media/394709091_359688783151169_5143872337014891556_n-ezgif.com-video-to-gif-converter.b415dfbe5b6be405b6c2.gif"),
       isFeatured: true,
