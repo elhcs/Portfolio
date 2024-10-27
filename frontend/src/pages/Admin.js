@@ -106,6 +106,13 @@ const Admin = () => {
               blogs and projects
             </span>
           </section>
+          <NavLink to="/admin/uploaddynamic" style={{ textDecoration: "none" }}>
+                <div className="row d-flex flex-column ">
+                  <i className="ibb">
+                    {Plusicon} {HL} Add Article
+                  </i>
+                </div>
+              </NavLink>
           <section className="portfolio_blog_section">
             <div className="row">
               <h1 className="section_title col">
@@ -147,6 +154,8 @@ const Admin = () => {
                   </i>
                 </div>
               </NavLink>
+
+
             </div>
           </section>
           <section className="portfolio_project_section">

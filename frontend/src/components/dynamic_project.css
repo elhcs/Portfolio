@@ -1,0 +1,75 @@
+.buttons {
+    margin-top: 20px;
+    background-color: rgba(
+      0,
+      123,
+      255,
+      0.2
+    ); /* Blue background with 20% opacity */
+    border: 2px solid rgba(0, 123, 255, 1); /* Solid blue border */
+    padding: 10px 20px;
+    color: rgba(0, 123, 255, 1);
+    margin: 3%;
+  }
+  
+  .buttons button {
+    background-color: rgba(0, 123, 255, 0); /* Blue background with 20% opacity */
+    border: 2px solid rgba(0, 123, 255, 0); /* Solid blue border */
+    padding: 10px 80px;
+  
+    /* Text color to match the border */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+
+  
+  .validate-btn {
+    background-color: rgba(0, 123, 255, 0.2);
+    border: 2px solid rgba(0, 123, 255, 1);
+    padding: 8px 15px;
+  
+    color: rgba(0, 123, 255, 1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+  }
+  
+  .validate-btn:hover {
+    background-color: rgba(0, 123, 255, 0.5); /* Darker blue on hover */
+  }
+
+  /* Ensure validated text keeps the alignment and size set by Quill */
+/* Ensure validated text keeps the alignment and size set by Quill */
+.validated-text {
+    width: 100%;
+    font-size: inherit;
+    padding: 3%;
+  }
+
+  .validated-image {
+    max-width: 100%; /* Ensures it doesn't exceed the container width */
+    padding: 3%;
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: -5%;
+    /* Add any additional styles as needed */
+  }
+  
+  
+  /* Explicitly handle Quill alignment classes */
+  .ql-align-left {
+    text-align: left !important;
+  }
+  
+  .ql-align-center {
+    text-align: center !important;
+  }
+  
+  .ql-align-right {
+    text-align: right !important;
+  }
+  
+  .ql-align-justify {
+    text-align: justify !important;
+  }
+  

@@ -61,12 +61,12 @@ const NewReleases = () => {
       article : '../project/644310db0e626d1b2192ea40'
     },
     {
-      title: 'Logos That Never Made it',
-      description: 'Logos and visual designs that got scrapped',
-      tag: 'DESIGN',
-      imageUrl: 'https://i.ibb.co/DbSMJY8/345654099-219362074136514-1256384178040045729-n.jpg',
+      title: 'Lets make music with LSTM and Transformers',
+      description: 'Training LSTM and Transformer models for generating music sequences (One-to-Many)',
+      tag: 'DEEP LEARNING',
+      imageUrl: 'b07f9f1919a90206cf719f9be40b7d1b.gif',
       isFeatured: true,
-      article : ''
+      article : '../biomed'
     },{
       title: 'Short Film Starring me As a Frog!',
       description: 'Houssaine the frog is stunned by technology, which uses increasingly invasive techniques to get attention. He turns his screen off in an attempt to escape and connect with real life, only to realize its all under his control.',

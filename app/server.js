@@ -1,10 +1,11 @@
+//server.js
+
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const passport = require("passport");
-
 
 const port = process.env.PORT || 5000;
 
@@ -13,7 +14,7 @@ const projects = require("./routes/api/projects");
 const blogs = require("./routes/api/blogs");
 const messages = require("./routes/api/messages");
 const testconnection = require("./routes/api/connectionTest");
-
+const dynamicProjects = require("./routes/api/dynamic_projects"); // Add this line
 
 app.use(cors());
 app.use(bodyParser.json({ limit: "2mb" }));
@@ -46,16 +47,8 @@ app.use("/api/users", users);
 app.use("/api/projects", projects);
 app.use("/api/blogs", blogs);
 app.use("/api/messages", messages);
-
-
+app.use("/api/dynamic_projects", dynamicProjects); // Add this line
 
 app.listen(port, () => {
   console.log(`Backend app listening on port ${port}`);
 });
-
-// app.use((req, res, next) => {
-//   // Error goes via `next()` method
-//   setImmediate(() => {
-//       next(new Error('Something went wrong'));
-//   });
-// });

@@ -170,7 +170,7 @@ const MyComponent = () => {
             </div>
                         <div></div>
                     </div>
-                    <div class="nav-section">
+                    <div class={`nav-section ${isMobile ? styles.hideOnMobile : ''}`}>
                         <ul>
                             <li><a href="#">Graphic Design</a></li>
                             <li><a href="#">University Club</a></li>

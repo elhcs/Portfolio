@@ -21,10 +21,12 @@ import RequireAuth from "./components/auth/RequireAuth";
 import RequireSudo from "./components/auth/RequireSudo";
 
 import UploadProject from "./pages/UploadProject";
+import UploadDynamicProject from "./pages/UploadDynamicProject";
 import UploadBlog from "./pages/UploadBlog";
 import Adminlayout from "./pages/Adminlayout";
 
 import Account from "./pages/Account";
+import DynamicProject from "./pages/Dynamic_project";
 import Register from "./pages/Register";
 import AdminRestrict from "./components/auth/AdminRestrict";
 import ScrollToTop from './ScrollToTop';
@@ -39,6 +41,7 @@ root.render(
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="project/:prjId" element={<Project />} />
+          <Route path="dynamicproject/:prjId" element={<DynamicProject />} />
           <Route
             path="admin"
             element={
@@ -50,6 +53,7 @@ root.render(
             
               <Route index element={<Admin />} />
               <Route path="upload" element={<AdminRestrict><UploadProject /></AdminRestrict>} />
+              <Route path="uploaddynamic" element={<AdminRestrict><UploadDynamicProject /></AdminRestrict>} />
               <Route path="addblog" element={<AdminRestrict><UploadBlog /></AdminRestrict>}></Route>
               <Route path="account" element={<AdminRestrict><Account /></AdminRestrict>} />
             <Route
@@ -61,6 +65,7 @@ root.render(
               }
             />
           </Route>
+          
           <Route path="login" element={<Login />}></Route>
           <Route path="article" element={<Article />}></Route>
           <Route path="shortfilm" element={<Shortfilm />}></Route>
@@ -68,6 +73,7 @@ root.render(
           <Route path="newhome" element={<Newhome />}></Route>
           <Route path="mathartc" element={<Mathpbmartc />}></Route>
           <Route path="biomed" element={<Biomed />}></Route>
+          <Route path="DynamicProject" element={<DynamicProject />}></Route>
           <Route path="*" element={<Nopage />}></Route>
         </Route>
       </Routes>

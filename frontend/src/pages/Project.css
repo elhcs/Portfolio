@@ -3,6 +3,34 @@
     padding-bottom: 1em;
 }
 
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .main-content {
+      flex-direction: column !important;   /* Stack the content vertically */
+      align-items: center !important;      /* Center content horizontally */
+    }
+  
+    .left-content, .right-content {
+      flex-basis: 100% !important;         /* Both sections take full width */
+      max-width: 90% !important;           /* Restrict the width so content isn't too wide */
+      margin-right: 0 !important;          /* Remove margin */
+    }
+  
+    .right-content {
+      margin-top: 20px !important;         /* Add space between the content and card */
+    }
+  }
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+
+}
+
 .text1 {
     position: absolute;
     margin-right: 45px;
@@ -179,3 +207,34 @@ a:active {
     max-width: 100% !important;
   
   }
+
+
+.bodypage p, .card p {
+    color: #000000 ;
+    text-align: left;
+    padding: 15px;
+    max-width: 900px;
+}
+.bodypage img {
+    width: 877px!important;
+}
+
+.bodypage h1 {
+    color: #000000 ;
+    text-align: left;
+    padding: 15px;
+    margin-bottom:10px ;
+    font-weight:900;
+    max-width: 500px;
+}
+
+.bodypage h2, card h2 {
+    color: #000000 ;
+    text-align: left !important;
+    padding: 15px;
+    margin-bottom:10px ;
+    margin-top:10px ;
+    font-weight:700;
+    max-width: 500px;
+}
+

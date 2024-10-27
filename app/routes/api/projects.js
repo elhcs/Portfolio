@@ -40,7 +40,7 @@ let upload = multer({ storage: storage, fileFilter: filefilter });
 const MAX_IMG_COUNT = 5;
 router.post("/add", upload.array("images", MAX_IMG_COUNT), (req, res, err) => {
   const files = req.files;
-
+  console.log("Received files:", files);
   const { errors, isValid } = validateAddProjectInput(req.body);
   if (!isValid) {
     return res.status(400).json(errors);

@@ -129,3 +129,31 @@ footer small {
 .black-box:hover .arrow-svg path {
     fill: black;
 }
+
+
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+    footer .top-section, footer .bottom-section {
+        flex-direction: row;
+        align-items: left;
+        text-align: left;
+    }
+
+    footer .nav-section {
+        justify-content: right;
+    }
+    
+    footer .logo-section, footer .nav-section {
+        padding-left: 0; /* Remove padding on mobile */
+        align-items: left; /* Center the items */
+    }
+
+    footer .logo-section {
+        margin-bottom: -10.5em;
+    }
+    
+    footer .bottom-section {
+        padding-top: 0.5em;
+    }
+}

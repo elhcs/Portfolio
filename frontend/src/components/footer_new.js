@@ -2,7 +2,13 @@ import React from 'react';
 import styles from '../components/Articlecomp.module.css';
 import './Footer_new.css';
 
+
+
+
+
 const MergedFooter = ({ isMobile }) => {
+    
+    
     return (
         <div>
             {/* Conditional rendering based on isMobile state */}
@@ -52,7 +58,7 @@ const MergedFooter = ({ isMobile }) => {
                         </div>
                         <div></div>
                     </div>
-                    <div className="nav-section">
+                    <div className={`nav-section ${isMobile ? styles.hideOnMobile : ''}` }>
                         <ul>
                             <li><a href="#">Graphic Design</a></li>
                             <li><a href="#">University Club</a></li>
@@ -67,7 +73,7 @@ const MergedFooter = ({ isMobile }) => {
                             <li><a href="#">Short Film</a></li>
                             <li><a href="#">Support</a></li>
                         </ul>
-                        <ul>
+                         <ul>
                             <li><a href="#">About Us</a></li>
                             <li><a href="#">Contact Us</a></li>
                             <li><a href="#">Education</a></li>

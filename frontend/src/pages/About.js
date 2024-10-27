@@ -73,7 +73,7 @@ In hac habitasse platea dictumst. In vulputate hendrerit tincidunt. Erat. Cras r
 
  tincidunt. </p></div>
 
-    <Footer />
+    <Footer isMobile={isMobile}/>
     </div>
   );
 }
