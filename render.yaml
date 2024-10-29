@@ -2,7 +2,7 @@ services:
   - type: web
     name: portfoliofront # Replace with your actual static site service name
     env: static
-    staticPublishPath: public
+    staticPublishPath: frontend/build
     redirects:
       - source: /*
         destination: /index.html
