@@ -96,7 +96,7 @@ function Project() {
         }}>
           
           {/* Left content (set flex-basis for side by side) */}
-          <div className="bodypage" style={{ padding: '20px', maxWidth: '95%', margin: 'auto' }}>
+          <div className="bodypage" style={{ padding: '-20px', maxWidth: '95%', margin: 'auto' }}>
           
 
             <div style={{ marginLeft:'-20px',padding: '20px', maxWidth: '95%', margin: 'auto' }}>

@@ -3,79 +3,85 @@ import Articlecomp from "../components/aboutmepinned";
 import FAQ from "../components/FAQ";
 import Blackbords from "../components/Blackbords";
 import styles from '../components/Articlecomp.module.css';
-import shortyy from "./394709091_359688783151169_5143872337014891556_n-ezgif.com-video-to-gif-converter.gif";
 import Footer from '../components/footer_new';
 
-const title = 'EL HOUSSAINE CHAHBOUN'
-const description = 'I am a final year engineering student at EMINES School of Industrial Management with a special interest for Data Science and Machine Learning.'
-const tag = 'BIO'
-const imageUrl = 'IMG_2089.jpg'
-const isFeatured = true
-
-
 const MyComponent = () => {
-
-  
+  // State for detecting mobile view
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768); // Adjust the breakpoint as needed
-    };
-
-    handleResize(); // Call once to set initial state
-
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    handleResize(); // Initial state setup
     window.addEventListener('resize', handleResize);
-
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  
-  
+  // Content constants
+  const title = 'EL HOUSSAINE CHAHBOUN';
+  const description = 'I am an engineering student with a deep passion for mathematics, data science, and creative design. Currently, I am pursuing my Master\'s (M2) in Data Science at École Polytechnique in Paris.';
+  const tag = 'BIO';
+  const images = [
+    { src: 'https://elhoussainechahboun.com/323728844_3210235322620335_8663680062689233439_n.jpg', alt: 'El Houssaine Chahboun' },
+   
+  ];
 
-  
+  // Reusable paragraph component
+  const Paragraph = ({ children }) => (
+    <p style={{ marginBottom: '20px' }} className={styles.cardDescription}>
+      {children}
+    </p>
+  );
+
   return (
-
-    
-
-    
     <div>
-     
-      <div style={{ width: '100%', height: '30px', backgroundColor: 'white' }}
-          ></div>
+      {/* White spacer */}
+      <div style={{ width: '100%', height: '30px', backgroundColor: 'white' }}></div>
+
+      {/* Intro Card */}
       <div style={{ display: 'flex' }}>
-  <div style={{ padding: '1%', marginTop:'-13px' }}>
-    <div className={styles.card}>
-      <div className={styles.imageWrapper}>
-      
-      </div>
-      <div className={styles.cardTextContent}>
-        <div className={styles.tagWrapper}>
-          <span style={{ marginLeft: 0, color: 'white', backgroundColor: 'black',  }}>{tag}</span>
+        <div style={{ padding: '1%', marginTop: '-13px' }}>
+          <div className={styles.card}>
+            <div className={styles.cardTextContent}>
+              <div className={styles.tagWrapper}>
+                <span style={{ marginLeft: 0, color: 'white', backgroundColor: 'black' }}>{tag}</span>
+              </div>
+              <h3 className={styles.cardTitle}>{title}</h3>
+              <p className={styles.cardDescription}>{description}</p>
+            </div>
+          </div>
         </div>
-        <h3 className={styles.cardTitle}>{title}</h3>
-        <p className={styles.cardDescription}>{description}</p>
       </div>
-    </div>
-  </div>
-  
-</div>
 
-<div style={{ overflowY: 'auto', maxHeight: '640px', padding: '1%'}}>
-    {/* Add your scrollable content here */}
-    <h3 style={{ fontSize: '40px' }} className={styles.biotitle}></h3>
-    <p className={styles.cardDescription}> </p>
-<img style={{ width: '100%' }} src={'https://elhoussainechahboun.com/323728844_3210235322620335_8663680062689233439_n.jpg'} alt={title}/>
-<br></br><br></br>
-<p className={styles.cardDescription}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac feugiat libero. In quam felis, varius eget eros id, sollicitudin condimentum turpis. Vestibulum nisi elit, facilisis ac magna sed, auctor eleifend justo. Phasellus congue mauris vitae enim facilisis, ac pulvinar ipsum sagittis. Nulla tellus tortor, suscipit ac sem quis, faucibus fringilla felis. Sed pulvinar tincidunt enim ac sollicitudin. Vivamus tincidunt pulvinar velit in rhoncus. Quisque fringilla eros eget ex porttitor, in tincidunt massa feugiat.
+      {/* Content Section */}
+      <div style={{ overflowY: 'auto', maxHeight: '640px', padding: '1%' }}>
+        {images.map((image, index) => (
+          <React.Fragment key={index}>
+            <img style={{ width: '100%' }} src={image.src} alt={image.alt} />
+            <br /><br />
+          </React.Fragment>
+        ))}
 
-In hac habitasse platea dictumst. In vulputate hendrerit tincidunt. Erat. Cras rutrum pharetra risus vitae ullamcorper. Donec non convallis erat. Praesent aliquet, lacus nec sollicitudin varius, diam enim molestie lorem, eu viverra nulla nulla tincidunt mi. Cras porta tincidunt nisl vel vulputate. Suspendisse a massa pharetra, commodo urna at, posuere urna. Proin faucibus convallis turpis, et fermentum justo dignissim non. Cras quis sem quis justo ultricies viverra sed porta quam. Nullam nec eros id nulla auctor lacinia.
+        <Paragraph>
+          Hi, I'm El Houssaine Chahboun, an engineering student with a deep passion for mathematics, data science, and creative design. Currently, I'm pursuing my Master's (M2) in Data Science at École Polytechnique in Paris, with a focus on generative AI, machine learning, and computer vision. Throughout my academic journey, I've developed robust programming skills, particularly in graphics programming, React, and Spark DataFrames.
+        </Paragraph>
 
- tincidunt. </p></div>
+        <Paragraph>
+          My interests extend beyond technical pursuits. I'm a dedicated graphic designer and maintain a Behance portfolio where I showcase my work on web and design projects. Recently, I embarked on a GitHub project titled <em>2D Dialogue Games</em>, a project that has allowed me to experiment with state-of-the-art AI algorithms to enhance interactive storytelling.
+        </Paragraph>
 
-    <Footer isMobile={isMobile}/>
+        <Paragraph>
+          I thrive in collaborative environments and am deeply grateful for the mentors, friends, and educators who've supported me along the way. Working with diverse teams has enriched my perspective, enabling me to learn from others and improve my skills across disciplines. Whether it's tackling academic challenges, leading projects, or even engaging in a friendly game of chess (a new passion!), I approach each endeavor with a commitment to excellence and an open mind.
+        </Paragraph>
+
+        <Paragraph>
+          Feel free to connect with me if you're interested in data science, creative technology, or simply want to share insights about mathematics, AI, or design. I believe in the power of community and collaboration, and I'm always eager to connect with like-minded individuals who are passionate about making a positive impact through technology.
+        </Paragraph>
+      </div>
+
+      {/* Footer */}
+      <Footer isMobile={isMobile} />
     </div>
   );
-}
+};
 
 export default MyComponent;

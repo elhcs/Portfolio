@@ -82,7 +82,7 @@ const MyComponent = () => {
           {/* Content for left column */}
           <div className={styles.bio}>
             <div className={styles.biotitle}>{'About'}</div>
-            <div className={styles.bioparag}>{'I am a final year engineering student at EMINES School of Industrial Management with a special interest for Data Science and Machine Learning.'}</div>
+            <div className={styles.bioparag}>{'I  have a strong passion for mathematics, data science, and creative design. Currently, I am pursuing a Masters degree (M2) in Data Science at École Polytechnique in Paris.'}</div>
           </div>
         </div>
         <div className={styles.additionalColumnRight} style={{ width: '295px' }}>
@@ -129,7 +129,7 @@ const MyComponent = () => {
         {/* Content for left column */}
         <div className={styles.bio}>
             <div className={styles.biotitle}>{'About'}</div>
-            <div className={styles.bioparag}>{'I am a final year engineering student at EMINES School of Industrial Management with a special interest for Data Science and Machine Learning.'}</div>
+            <div className={styles.bioparag}>{'Passionate about math, data science, and creative design, Im currently exploring the world of data at École Polytechnique in Paris. Always curious, always creating!'}</div>
         </div>
     </div>
     <div className={styles.additionalColumnRight} style={{ width: '295px' }}>
