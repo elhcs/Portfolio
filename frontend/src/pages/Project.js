@@ -11,8 +11,8 @@ import { NavLink } from "react-router-dom";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism'; // Choose a style you prefer
 import Footer from "../components/footer_new";
-
-
+import styles from '../components/Articlecomp.module.css';
+import CodeCell from "../components/codecell";
 // Custom theme based on VS Code Dark Plus
 const customVscDarkPlus = {
   ...vscDarkPlus,
@@ -37,7 +37,10 @@ const customVscDarkPlus = {
   // Add more customizations as needed
 };
 
+
+
 const CppCodeSnippet2 = () => {
+  
   const codeString = `    
     class LightSampler {
     private:
@@ -221,10 +224,23 @@ const tlines = (
   </svg>
 );
 function Project() {
+  
   const output = useParams();
   const api_url = "https://portfoliox-vdrp.onrender.com/api/projects/get/" + output.prjId;
   const [loading, setLoading] = useState(true);
   const [project, setProject] = useState({});
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); // Adjust the breakpoint as needed
+    };
+
+    handleResize(); // Call once to set initial state
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(setlight());
@@ -341,12 +357,236 @@ function Project() {
 
     {output.prjId === "644310db0e626d1b2192ea40" && (
           <div>
-    <div className="col text">
-          <div className="titletext"style={{ color: '#000000',  textAlign: 'left', marginLeft:50,marginTop:50 }}>{"ROSALIA IS A CULTURAL RESET"}</div>
-          <div className="paratext"style={{ color: '#000000' ,  textAlign: 'left', marginLeft:55,marginTop:30, width: "70%"}}>{"It’s been six years since Beyoncé released “Lemonade,” an album (and film) on which she laid bare her marital strife, and subsequent reconciliation, with Jay-Z. The album was a feat of storytelling so ambitious that it made us reconsider what a modern pop star could accomplish. For years after its release, Beyoncé worked to expand the cultural footprint of “Lemonade,” first touring it in arenas around the world. In 2018, at Coachella, she blew it out into a baroque theatrical production honoring the legacy of Black collegiate marching bands. She followed that performance with a documentary about her preparation for the show, along with an accompanying live album called “Homecoming.” That year, she and Jay-Z released “Everything Is Love,” a joint album that was more a “Lemonade” victory lap than a new musical chapter. And yet the “Lemonade” era was so monumental that its long tail felt justified. Each iteration seemed to pump new fuel into the project."}</div>
-          <div className="paratext"style={{ color: '#000000' ,  textAlign: 'left', marginLeft:55,marginTop:30, width: "70%"}}>{"The album was a feat of storytelling so ambitious that it made us reconsider what a modern pop star could accomplish. For years after its release, Beyoncé worked to expand the cultural footprint of “Lemonade,” first touring it in arenas around the world. In 2018, at Coachella, she blew it out into a baroque theatrical production honoring the legacy of Black collegiate marching bands. She followed that performance with a documentary about her preparation for the show, along with an accompanying live album called “Homecoming.” That year, she and Jay-Z released “Everything Is Love,” a joint album that was more a “Lemonade” victory lap than a new musical chapter. And yet the “Lemonade” era was so monumental that its long tail felt justified. Each iteration seemed to pump new fuel into the project."}</div>
-          <br></br><br></br><br></br>
+
+    <div className="App">
+      <div className="App-body">
+
+        {/* Ensure full-width for the container */}
+        
+
+        {/* Conditional rendering based on isMobile state */}
+        <div className={`${styles.additionalColumnsContainer} ${isMobile ? styles.hideOnMobile : ''}`}>
+          <div className={styles.additionalColumnLeft} style={{ width: '85%' }}>
+            {/* Content for left column */}
+            <div className={styles.bio}>
+              <div className={styles.biotitle}>{'Save it'}</div>
+              <div className={styles.bioparag}>{'Explore this notebook and try the demo in your own environment!'}</div>
+            </div>
+          </div>
+          <div className={styles.additionalColumnRight} style={{ width: '295px' }}>
+            {/* Content for right column */}
+            <div className={`${styles.blackBox} black-box`}>
+              <div className={styles.rightArrow}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="214" viewBox="0 27 300 350" fill="none" className="arrow-svg">
+                  <rect width="214" height="214" fill="none" />
+                  <path
+                    d="M109.379 157.621C110.55 158.793 112.45 158.793 113.621 157.621L132.713 138.529C133.885 137.358 133.885 135.458 132.713 134.287C131.542 133.115 129.642 133.115 128.471 134.287L111.5 151.257L94.5294 134.287C93.3579 133.115 91.4584 133.115 90.2868 134.287C89.1152 135.458 89.1152 137.358 90.2868 138.529L109.379 157.621ZM108.5 70V155.5H114.5V70H108.5Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
         </div>
+
+        {/* Main content flex container */}
+        <div className="main-content" style={{
+          display: 'flex',
+          flexDirection: 'row', // Default for larger screens
+          justifyContent: 'space-between',
+          alignItems: 'flex-start',
+          padding: '0px',
+          flexWrap: 'wrap'  // Ensure wrapping when space is tight
+        }}>
+          
+          {/* Left content */}
+          <div className="bodypage" style={{ padding: '-20px', maxWidth: '95%', margin: 'auto' }}>
+            <h1>Tracking by Detection: Introduction</h1>
+            <p>This technique is widely used for tracking objects in video across frames, maintaining identities consistently using object detection and tracking algorithms.</p>
+
+            <h2>Detection Phase</h2>
+            <p>In the detection phase, objects are identified in each frame using models like OpenPose. These models estimate the body pose and allow for object detection. OpenPose is a widely used pose detection algorithm.</p>
+
+            <h2>Tracking Phase</h2>
+            <p>After detection, we use tracking algorithms like the Hungarian algorithm to maintain the identity of each detected object over time across multiple frames.</p>
+
+            <h2>Data Setup</h2>
+            <p>To begin, we need to download a video file and set up the necessary libraries. The video is used as input data for object tracking.</p>
+            <CodeCell
+              codeString={`
+# Download video and set up
+!git clone https://github.com/xuexingyu24/Real-time-human-pose-estimation-by-pytorch.git
+%cd Real-time-human-pose-estimation-by-pytorch/
+!wget http://stelat.eu/wp-content/uploads/2023/10/video-tp.tar.gz
+!tar xzvf video-tp.tar.gz
+              `}
+            />
+
+            <h2>Video Preprocessing</h2>
+            <p>Before processing, the video is resized to reduce computation time. We then process a small subset of frames (up to 150 frames) for quicker testing.</p>
+            <CodeCell
+              codeString={`
+import cv2
+import imageio
+import matplotlib.pyplot as plt
+import matplotlib.animation as animation
+
+scale_res = 0.25
+break_frame = 150
+input_video = "img1/out.mp4"
+
+cap = cv2.VideoCapture(input_video)
+width  = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+fourcc = cv2.VideoWriter_fourcc(*'MP4V')
+dim = (int(width*scale_res), int(height*scale_res))
+out = cv2.VideoWriter('video_lowres.mp4', fourcc, 20.0, dim)
+
+while cap.isOpened():
+    ret, frame = cap.read()
+    if not ret:
+        print("Can't receive frame (stream end?). Exiting ...")
+        break
+    out.write(cv2.resize(frame,dim))
+
+cap.release()
+out.release()
+cv2.destroyAllWindows()
+              `}
+            />
+
+            <h2>Detection with OpenPose</h2>
+            <p>We use OpenPose for detecting human poses in the video frames. The model predicts the keypoints of a human body (such as elbows, shoulders, etc.).</p>
+            <CodeCell
+              codeString={`
+from model import bodypose_model, PoseEstimationWithMobileNet
+from Demo_picture import Net_Prediction
+import time
+import torch
+import numpy as np
+
+class PoseConfig:
+    def __init__(self, backbone='Mobilenet', scale=0.3, show=(-1, 2), thre=0.1):
+        self.backbone = backbone
+        self.scale = scale
+        self.show = show
+        self.thre = thre
+
+# Initialize the model and set the configuration
+config = PoseConfig()
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+model = PoseEstimationWithMobileNet().to(device)
+model.load_state_dict(torch.load('weights/MobileNet_bodypose_model', map_location=device))
+model.eval()
+
+cap = cv2.VideoCapture("img1/out.mp4")
+all_dets = {}
+current = 0
+
+while True:
+    isSuccess, frame = cap.read()
+    if isSuccess and current < break_frame:
+        # Processing...
+    else:
+        break
+cap.release()
+              `}
+            />
+
+            <h2>Tracking Visualization</h2>
+            <p>We visualize the detected skeletons over time, each person gets a different color to distinguish between multiple people.</p>
+            <CodeCell
+              codeString={`
+def draw_det(image, d, color, scale, track_id=None):
+    for p in d:
+        x, y = p[0:2]
+        if x != -1 or y != -1:
+            cv2.circle(image, (int(x*scale), int(y*scale)), int(5*scale+1), color, thickness=int(5*scale+1))
+            if track_id is not None:
+                image = cv2.putText(image, str(track_id), (int(x*scale)+5, int(y*scale)), cv2.FONT_HERSHEY_SIMPLEX, 1, color, 2, cv2.LINE_AA)
+
+# Display video with skeletons
+def display_det(video):
+    fig = plt.figure(figsize=(10,5))
+    mov = []
+    for i in range(min(len(video), break_frame)):
+        frame = video[i]
+        draw_dets(frame, all_dets[i], scale_res)
+        img = plt.imshow(frame, animated=True)
+        mov.append([img])
+    anime = animation.ArtistAnimation(fig, mov, interval=250, repeat_delay=1000)
+    return anime
+
+video = imageio.mimread("output_lowres.mp4")
+HTML(display_det(video).to_html5_video())
+              `}
+            />
+
+            <h2>Tracking Implementation</h2>
+            <p>Now, we implement the tracker class to maintain object identities and assign detections to existing tracks.</p>
+            <CodeCell
+              codeString={`
+class Track:
+    def __init__(self, pose, track_id, t):
+        self.poses = {t: pose} if pose else {}
+        self.track_id = track_id
+        self.last_appearance = 0
+        self.alive = True
+
+    def update_pose(self, pose, t):
+        self.poses[t] = pose
+
+# Matching detections with existing tracks
+def distance_poses(track, det):
+    pose1 = np.array(track)
+    pose2 = np.array(det)
+    valid1 = np.where(pose1[:, 0] < 0, 0, 1)
+    valid2 = np.where(pose2[:, 0] < 0, 0, 1)
+    valid = np.minimum(valid1, valid2)
+    sum_valid = np.sum(valid)
+    if sum_valid != 0:
+        dist = np.sum(valid * (np.abs(pose1[:, 0] - pose2[:, 0]) + np.abs(pose1[:, 1] - pose2[:, 1]))) / sum_valid
+    else:
+        dist = 1e20
+    return dist
+              `}
+            />
+
+            <h2>Results and Future Improvements</h2>
+            <p>We now track the detected people across frames, maintaining consistent identities. Some issues like occlusions and missing keypoints still persist, but they can be addressed with further research.</p>
+            <p>To improve this approach, we suggest reading more about using bounding boxes for tracking and improving the detection accuracy under challenging conditions.</p>
+
+            <h2>Conclusion</h2>
+            <p>We've successfully implemented a tracking-by-detection system using OpenPose and a Hungarian algorithm for object tracking.</p>
+          </div>
+
+          {/* Right content */}
+          <div className="right-content" style={{
+              marginRight:'20px',
+              flexBasis: '30%', 
+              minWidth: '300px', 
+              padding: "15px", 
+              marginTop: "25px",
+              position: 'sticky', 
+              top: '20px' 
+            }}>
+            <div className="card" style={{ padding: '20px', borderRadius: '0px', width: '100%' }}>
+              <h2 style={{ marginTop: '15px', textAlign: 'left', padding: '15px' }}>By El Houssaine</h2>
+              <p>Meet El Houssaine Chahboun, M2 master's degree in Data Science from École Polytechnique (L'X), with a unique perspective on solving complex problems across various fields.</p>
+              <div className="social-links" style={{ marginTop: '20px', textAlign: 'left' }}>
+                <a href="https://x.com/elhoussainechah" target="_blank" rel="noopener noreferrer" style={{ margin: '0 10px' }}>Twitter</a>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" style={{ margin: '0 10px' }}>Facebook</a>
+                <a href="https://www.linkedin.com/in/elhoussainechahboun/" target="_blank" rel="noopener noreferrer" style={{ margin: '0 10px' }}>LinkedIn</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <br /><br /><br />
+
+      </div>
+    </div>
+
         </div>
   )}
 

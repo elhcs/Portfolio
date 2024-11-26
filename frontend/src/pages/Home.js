@@ -29,18 +29,21 @@ const MyComponent = () => {
   
   const [currentIndex, setCurrentIndex] = useState(0);
   const [imageList, setImageList] = useState([
-    "https://i.ibb.co/pJLyjpM/ezgif-com-video-to-gif-converted.gif",
+    "https://i.ibb.co/pJLyjpM/ezgif-com-video-to-gif-converted.gif","https://portfoliox-vdrp.onrender.com/public/images/f987ac3c-0c6b-49b3-b016-52d00a5d755a-1732460993710.png","b07f9f1919a90206cf719f9be40b7d1b.gif"
     // Add more image URLs as needed
   ]);
 
   const textElements = [
-    ["MATHEMATICS, DATASCIENCE AND GRAPHICS", "Diverse motion design projects, from club content to high-profile event videos, showcasing the broad creative scope of this field."]
+    ["MATHEMATICS, DATASCIENCE AND GRAPHICS", "Diverse motion design projects, from club content to high-profile event videos, showcasing the broad creative scope of this field.","MATHEMATICS, DATASCIENCE AND GRAPHICS", "Diverse motion design projects, from club content to high-profile event videos, showcasing the broad creative scope of this field."],
+    ["Tracking by Detection in Computer Vision", "An introduction to tracking objects across frames in video using the Tracking by Detection approach, including pose estimation and tracking algorithms."],
+    ["Making music with LSTM and Transformers", "Training LSTM and Transformer models for generating music sequences (One-to-Many)."]
+
   ];
 
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % textElements.length);
-    }, 3000); // Changes text every 3000 milliseconds (3 seconds)
+    }, 6000); // Changes text every 3000 milliseconds (3 seconds)
 
     return () => clearInterval(intervalId); // Cleanup the interval on component unmount
   }, []);
@@ -53,7 +56,7 @@ const MyComponent = () => {
     <div>
       <div className={styles.container}>
         <div className={styles.column}>
-          <div className={styles.textWrapper}>
+        <div className={`${styles.textWrapper} ${styles.fade} ${currentIndex === 0 ? styles.fadeActive : ''}`}>
             <div className={styles.topText}>
               <p>{textElements[currentIndex][0]}</p>
             </div>
@@ -71,7 +74,8 @@ const MyComponent = () => {
             ))}
           </div>
         </div>
-        <div className={styles.column}>
+        <div className={`${styles.column} ${styles.fade} ${currentIndex === 0 ? styles.fadeActive : ''}`}>
+
           <img src={imageList[currentIndex]} style={{ width:'100%'}} alt="Placeholder" />
         </div>
       </div>

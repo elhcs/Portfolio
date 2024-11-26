@@ -41,7 +41,7 @@ function Feed(props) {
               hex1={project.hex1}
               hex2={project.hex2}
               isImg={isImg}
-              imgUrl={isImg ? project.imgs[0].path_url : ""}
+              imgUrl={isImg ? project.imgs[1].path_url : ""}
               parag1={project.parag1}
               parag2={project.parag2 ? project.parag2 : ""}
               type={project.cardType}

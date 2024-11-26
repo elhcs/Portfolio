@@ -53,10 +53,10 @@ const NewReleases = () => {
       article : '../project/66718936219f0d12d16680cf'
     },
     {
-      title: "Rosalia's Third Album: MOTOMAMI",
-      description: 'Rosalia s third and latest album',
-      tag: 'MUSIC',
-      imageUrl: 'https://portfoliox-vdrp.onrender.com/public/images/ba4a495fd3c16fdd83340acf4039e960.jpg',
+      title: "Tracking by Detection in Computer Vision",
+      description: 'An introduction to tracking objects across frames in video using the Tracking by Detection approach, including pose estimation and tracking algorithms.',
+      tag: 'DEEP LEARNING',
+      imageUrl: 'https://portfoliox-vdrp.onrender.com/public/images/f987ac3c-0c6b-49b3-b016-52d00a5d755a-1732460993710.png',
       isFeatured: true,
       article : '../project/644310db0e626d1b2192ea40'
     },
