@@ -6,6 +6,7 @@ import store from "./store";
 import "./index.css";
 import Home from "./pages/Home";
 import Biomed from "./pages/Biomed";
+import Udc from "./pages/udc";
 
 import Layout from "./pages/Layout";
 import Project from "./pages/Project";
@@ -31,7 +32,16 @@ import Register from "./pages/Register";
 import AdminRestrict from "./components/auth/AdminRestrict";
 import ScrollToTop from './ScrollToTop';
 
+// Load Instagram embed script globally
+const loadInstagramScript = () => {
+  const script = document.createElement("script");
+  script.src = "https://www.instagram.com/embed.js";
+  script.async = true;
+  script.defer = true;
+  document.body.appendChild(script);
+};
 
+loadInstagramScript();
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
@@ -69,6 +79,7 @@ root.render(
           <Route path="login" element={<Login />}></Route>
           <Route path="article" element={<Article />}></Route>
           <Route path="shortfilm" element={<Shortfilm />}></Route>
+          <Route path="udc" element={<Udc />}></Route>
           <Route path="about" element={<About />}></Route>
           <Route path="newhome" element={<Newhome />}></Route>
           <Route path="mathartc" element={<Mathpbmartc />}></Route>

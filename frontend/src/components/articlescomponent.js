@@ -1,37 +1,14 @@
 import React from 'react';
 import styles from './Articlecomp.module.css'; // Adjust the path as necessary
 import { NavLink } from 'react-router-dom';
-
+import Card from './Card';
 // Helper function to determine if the URL is a video
 const isVideo = (url) => {
   // Checks for video file extensions
   return /\.(mp4|webm)$/i.test(url);
 };
 
-const Card = ({ title, description, tag, imageUrl, isFeatured, article }) => {
-  return (
-    <div className={styles.card}>
-      <NavLink to = {article}>
-      <div className={styles.imageWrapper}>
-        {isVideo(imageUrl) ? (
-          // Renders a video element if the URL is a video
-          <video src={imageUrl} alt={title} className={styles.cardImage} autoPlay muted loop controls/>
-        ) : (
-          // Renders an image element if the URL is an image
-          <img src={imageUrl} alt={title} className={styles.cardImage} />
-        )}
-      </div>
-      <div className={styles.cardTextContent}>
-        <div className={styles.tagWrapper}>
-          <span style={{ marginLeft: 0, color: 'white', backgroundColor: 'black' }}>{tag}</span>
-        </div>
-        <h3 className={styles.cardTitle}>{title}</h3>
-        <p className={styles.cardDescription}>{description}</p>
-      </div>
-      </NavLink>
-    </div>
-  );
-};
+
 
 const NewReleases = () => {
   // Example data, this should come from your state or props
@@ -42,16 +19,16 @@ const NewReleases = () => {
       tag: 'UNIVERSITY',
       imageUrl: 'https://elx.onrender.com/udcvideo.mp4',
       isFeatured: true,
-      article : ''
+      article : 'udc'
     },
     {
-      title: 'Meet Gao Hang!',
-      description: 'Gao Hang is an artist who seamlessly blends the contemporary with the classi...',
-      tag: 'ART',
-      imageUrl: "7587fd9a6393f3326ac9802c3ef6afe1.png",
+      title: 'Lets make music with LSTM and Transformers',
+      description: 'Training LSTM and Transformer models for generating music sequences (One-to-Many)',
+      tag: 'DEEP LEARNING',
+      imageUrl: 'https://media.licdn.com/dms/image/v2/D4E22AQHwXGEdFfgsxQ/feedshare-shrink_800/feedshare-shrink_800/0/1732092867220?e=1735776000&v=beta&t=UW18OYhX1fmVKZs1X3ZoAWjAZEedWXBmuStrXro09EQ',
       isFeatured: true,
-      article : '../project/66718936219f0d12d16680cf'
-    },
+      article : '../biomed'
+    }, 
     {
       title: "Tracking by Detection in Computer Vision",
       description: 'An introduction to tracking objects across frames in video using the Tracking by Detection approach, including pose estimation and tracking algorithms.',
@@ -60,13 +37,14 @@ const NewReleases = () => {
       isFeatured: true,
       article : '../project/644310db0e626d1b2192ea40'
     },
+   
     {
-      title: 'Lets make music with LSTM and Transformers',
-      description: 'Training LSTM and Transformer models for generating music sequences (One-to-Many)',
-      tag: 'DEEP LEARNING',
-      imageUrl: 'b07f9f1919a90206cf719f9be40b7d1b.gif',
+      title: 'Meet Gao Hang!',
+      description: 'Gao Hang is an artist who seamlessly blends the contemporary with the classi...',
+      tag: 'ART',
+      imageUrl: "7587fd9a6393f3326ac9802c3ef6afe1.png",
       isFeatured: true,
-      article : '../biomed'
+      article : '../project/66718936219f0d12d16680cf'
     },{
       title: 'Short Film Starring me As a Frog!',
       description: 'Houssaine the frog is stunned by technology, which uses increasingly invasive techniques to get attention. He turns his screen off in an attempt to escape and connect with real life, only to realize its all under his control.',

@@ -1,0 +1,17 @@
+.glass-card {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Apply blur effect to everything behind the card */
+    border-radius: 15px;
+    padding: 20px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for the glass effect */
+    font-family: Arial, sans-serif;
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  .glass-card p {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  
