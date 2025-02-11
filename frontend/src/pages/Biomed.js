@@ -1,33 +1,14 @@
-import React, { useEffect, useState } from "react";
-import "./Project.css";
+import React, { useState, useEffect } from 'react';
+import Footer from '../components/footer_new'
 import styles from '../components/Articlecomp.module.css';
-import "../components/Navbar";
-import Footer from "../components/footer_new";
 import CodeCell from "../components/codecell";  // Adjust the path to where CodeCell.js is located
 
 
-
-
-
-  
-
-const tlines = (
-  <svg
-    width="145"
-    height="146"
-    viewBox="0 0 145 146"
-    fill="red"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path d="M145 116.693V145.078H0V116.693H145Z" fill="red" />
-    <path d="M145 56.7695V88.3082H0V56.7695H145Z" fill="red" />
-    <path d="M145 0V28.3848H0V0H145Z" fill="red" />
-  </svg>
-);
-
-function Project() {
+const isMobilee = window.innerWidth < 768;
+const MyComponent = () => {
 
   const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768); // Adjust the breakpoint as needed
@@ -39,54 +20,62 @@ function Project() {
 
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+
+  
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [imageList, setImageList] = useState([
+    "elxdesign.gif"
+    // Add more image URLs as needed
+  ]);
+
+  const textElements = [
+    ["MUSIC GENERATION WITH LSTM", "Think of training a neural network to absorb Bach’s Cello Suite and compose new music—like creating tunes with the same flair as the Powerpuff Girls were made in the lab!"]
+  ];
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % textElements.length);
+    }, 12000); // Changes text every 3000 milliseconds (3 seconds)
+
+    return () => clearInterval(intervalId); // Cleanup the interval on component unmount
+  }, []);
+
+  const navigateTo = index => {
+    setCurrentIndex(index);
+  };
+
   return (
-    <div className="App">
-      <div className="App-body">
-
-        {/* Ensure full-width for the container */}
-        <div className="full-width-container" style={{ width: '100%' }}>
-          <div className="row">
-            <div className="col text">
-              <div className="titletext" style={{ color: '#ffffff', padding: 7, maxWidth: '550px' }}>
-                {"MUSIC GENERATION WITH LSTM"}
-              </div>
-              <div className="paratext" style={{ color: '#ffffff', maxWidth: '600px',marginBottom:51}}>
-                {"Think of training a neural network to absorb Bach’s Cello Suite and compose new music—like creating tunes with the same flair as the Powerpuff Girls were made in the lab!"}
-              </div>
+    <div>
+      <div className={styles.container}>
+        <div className={styles.column}>
+        <div className={`${styles.textWrapper} ${styles.fade} ${currentIndex === 0 ? styles.fadeActive : ''}`}>
+        <div className={styles.topText}>
+              <h1 style={{  marginBottom:"10%", margin:"10%", color:"white"}}>{textElements[currentIndex][0]}</h1>
+              <p style={{  margin:"10%", color:"white"}}>{textElements[currentIndex][1]}</p>
             </div>
-                      <div className={styles.column}>
-          <img src={'b07f9f1919a90206cf719f9be40b7d1b.gif'} style={{ width:'100%'}} alt="Placeholder" />
-        </div>
+            {/* <div className={styles.bottomText}>
+              <p>{textElements[currentIndex][1]}</p>
+            </div> */}
           </div>
+          <div className={styles.indicatorContainer}>
+            {textElements.map((_, index) => (
+              <div
+                key={index}
+                onClick={() => navigateTo(index)}
+                className={`${styles.indicator} ${index === currentIndex ? styles.indicatorActive : ''}`}
+              ></div>
+            ))}
+          </div>
+        </div>
+        <div className={`${styles.column} ${styles.fade} ${currentIndex === 0 ? styles.fadeActive : ''}`}>
 
+          <img src={imageList[currentIndex]} style={{ width:'100%'}} alt="Placeholder" />
         </div>
-        {/* Conditional rendering based on isMobile state */}
- <div className={`${styles.additionalColumnsContainer} ${isMobile ? styles.hideOnMobile : ''}`}>
-    <div className={styles.additionalColumnLeft} style={{ width: '85%' }}>
-        {/* Content for left column */}
-        <div className={styles.bio}>
-            <div className={styles.biotitle}>{'Save it'}</div>
-              <div className={styles.bioparag}>{'Not in the mood to follow the tutorial? Just download the google colab notebook and explore it your way!'}</div>
+      </div>
 
-        </div>
-    </div>
-    <div className={styles.additionalColumnRight} style={{ width: '295px' }}>
-        {/* Content for right column */}
-        <div className={`${styles.blackBox} black-box`}>
-            <div className={styles.rightArrow}>
-            <svg xmlns="http://www.w3.org/2000/svg" width="214" viewBox="0 27 300 350" fill="none" className="arrow-svg">
-                    <rect width="214" height="214" fill="none" />
-                <path
-                  d="M109.379 157.621C110.55 158.793 112.45 158.793 113.621 157.621L132.713 138.529C133.885 137.358 133.885 135.458 132.713 134.287C131.542 133.115 129.642 133.115 128.471 134.287L111.5 151.257L94.5294 134.287C93.3579 133.115 91.4584 133.115 90.2868 134.287C89.1152 135.458 89.1152 137.358 90.2868 138.529L109.379 157.621ZM108.5 70V155.5H114.5V70H108.5Z"
-                  fill="white"
-                />
-              </svg>
-            </div>
-        </div>
-    </div>
-</div>
-        {/* Main content flex container */}
-        <div className="main-content" style={{
+                  {/* Main content flex container */}
+                  <div className="main-content" style={{
           display: 'flex',
           flexDirection: 'row', // Default for larger screens
           justifyContent: 'space-between',
@@ -520,10 +509,23 @@ IPython.display.Audio(audio_data, rate=44100)`}/>
 
         <br /><br /><br />
 
-        <Footer isMobile={isMobile} />
-      </div>
+
+
+
+      
+    
+
+      
+
+      <div class="linesection">
+<Footer />
+</div>
     </div>
+
   );
 }
 
-export default Project;
+export default MyComponent;
+
+
+

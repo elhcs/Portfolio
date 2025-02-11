@@ -1,0 +1,136 @@
+.newReleases {
+  background-color: #ffffff;
+  padding: 3rem;
+  font-family: 'Your Font', sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  font-weight: 900;
+}
+
+.headertitle {
+  font-weight: bolder;
+  font-size: 40px;
+  text-align: left;
+}
+
+.allStoriesLink {
+  position: relative;
+  text-align: right;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.allStoriesLink::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: #1DB954;
+  transition: width 0.3s ease-in-out;
+}
+
+.allStoriesLink:hover {
+  color: #1DB954;
+}
+
+.allStoriesLink:hover::after {
+  width: 100%;
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.card {
+  flex: 1 1 auto;
+  min-width: 435px;
+  max-width: 500px;
+}
+
+.imageWrapper {
+  height: auto;
+}
+
+.cardTextContent {
+  margin-top: 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.tagWrapper {
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  margin-bottom: 0.7rem;
+  border-radius: 2px;
+  text-align: left;
+  align-self: flex-start;
+}
+
+.tag {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.cardDetails {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.column {
+  flex: 1;
+  display: flex;
+  flexDirection: column;
+  color: white;
+  position: relative;
+  width: auto;
+}
+
+
+.cardTitle {
+  font-size: 1.2rem;
+  color: #000;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.cardDescription {
+  font-size: 1rem;
+  color: #666;
+  text-align: left;
+}
+
+@media (max-width: 599px) {
+  .cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .card {
+    flex: 1 1 auto;
+    min-width: 345px;
+    max-width: 440px;
+  }
+}

@@ -25,7 +25,7 @@ const NewReleases = () => {
       title: 'Lets make music with LSTM and Transformers',
       description: 'Training LSTM and Transformer models for generating music sequences (One-to-Many)',
       tag: 'DEEP LEARNING',
-      imageUrl: 'https://media.licdn.com/dms/image/v2/D4E22AQHwXGEdFfgsxQ/feedshare-shrink_800/feedshare-shrink_800/0/1732092867220?e=1735776000&v=beta&t=UW18OYhX1fmVKZs1X3ZoAWjAZEedWXBmuStrXro09EQ',
+      imageUrl: 'elxdesign.gif',
       isFeatured: true,
       article : '../biomed'
     }, 
@@ -39,12 +39,12 @@ const NewReleases = () => {
     },
    
     {
-      title: 'Meet Gao Hang!',
-      description: 'Gao Hang is an artist who seamlessly blends the contemporary with the classi...',
+      title: 'Blender Addon: Image to 3D Avatar!',
+      description: 'This addon allows users to generate 3D avatars from 2D images, enhancing workflow for 3D artists and developers..',
       tag: 'ART',
-      imageUrl: "7587fd9a6393f3326ac9802c3ef6afe1.png",
+      imageUrl: "https://i.pinimg.com/736x/6d/ef/02/6def029af03e7acec92bb8585fd2c32f.jpg",
       isFeatured: true,
-      article : '../project/66718936219f0d12d16680cf'
+      article : '/blenderaddon'
     },{
       title: 'Short Film Starring me As a Frog!',
       description: 'Houssaine the frog is stunned by technology, which uses increasingly invasive techniques to get attention. He turns his screen off in an attempt to escape and connect with real life, only to realize its all under his control.',

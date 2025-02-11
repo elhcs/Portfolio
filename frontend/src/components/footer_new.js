@@ -12,30 +12,19 @@ const MergedFooter = ({ isMobile }) => {
     return (
         <div>
             {/* Conditional rendering based on isMobile state */}
-            <div className={`${styles.additionalColumnsContainer} ${isMobile ? styles.hideOnMobile : ''}`}>
-                <div className={styles.additionalColumnLeft} style={{ width: '85%' }}>
-                    {/* Content for left column */}
-                    <div className={styles.bio}>
-                        <div className={styles.biotitle}>{'About'}</div>
-                        <div className={styles.bioparag}>{'Passionate about math, data science, and creative design, Im currently exploring the world of data at École Polytechnique in Paris. Always curious, always creating!'}</div>
-                    </div>
-                </div>
-                <div className={styles.additionalColumnRight} style={{ width: '295px' }}>
-                    {/* Content for right column */}
-                    <div className={`${styles.blackBox} black-box`}>
-                        <div className={styles.rightArrow}>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="214" viewBox="0 0 300 124" fill="none" className="arrow-svg">
-                                <rect width="214" height="214" fill="none" />
-                                <path
-                                    d="M109.379 66.379C110.55 65.207 112.45 65.207 113.621 66.379L132.713 85.471C133.885 86.642 133.885 88.542 132.713 89.713C131.542 90.885 129.642 90.885 128.471 89.713L111.5 72.743L94.5286 89.713C93.3571 90.885 91.4576 90.885 90.286 89.713C89.1144 88.542 89.1144 86.642 90.286 85.471L109.379 66.379ZM108.5 155.5V70H114.5V155.5H108.5Z"
-                                    fill="white"
-                                />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
+       
+            <div className="footer-container">
+        {/* Two-column Layout */}
+        <div className="two-column-layout">
+          <div className="empty-column"><h2 style={{fontWeight:700, textAlign:"left", marginLeft:50, fontSize:50}}>Contact</h2>  <a style={{textAlign:"left", marginLeft:-1050}} href="mailto:el-houssaine.chahboun@polytechnique.edu">
+      Email me here
+    </a></div>
+          <div className="image-column">
+            <img src={"elx-ezgif.com-crop.gif"} alt="Square Image" className="square-image" />
+          </div>
+        </div></div>
             <footer>
+                
                 <div className="top-section">
                     <div className="logo-section">
                         <div className="logo">
@@ -60,24 +49,22 @@ const MergedFooter = ({ isMobile }) => {
                     </div>
                     <div className={`nav-section ${isMobile ? styles.hideOnMobile : ''}` }>
                         <ul>
-                            <li><a href="#">Graphic Design</a></li>
+                           
                             <li><a href="#">University Club</a></li>
-                            <li><a href="#">Join The Club</a></li>
+                           
                         </ul>
                         <ul>
-                            <li><a href="#">Services</a></li>
+                          
                             <li><a href="#">Blog</a></li>
                         </ul>
                         <ul>
-                            <li><a href="#">Showcase</a></li>
-                            <li><a href="#">Short Film</a></li>
-                            <li><a href="#">Support</a></li>
+                          <li><a href="#">About Us</a></li>
+                         
                         </ul>
                          <ul>
-                            <li><a href="#">About Us</a></li>
+                            
                             <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Education</a></li>
-                            <li><a href="#">Resources</a></li>
+                          
                         </ul>
                     </div>
                 </div>
@@ -89,7 +76,7 @@ const MergedFooter = ({ isMobile }) => {
                         <a href="#">&#xf1a0;</a>
                         <a href="#">&#xf16d;</a>
                     </div>
-                    <small>&copy; Copyright. All rights reserved.</small>
+                    <small>Fully designed and developed by El Houssaine CHAHBOUN &copy; Copyright. All rights reserved.</small>
                 </div>
             </footer>
         </div>

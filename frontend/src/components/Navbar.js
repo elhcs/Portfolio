@@ -66,9 +66,14 @@ function Navbar() {
               </NavLink>
             </li>
             <li className={`nav-item ms-auto p-2 ${isAboutPage ? "special-about-item" : ""}`}>
-              <NavLink to="/" className="nav-link" style={{ color: isAboutPage ? "black" : "white" }}>
-                CONTACT
-              </NavLink>
+            <NavLink 
+  to="#" 
+  onClick={() => window.location.href = "mailto:el-houssaine.chahboun@polytechnique.edu"} 
+  className="nav-link" 
+  style={{ color: isAboutPage ? "black" : "white" }}
+>
+  CONTACT
+</NavLink>
             </li>
             {!isAuthenticated && (
               <li className={`nav-item ms-auto p-2 ${isAboutPage ? "special-about-item" : ""}`}>

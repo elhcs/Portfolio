@@ -31,6 +31,7 @@ import DynamicProject from "./pages/Dynamic_project";
 import Register from "./pages/Register";
 import AdminRestrict from "./components/auth/AdminRestrict";
 import ScrollToTop from './ScrollToTop';
+import BlenderAddonProject from "./pages/blenderaddon";
 
 // Load Instagram embed script globally
 const loadInstagramScript = () => {
@@ -84,6 +85,8 @@ root.render(
           <Route path="newhome" element={<Newhome />}></Route>
           <Route path="mathartc" element={<Mathpbmartc />}></Route>
           <Route path="biomed" element={<Biomed />}></Route>
+          <Route path="blenderaddon" element={<BlenderAddonProject />}></Route>
+
           <Route path="DynamicProject" element={<DynamicProject />}></Route>
           <Route path="*" element={<Nopage />}></Route>
         </Route>

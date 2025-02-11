@@ -1,0 +1,32 @@
+.file-list {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+  }
+  
+  .file-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .file-item:last-child {
+    border-bottom: none;
+  }
+  
+  .icon {
+    font-size: 16px;
+  }
+  
+  .file-item a {
+    font-weight: bold;
+    color: #0366d6;
+  }
+  
+  .file-item a:hover {
+    text-decoration: underline;
+  }
+  

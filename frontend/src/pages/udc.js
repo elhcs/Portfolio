@@ -78,7 +78,29 @@ const cardsData = [
 ];
 function UdcProject() {
   
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [imageList, setImageList] = useState([
+    "elxdesign.gif"
+    // Add more image URLs as needed
+  ]);
 
+  const textElements = [
+    ["FOUNDING THE UM6P UNIVERSITY DESIGN CLUB", "Monetizing students creativity, UM6P's first Graphic Design club: a fresh alternative to traditional design agencies.."]
+
+  ];
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % textElements.length);
+    }, 12000); // Changes text every 3000 milliseconds (3 seconds)
+
+    return () => clearInterval(intervalId); // Cleanup the interval on component unmount
+  }, []);
+
+  const navigateTo = index => {
+    setCurrentIndex(index);
+  };
+  
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -98,29 +120,42 @@ function UdcProject() {
  {
   
     return (
-      <div className="App">
-      <div className="App-body">
-        
-
-      <div className="full-width-container">
-      <div className="row">
-        <div className="col text">
-          <div className="titletext"style={{ color: '#ffffff', padding: 0 }}>{"UDC University Design Club" }</div>
-          <div className="paratext"style={{ color: '#ffffff', width:'70%', padding: 40}}>{"I founded the University Design Club (UDC) to provide students with a platform to turn their design passions into real-world opportunities. From organizing workshops to collaborating on university projects, "}</div>
+      <div>
+       <div className={styles.container}>
+        <div>
+        <div >
+            <div className={styles.topText}>
+              <h1 style={{  marginBottom:"10%", margin:"10%", color:"white"}}>{textElements[currentIndex][0]}</h1>
+              <p style={{  margin:"10%", color:"white"}}>{textElements[currentIndex][1]}</p>
+            </div>
+            {/* <div className={styles.bottomText}>
+              <p>{textElements[currentIndex][1]}</p>
+            </div> */}
+          </div>
+          <div className={styles.indicatorContainer}>
+            {textElements.map((_, index) => (
+              <div
+                key={index}
+                onClick={() => navigateTo(index)}
+                className={`${styles.indicator} ${index === currentIndex ? styles.indicatorActive : ''}`}
+              ></div>
+            ))}
+          </div>
         </div>
-        <div className="col img">
-        <img src={"https://i.ibb.co/pJLyjpM/ezgif-com-video-to-gif-converted.gif"} style={{ width:'100%'}} alt="Placeholder" />
+        <div>
 
-</div>
+          <img src={imageList[currentIndex]} style={{ width:'100%'}} alt="Placeholder" />
+        </div>
       </div>
-      
-    </div>
-    
-<div className="bodypage" style={{ padding: '20px', maxWidth: '95%', margin: 'auto' }}>
-
+        {/* Conditional rendering based on isMobile state */}
+     <div className={`${styles.additionalColumnsContainer}`}>
         
-      <br/><br/><br/><br/></div>
-      <section className={styles.newReleases}>
+
+
+        </div>
+
+
+           <section className={styles.newReleases}>
       <header className={styles.header}>
 
         <h2 className={styles.headertitle}>Our story</h2>
@@ -206,7 +241,7 @@ function UdcProject() {
     <Footer />
     
 
-    </div></div>
+    </div>
 
 
   
