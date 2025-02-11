@@ -32,7 +32,7 @@ function ContentRec(props) {
         className="RecContent container full-height d-flex flex-column"
         style={Styles}
       >
-        <div className="row title__RecContent">{props.title}</div>
+        <h1 style={{margin:"3%", textAlign:"left"}}>{props.title}</h1>
         <div className="row mt-auto">
           <div className="col subtitle__RecContent">{props.parag1}</div>
           <div className="col subtitle__RecContent">
