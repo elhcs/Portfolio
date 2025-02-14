@@ -25,7 +25,7 @@ const MyComponent = () => {
   
   const [currentIndex, setCurrentIndex] = useState(0);
   const [imageList, setImageList] = useState([
-    "elxdesign.gif"
+    "https://i.pinimg.com/736x/c3/95/f3/c395f340d60ee7197704ff17344430d5.jpg"
     // Add more image URLs as needed
   ]);
 
@@ -89,7 +89,7 @@ const MyComponent = () => {
           
 
             <div style={{ marginLeft:'-20px',padding: '20px', maxWidth: '95%', margin: 'auto' }}>
-            <h1>Deep Learning/ RNN+Transformer in Keras</h1>
+            <h2>Deep Learning/ RNN+Transformer in Keras</h2>
             <p>Version: 2024/10/02 (added Transformer, changed model definition to classes - as in PyTorch)</p>
             <p>Version: 2023/09/19 (changed to tensorflow.keras, changed figures, code to function)</p>
             <p>For any remark or suggestion, please feel free to contact me.</p>

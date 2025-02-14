@@ -25,7 +25,7 @@ const NewReleases = () => {
       title: 'Lets make music with LSTM and Transformers',
       description: 'Training LSTM and Transformer models for generating music sequences (One-to-Many)',
       tag: 'DEEP LEARNING',
-      imageUrl: 'elxdesign.gif',
+      imageUrl: 'https://i.pinimg.com/736x/c3/95/f3/c395f340d60ee7197704ff17344430d5.jpg',
       isFeatured: true,
       article : '../biomed'
     }, 
