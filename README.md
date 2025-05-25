@@ -7,7 +7,7 @@ Public Portfolio for EGD Club Student's Projects
 
 Clone the repostory with the command:
 ```
-git clone https://github.com/Youssef-ADOUIRI/Emines-Graphic-Design.git
+git clone https://github.com/elhcs/Portfolio.git
 cd Emines-Graphic-Design
 ```
 
