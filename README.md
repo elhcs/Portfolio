@@ -8,7 +8,7 @@ Public Portfolio for EGD Club Student's Projects
 Clone the repostory with the command:
 ```
 git clone https://github.com/elhcs/Portfolio.git
-cd Emines-Graphic-Design
+cd Portfolio
 ```
 
 Open a terminal in the project root directory and execute :
