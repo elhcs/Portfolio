@@ -92,7 +92,7 @@ const Login = () => {
           
           © All rights reserved EL Houssaine CHAHBOUN
           <br />
-          Benguerir - Rabat Morocco.
+          Paris - France
         </p>
       
       </div>

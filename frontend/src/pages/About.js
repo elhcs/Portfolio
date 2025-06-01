@@ -5,6 +5,20 @@ import Blackbords from "../components/Blackbords";
 import styles from '../components/Articlecomp.module.css';
 import Footer from '../components/footer_new';
 
+
+<style>
+  {`
+    .bw-hover {
+      width: 100%;
+      filter: grayscale(100%);
+      transition: filter 0.5s ease;
+    }
+
+    .bw-hover:hover {
+      filter: grayscale(0%);
+    }
+  `}
+</style>
 const MyComponent = () => {
   // State for detecting mobile view
   const [isMobile, setIsMobile] = useState(false);
@@ -38,21 +52,21 @@ const MyComponent = () => {
       <div style={{ width: '100%', height: '30px', backgroundColor: 'white' }}></div>
 
       {/* Intro Card */}
-      <div style={{ display: 'flex' }}>
+      <div style={{ display: isMobile ? 'block' : 'flex' }}>
         <div style={{ padding: '1%', marginTop: '-13px' }}>
           <div className={styles.card}>
             <div className={styles.cardTextContent}>
               <div className={styles.tagWrapper}>
                 <span style={{ marginLeft: 0, color: 'white', backgroundColor: 'black' }}>{tag}</span>
+                
               </div>
               <h3 className={styles.cardTitle}>{title}</h3>
               <p className={styles.cardDescription}>{description}</p>
+              
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Content Section */}
+            {/* Content Section */}
       <div style={{ overflowY: 'auto', maxHeight: '640px', padding: '1%' }}>
         {images.map((image, index) => (
           <React.Fragment key={index}>
@@ -76,10 +90,17 @@ const MyComponent = () => {
         <Paragraph>
           Feel free to connect with me if you're interested in data science, creative technology, or simply want to share insights about mathematics, AI, or design. I believe in the power of community and collaboration, and I'm always eager to connect with like-minded individuals who are passionate about making a positive impact through technology.
         </Paragraph>
+        <br /><br />
+        <img style={{ width: '100%'}} src={'https://santetudiant.com/wp-content/uploads/2023/07/polytechnique2.jpg'} alt={'dsf'} />
+            <br /><br />
       </div>
 
+      </div>
+
+  
+
       {/* Footer */}
-      <Footer isMobile={isMobile} />
+      <Footer/>
     </div>
   );
 };

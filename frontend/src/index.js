@@ -7,6 +7,7 @@ import "./index.css";
 import Home from "./pages/Home";
 import Biomed from "./pages/Biomed";
 import Udc from "./pages/udc";
+import Rebrand from "./pages/Rebrand";
 
 import Layout from "./pages/Layout";
 import Project from "./pages/Project";
@@ -83,7 +84,8 @@ root.render(
           <Route path="udc" element={<Udc />}></Route>
           <Route path="about" element={<About />}></Route>
           <Route path="newhome" element={<Newhome />}></Route>
-          <Route path="mathartc" element={<Mathpbmartc />}></Route>
+          <Route path="newhome" element={<Newhome />}></Route>
+          <Route path="rebrand" element={<Rebrand />}></Route>
           <Route path="biomed" element={<Biomed />}></Route>
           <Route path="blenderaddon" element={<BlenderAddonProject />}></Route>
 

@@ -1,0 +1,151 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+    color: #000;
+    line-height: 1.6;
+  }
+  
+  .app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .main {
+    flex: 1;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+  }
+  
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  
+  .sr-only:focus {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    height: auto;
+    padding: 10px;
+    background-color: #0066cc;
+    color: white;
+    z-index: 9999;
+    border-radius: 4px;
+  }
+
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .main-nav {
+    display: block;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+  }
+  
+  .nav-item a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    transition: all 0.3s;
+  }
+  
+  .nav-item a:hover,
+  .nav-item.current a {
+    font-weight: 600;
+  }
+  
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+  }
+  
+  .enroll-btn {
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid #000;
+    border-radius: 50px;
+    padding: 10px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    transition: all 0.3s;
+  }
+  
+  .enroll-btn:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  @media (max-width: 768px) {
+    .main-nav {
+      display: none;
+    }
+    
+    .menu-toggle {
+      display: flex;
+    }
+    
+    .enroll-btn {
+      display: none;
+    }
+  }
+
+  .hero-section {
+    position: relative;
+    padding: 40px 0;
+    min-height: 70vh;
+    overflow: hidden;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 10;
+  }
+  
