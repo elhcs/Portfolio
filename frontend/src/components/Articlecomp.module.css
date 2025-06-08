@@ -71,6 +71,13 @@ ul li {
     max-width: 350px; /* Maximum width of the card */
     /* Rest of your card styling */
   }
+
+  .card_elh {
+    flex: 1 1 auto; /* Grow and shrink as needed, basis is auto */
+    min-width: 435px; /* Minimum width of the card */
+
+    /* Rest of your card styling */
+  }
   
   
 

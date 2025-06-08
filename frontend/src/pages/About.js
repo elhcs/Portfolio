@@ -54,20 +54,21 @@ const MyComponent = () => {
       {/* Intro Card */}
       <div style={{ display: isMobile ? 'block' : 'flex' }}>
         <div style={{ padding: '1%', marginTop: '-13px' }}>
-          <div className={styles.card}>
+          <div className={styles.card_elh}>
             <div className={styles.cardTextContent}>
               <div className={styles.tagWrapper}>
-                <span style={{ marginLeft: 0, color: 'white', backgroundColor: 'black' }}>{tag}</span>
+                <span style={{ marginLeft: 0, color: 'white', backgroundColor: 'black', }}>{tag}</span>
                 
               </div>
               <h3 className={styles.cardTitle}>{title}</h3>
               <p className={styles.cardDescription}>{description}</p>
+              <img style={{ width: '100%' }} src={"elhoai.png"} alt={"Ds"} />
               
             </div>
           </div>
         </div>
             {/* Content Section */}
-      <div style={{ overflowY: 'auto', maxHeight: '640px', padding: '1%' }}>
+      <div style={{ overflowY: 'auto', maxHeight: '645px', padding: '1%' }}>
         {images.map((image, index) => (
           <React.Fragment key={index}>
             <img style={{ width: '100%' }} src={image.src} alt={image.alt} />
@@ -75,24 +76,26 @@ const MyComponent = () => {
           </React.Fragment>
         ))}
 
-        <Paragraph>
-          Hi, I'm El Houssaine Chahboun, an engineering student with a deep passion for mathematics, data science, and creative design. Currently, I'm pursuing my Master's (M2) in Data Science at École Polytechnique in Paris, with a focus on generative AI, machine learning, and computer vision. Throughout my academic journey, I've developed robust programming skills, particularly in graphics programming, React, and Spark DataFrames.
-        </Paragraph>
+      <Paragraph>
+              I'm El Houssaine Chahboun, an engineering graduate and current Master's student in Data Science at École Polytechnique. My journey blends a passion for mathematics, computer science, and design, rooted in a deep curiosity and drive for excellence.
+      </Paragraph>
+      <Paragraph>
+              Throughout my academic path,from excelling in preparatory classes in Morocco to being among the admitted students to EMINES, and now pursuing advanced studies in France at École Polytechnique, I’ve cultivated strong analytical thinking and a resilience shaped by both academic rigor and personal growth.
+      </Paragraph>
+      <Paragraph>
+              My current focus lies in the field of statistical learning, I'm particularly interested in the theoretical aspects of statistics, including concentration inequalities,computational statistics, generalization bounds, and the robustness of learning algorithms. During my M2, I've had the opportunity to engage with advanced topics like empirical processes, high-dimensional inference, and statistical learning theory,tools that I believe are essential for designing reliable, interpretable models in AI.
+      </Paragraph>
+      <Paragraph>
+              I am actively looking to deepen my engagement in research, especially at the intersection of theoretical statistics and machine learning. I’m drawn to problems that require both rigorous mathematical reasoning and practical understanding of data. Whether it’s analyzing model behavior under distributional shifts or studying performance under extreme values, I strive to bridge theory and application in a meaningful way.
+      </Paragraph>
+      <Paragraph>
+              Beyond research, I’m also a graphics programmer and designer, often building interactive visual systems and web experiences that reflect a balance of structure and creativity. I believe this synthesis,between rigorous thinking and visual intuition,shapes how I approach both scientific inquiry and creative work.
+      </Paragraph>
+      <Paragraph>
+              This page is a glimpse into my evolving journey. If you'd like to discuss research, explore collaborations, or just chat about math and ideas, feel free to reach out.
+      </Paragraph>
 
-        <Paragraph>
-          My interests extend beyond technical pursuits. I'm a dedicated graphic designer and maintain a Behance portfolio where I showcase my work on web and design projects. Recently, I embarked on a GitHub project titled <em>2D Dialogue Games</em>, a project that has allowed me to experiment with state-of-the-art AI algorithms to enhance interactive storytelling.
-        </Paragraph>
-
-        <Paragraph>
-          I thrive in collaborative environments and am deeply grateful for the mentors, friends, and educators who've supported me along the way. Working with diverse teams has enriched my perspective, enabling me to learn from others and improve my skills across disciplines. Whether it's tackling academic challenges, leading projects, or even engaging in a friendly game of chess (a new passion!), I approach each endeavor with a commitment to excellence and an open mind.
-        </Paragraph>
-
-        <Paragraph>
-          Feel free to connect with me if you're interested in data science, creative technology, or simply want to share insights about mathematics, AI, or design. I believe in the power of community and collaboration, and I'm always eager to connect with like-minded individuals who are passionate about making a positive impact through technology.
-        </Paragraph>
-        <br /><br />
-        <img style={{ width: '100%'}} src={'https://santetudiant.com/wp-content/uploads/2023/07/polytechnique2.jpg'} alt={'dsf'} />
-            <br /><br />
+     
       </div>
 
       </div>
