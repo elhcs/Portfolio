@@ -85,7 +85,7 @@ function UdcProject() {
   ]);
 
   const textElements = [
-    ["FOUNDING THE UM6P UNIVERSITY DESIGN CLUB", "Monetizing students creativity, UM6P's first Graphic Design club: a fresh alternative to traditional design agencies.."]
+    ["UM6P UNIVERSITY DESIGN CLUB", "Monetizing students creativity, UM6P's first Graphic Design club: a fresh alternative to traditional design agencies.."]
 
   ];
 
@@ -125,8 +125,8 @@ function UdcProject() {
         <div>
         <div >
             <div className={styles.topText}>
-              <h1 style={{  marginBottom:"10%", margin:"10%", color:"white"}}>{textElements[currentIndex][0]}</h1>
-              <p style={{  margin:"10%", color:"white"}}>{textElements[currentIndex][1]}</p>
+              <h1 style={{  marginBottom:"10%", margin:"13%", color:"white", marginTop:"20%"}}>{textElements[currentIndex][0]}</h1>
+              <p style={{  margin:"14%", color:"white"}}>{textElements[currentIndex][1]}</p>
             </div>
             {/* <div className={styles.bottomText}>
               <p>{textElements[currentIndex][1]}</p>
