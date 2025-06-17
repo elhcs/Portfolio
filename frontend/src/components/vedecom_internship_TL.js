@@ -29,7 +29,7 @@ const Timeline = () => {
 
     .timeline-container {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: linear-gradient(0deg, black 0%, black 100%);
       min-height: 100vh;
       padding: 20px;
       overflow-x: hidden;
@@ -428,12 +428,7 @@ const Timeline = () => {
         <div className={`slide ${currentSlide === 1 ? 'active' : ''}`}>
           <div className="container">
             <div className="navigation">
-              <button 
-                className={`nav-btn ${currentSlide === 1 ? 'active' : ''}`} 
-                onClick={() => showSlide(1)}
-              >
-                Vue d'ensemble
-              </button>
+
               <button 
                 className={`nav-btn ${currentSlide === 2 ? 'active' : ''}`} 
                 onClick={() => showSlide(2)}
@@ -545,12 +540,8 @@ const Timeline = () => {
             </button>
             
             <div className="navigation">
-              <button className="nav-btn" onClick={() => showSlide(1)}>
-                Vue d'ensemble
-              </button>
-              <button className="nav-btn active">
-                Détails Mai-Juin
-              </button>
+
+
             </div>
 
             <h1 className="timeline-title">🔍 Zoom : Période Mai-Juin (Détails)</h1>
