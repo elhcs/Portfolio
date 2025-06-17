@@ -125,7 +125,7 @@ function UdcProject() {
         <div>
         <div >
             <div className={styles.topText}>
-              <h1 style={{  marginBottom:"10%", margin:"13%", color:"white", marginTop:"20%"}}>{textElements[currentIndex][0]}</h1>
+              <h1 style={{  marginBottom:"10%", margin:"14%", color:"white", marginTop:"17%"}}>{textElements[currentIndex][0]}</h1>
               <p style={{  margin:"14%", color:"white"}}>{textElements[currentIndex][1]}</p>
             </div>
             {/* <div className={styles.bottomText}>
