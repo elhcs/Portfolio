@@ -62,7 +62,7 @@ const MyComponent = () => {
               </div>
               <h3 className={styles.cardTitle}>{title}</h3>
               <p className={styles.cardDescription}>{description}</p>
-              <img style={{ width: '100%' }} src={"testid.png"} alt={"Ds"} />
+              <img style={{ width: '100%' }} src={"https://i.pinimg.com/1200x/3d/5a/13/3d5a13d9ffffdd75b7f837bc97eeaf06.jpg"} alt={"Ds"} />
               
             </div>
           </div>
