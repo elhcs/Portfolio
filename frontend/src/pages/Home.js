@@ -30,7 +30,7 @@ const MyComponent = () => {
   
   const [currentIndex, setCurrentIndex] = useState(0);
   const [imageList, setImageList] = useState([
-    "https://i.ibb.co/pJLyjpM/ezgif-com-video-to-gif-converted.gif","https://portfoliox-vdrp.onrender.com/public/images/f987ac3c-0c6b-49b3-b016-52d00a5d755a-1732460993710.png","elxdesign.gif"
+    "https://i.ibb.co/pJLyjpM/ezgif-com-video-to-gif-converted.gif","","elxdesign.gif"
     // Add more image URLs as needed
   ]);
 
@@ -55,7 +55,7 @@ const MyComponent = () => {
 
   return (
     <div>
-      <div className={styles.container}>
+      <div className={styles.container} style={{ height:'750px'}}>
         <div className={styles.column}>
         <div className={`${styles.textWrapper} ${styles.fade} ${currentIndex === 0 ? styles.fadeActive : ''}`}>
         <div className={styles.topText}>
@@ -77,8 +77,11 @@ const MyComponent = () => {
           </div>
         </div>
         <div className={`${styles.column} ${styles.fade} ${currentIndex === 0 ? styles.fadeActive : ''}`}>
-
-          <img src={imageList[currentIndex]} style={{ width:'100%'}} alt="Placeholder" />
+          {currentIndex === 1 ? (
+            <iframe id="viewer" width="100%" height="750px" allow="fullscreen; xr-spatial-tracking" src="https://superspl.at/s?id=bb29f70a"></iframe>
+          ) : (
+            <img src={imageList[currentIndex]} style={{ width: '100%' }} alt="Placeholder" />
+          )}
         </div>
       </div>
 

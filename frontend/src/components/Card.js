@@ -1,10 +1,17 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './Articlecomp.module.css'; 
-// Helper function to determine if the URL is a video
+
 const isVideo = (url) => /\.(mp4|webm)$/i.test(url);
 
-const Card = ({ title, description, tag, imageUrl, article }) => {
+const Card = ({
+  title,
+  description,
+  tag,
+  imageUrl,
+  article,
+  textColor = '#333', // default color
+}) => {
   return (
     <div className={styles.card}>
       <NavLink to={article}>
@@ -29,8 +36,12 @@ const Card = ({ title, description, tag, imageUrl, article }) => {
               {tag}
             </span>
           </div>
-          <h3 className={styles.cardTitle}>{title}</h3>
-          <p className={styles.cardDescription}>{description}</p>
+          <h3 className={styles.cardTitle} style={{ color: textColor }}>
+            {title}
+          </h3>
+          <p className={styles.cardDescription} style={{ color: textColor }}>
+            {description}
+          </p>
         </div>
       </NavLink>
     </div>

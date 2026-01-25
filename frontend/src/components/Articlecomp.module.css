@@ -1,5 +1,5 @@
 .newReleases {
-  background-color: #ffffff; /* or the main background color you have */
+  background-color: var(--bg-color, #ffffff);
   padding: 3rem;
   font-family: 'Your Font', sans-serif; /* Replace with your font */
 }
@@ -58,6 +58,7 @@ ul li {
   
   
 .cardContainer {
+
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start; /* Align to the start of the container */

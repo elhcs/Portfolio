@@ -1,0 +1,49 @@
+/* MyComponentAnimations.css */
+
+/* Define the keyframe animation for sliding up from the bottom */
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%); /* Start 100% of its own height below its final position */
+  }
+  100% {
+    transform: translateY(0);    /* End at its natural position */
+  }
+}
+
+/* Apply the animation to elements with the 'slide-in' class */
+.slide-in {
+  animation: slideUp 0.8s ease-out forwards; /* Use the new slideUp keyframes */
+}
+
+/* Add delays for sequential animation */
+.delay-1 {
+  animation-delay: 0.2s;
+}
+
+.delay-2 {
+  animation-delay: 0.4s;
+}
+
+/* REVISED bw-hover: Only applies filter, not width */
+.bw-hover {
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+}
+
+.bw-hover:hover {
+  filter: grayscale(0%);
+}
+
+/* --- New Styles for Matrix Decryption Effect --- */
+
+/* Base style for elements that will decrypt */
+.decrypting-text {
+/* You might want a monospaced font for a more authentic Matrix feel */
+font-family: 'monospace', 'Courier New', Courier, sans-serif;
+letter-spacing: 0.05em; /* A little spacing helps with the effect */
+}
+
+/* Hide the initial content while it's "decrypting" */
+.decrypting-hidden {
+visibility: hidden; /* Hide original text while scrambled */
+}
