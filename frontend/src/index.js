@@ -18,7 +18,7 @@ import Article from "./pages/Article";
 import Shortfilm from "./pages/Shortfilm";
 import About from "./pages/About";
 import Newhome from "./pages/newhome";
-import Mathpbmartc from "./pages/Mathpbmartc";
+
 import RequireAuth from "./components/auth/RequireAuth";
 import RequireSudo from "./components/auth/RequireSudo";
 

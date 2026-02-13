@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Nopage.css";
+import GaussianTextBackground from "../components/internship_timeline";
 
 function Nopage() {
   return (
@@ -10,6 +11,7 @@ function Nopage() {
       No page found
       <br />
       <NavLink to="/">Go to the home page</NavLink>
+      <GaussianTextBackground/>
     </div>
   );
 }

@@ -55,7 +55,7 @@ const MyComponent = () => {
 
   return (
     <div>
-      <div className={styles.container} style={{ height:'750px'}}>
+      <div className={styles.container} style={{}}>
         <div className={styles.column}>
         <div className={`${styles.textWrapper} ${styles.fade} ${currentIndex === 0 ? styles.fadeActive : ''}`}>
         <div className={styles.topText}>

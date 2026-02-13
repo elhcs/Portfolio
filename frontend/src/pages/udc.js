@@ -14,6 +14,7 @@ import Card from "../components/Card";
 import Blackbords from "../components/Blackbords";
 import NewReleases from "../components/articlescomponent.js";
 import Articlecomp from "../components/articlescomponent";
+import GaussianTextBackground from "../components/internship_timeline";
 
 
 
@@ -143,8 +144,18 @@ function UdcProject() {
           </div>
         </div>
         <div>
+        // Only adjust these props when using the component:
+<GaussianTextBackground
+  width={700}         // container width
+  height={750}        // container height
+  pixelSize={40}      // bigger symbols!
+  pixelSpacing={50}   // spacing between symbol positions
+  sigma={100}         // wider Gaussian spread
+  trailLength={12}    // longer motion trail
+  trailDecay={0.8}    // slower decay for smoother trail
+  growthFactor={0.2}  // slower particle appearance
+/>
 
-          <img src={imageList[currentIndex]} style={{ width:'100%'}} alt="Placeholder" />
         </div>
       </div>
         {/* Conditional rendering based on isMobile state */}
