@@ -35,7 +35,9 @@ function Navbar() {
       className="navbar navbar-expand-lg navbar-light"
       style={{
         backgroundColor: isAboutPage ? "white" : "black",
-        borderBottom: isAboutPage ? "3px solid white" : "none"
+        borderBottom: isAboutPage ? "3px solid white" : "none",
+        paddingTop: `max(10px, env(safe-area-inset-top))`,
+        margin: 0,
       }}
     >
       <div className="container-fluid">

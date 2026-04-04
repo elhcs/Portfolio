@@ -13,6 +13,10 @@
   margin-top: 10px;
 }
 
+.navbar {
+  padding-top: max(10px, env(safe-area-inset-top)) !important;
+}
+
 /* Styling for Navigation List */
 .nav-list {
   font-family: 'Helvetica', sans-serif; /* Added fallback font */
