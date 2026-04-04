@@ -160,7 +160,10 @@ ul li {
   background-color: black;
   height: auto;
   flex-direction: row;
-  padding-top: max(20px, env(safe-area-inset-top));
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 .containerMobile {
@@ -174,20 +177,17 @@ ul li {
   color: white;
   position: relative;
   width: auto;
-}
-
-
-
-.bottomText {
-  flex: 1;
-  padding: 15%;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .indicatorContainer {
   position: absolute;
   bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  width: 100%;
+  width: auto;
   justifyContent: center;
 }
 
@@ -214,15 +214,21 @@ ul li {
 
 
 @media (max-width: 599px) {
-  
   .container {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
+  
+  .container > div {
+    flex: 1 1 auto;
+    width: 100% !important;
+  }
+  
   .cardContainer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Align to the start of the container */
-    align-items: stretch; /* Stretch the items to fill the container */
+    justify-content: center;
+    align-items: stretch;
+  }
     gap: 1.5rem; /* Adjust the space between the cards */
   }
 
@@ -232,7 +238,7 @@ ul li {
     max-width: 440px; /* Maximum width of the card */
     /* Rest of your card styling */
   }
-}
+
 
 
 

@@ -80,6 +80,7 @@ const cardsData = [
 function UdcProject() {
   
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
   const [imageList, setImageList] = useState([
     "elxdesign.gif"
     // Add more image URLs as needed
@@ -89,6 +90,13 @@ function UdcProject() {
     ["UM6P UNIVERSITY DESIGN CLUB", "Monetizing students creativity, UM6P's first Graphic Design club: a fresh alternative to traditional design agencies.."]
 
   ];
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -123,7 +131,7 @@ function UdcProject() {
     return (
       <div>
        <div className={styles.container}>
-        <div>
+        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
         <div >
             <div className={styles.topText}>
               <h1 style={{  marginBottom:"10%", margin:"14%", color:"white", marginTop:"17%"}}>{textElements[currentIndex][0]}</h1>
@@ -143,9 +151,9 @@ function UdcProject() {
             ))}
           </div>
         </div>
-        <div>
+        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '2%' }}>
         // Only adjust these props when using the component:
-<GaussianTextBackground
+{/* <GaussianTextBackground
   width={700}         // container width
   height={750}        // container height
   pixelSize={40}      // bigger symbols!
@@ -154,7 +162,7 @@ function UdcProject() {
   trailLength={12}    // longer motion trail
   trailDecay={0.8}    // slower decay for smoother trail
   growthFactor={0.2}  // slower particle appearance
-/>
+/> */}<img src={"ezgif-com-video-to-gif-converted-2.gif"} style={{ width:'100%', maxWidth: '100%', height: 'auto', objectFit: 'contain', ...(isMobile && { marginRight: '20%' }) }} alt="Placeholder" />
 
         </div>
       </div>
@@ -172,7 +180,7 @@ function UdcProject() {
         <h2 className={styles.headertitle}>Our story</h2>
         <a href="/stories" className={styles.allStoriesLink}>View all members</a>
              </header>
-             <p className={styles.headertitle}>Founded at the exciting Mohammed VI Polytechnic University in 2023, the University Design Club (UDC), previously ELX, began as a small initiative by a group of passionate design enthusiasts led by El Houssaine CHAHBOUN, our first President. Inspired by the need for a collaborative space where creativity, innovation, and learning could thrive, UDC was established to empower students to turn their design dreams into reality.</p>
+             <p className={styles.cardDescription}>Founded at the exciting Mohammed VI Polytechnic University in 2023, the University Design Club (UDC), previously ELX, began as a small initiative by a group of passionate design enthusiasts led by El Houssaine CHAHBOUN, our first President. Inspired by the need for a collaborative space where creativity, innovation, and learning could thrive, UDC was established to empower students to turn their design dreams into reality.</p>
       
             
     </section>
@@ -182,7 +190,7 @@ function UdcProject() {
 
         <h2 className={styles.headertitle}>Our Purpose</h2>
                     </header>
-             <p className={styles.headertitle}>Design is more than aesthetics—it's a tool for solving problems, expressing ideas, and shaping the future. UDC exists to provide a platform for students across all disciplines to explore, develop, and showcase their design skills. By connecting aspiring designers with resources, mentorship, and real-world opportunities, we aim to foster a community that celebrates creativity and innovation.</p>
+             <p className={styles.cardDescription}>Design is more than aesthetics—it's a tool for solving problems, expressing ideas, and shaping the future. UDC exists to provide a platform for students across all disciplines to explore, develop, and showcase their design skills. By connecting aspiring designers with resources, mentorship, and real-world opportunities, we aim to foster a community that celebrates creativity and innovation.</p>
       
             
     </section>
@@ -212,7 +220,7 @@ function UdcProject() {
         <h2 className={styles.headertitle}>Why UDC Matters</h2>
         <a href="/stories" className={styles.allStoriesLink}>Sponser Us</a>
              </header>
-             <p className={styles.headertitle}>In an era where design is shaping everything from technology to society, UDC plays a crucial role in bridging the gap between academic knowledge and practical application. What sets UDC apart is its ability to transform students’ hobbies into lucrative opportunities. By leveraging their skills to contribute to projects of all scales—from assisting other university clubs with their branding to designing for major campus events and department initiatives—our members gain invaluable experience while creating meaningful, professional-grade work.</p>
+             <p className={styles.cardDescription}>In an era where design is shaping everything from technology to society, UDC plays a crucial role in bridging the gap between academic knowledge and practical application. What sets UDC apart is its ability to transform students’ hobbies into lucrative opportunities. By leveraging their skills to contribute to projects of all scales—from assisting other university clubs with their branding to designing for major campus events and department initiatives—our members gain invaluable experience while creating meaningful, professional-grade work.</p>
       
             
     </section>
@@ -244,7 +252,7 @@ function UdcProject() {
         <h2 className={styles.headertitle}>Join The Club</h2>
         <a href="/stories" className={styles.allStoriesLink}>Join Us</a>
              </header>
-             <p className={styles.headertitle}>Whether you're an experienced designer or just starting your creative journey, UDC welcomes you. Together, we’re shaping the future of design and turning passions into professions.</p>
+             <p className={styles.cardDescription}>Whether you're an experienced designer or just starting your creative journey, UDC welcomes you. Together, we’re shaping the future of design and turning passions into professions.</p>
 
       
             

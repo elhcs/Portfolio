@@ -1,5 +1,14 @@
 /* Navbar.css */
 
+.navbar {
+  padding-bottom: 1rem !important;
+}
+
+.navbar-expand-lg .container-fluid {
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
 /* Styling for Logo Text */
 #LogoText {
   font-family: 'Helvetica', sans-serif; /* Added fallback font */
@@ -11,10 +20,6 @@
   align-items: center;
   margin-left: 10px;
   margin-top: 10px;
-}
-
-.navbar {
-  padding-top: max(10px, env(safe-area-inset-top)) !important;
 }
 
 /* Styling for Navigation List */
