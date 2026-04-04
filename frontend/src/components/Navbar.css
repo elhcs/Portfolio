@@ -1,12 +1,17 @@
 /* Navbar.css */
 
 .navbar {
+  padding-top: max(10px, env(safe-area-inset-top)) !important;
   padding-bottom: 1rem !important;
+  margin-top: 0;
+  position: relative;
 }
 
 .navbar-expand-lg .container-fluid {
-  padding-left: env(safe-area-inset-left);
-  padding-right: env(safe-area-inset-right);
+  padding-left: max(1rem, env(safe-area-inset-left));
+  padding-right: max(1rem, env(safe-area-inset-right));
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 /* Styling for Logo Text */

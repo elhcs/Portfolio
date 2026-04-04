@@ -36,9 +36,6 @@ function Navbar() {
       style={{
         backgroundColor: isAboutPage ? "white" : "black",
         borderBottom: isAboutPage ? "3px solid white" : "none",
-        paddingTop: `max(10px, env(safe-area-inset-top))`,
-        paddingLeft: `env(safe-area-inset-left)`,
-        paddingRight: `env(safe-area-inset-right)`,
       }}
     >
       <div className="container-fluid">
