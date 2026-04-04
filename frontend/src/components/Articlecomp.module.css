@@ -160,6 +160,7 @@ ul li {
   background-color: black;
   height: auto;
   flex-direction: row;
+  padding-top: max(20px, env(safe-area-inset-top));
 }
 
 .containerMobile {
