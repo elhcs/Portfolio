@@ -30,7 +30,7 @@ const MyComponent = () => {
   
   const [currentIndex, setCurrentIndex] = useState(0);
   const [imageList, setImageList] = useState([
-    "https://i.ibb.co/pJLyjpM/ezgif-com-video-to-gif-converted.gif","","elxdesign.gif"
+    "ezgif-com-video-to-gif-converted-2.gif","","elxdesign.gif"
     // Add more image URLs as needed
   ]);
 

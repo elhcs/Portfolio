@@ -74,21 +74,26 @@ const MyComponent = () => {
   );
 
   return (
-    <div>
+    <div style={{ overflow: 'hidden', width: '100%' }}>
       {/* Container for columns */}
       <div
         style={{
           display: isMobile ? 'block' : 'flex',
           flexDirection: isMobile ? 'column' : 'row',
+          width: '100%',
+          overflow: 'hidden',
         }}
       >
         {/* Column 1 */}
         <div
           style={{
             overflowY: 'auto',
+            overflowX: 'hidden',
             padding: isMobile ? '5%' : '1%',
             borderTop: '2.5px solid black',
             maxHeight: isMobile ? 'none' : '664px',
+            width: '100%',
+            boxSizing: 'border-box',
           }}
         >
           <div className={styles.card_elh}>
@@ -117,7 +122,9 @@ const MyComponent = () => {
                   color: 'black',
                   fontSize: '20px',
                   textAlign: 'left',
-                  maxWidth: '2620px',
+                  maxWidth: '100%',
+                  wordWrap: 'break-word',
+                  overflowWrap: 'break-word',
                 }}
               >
                 {description}
@@ -140,11 +147,17 @@ const MyComponent = () => {
               <br />
               <br />
 
-              <div style={{ marginTop: 'auto' }}>
+              <div style={{ marginTop: 'auto', overflow: 'hidden' }}>
                 <img
-                  style={{ marginLeft: '-80%', width: '18%' }}
+                  style={{ 
+                    marginLeft: '0',
+                    width: isMobile ? '95%' : '18%',
+                    maxWidth: '100%',
+                    height: 'auto',
+                    display: 'block',
+                  }}
                   src="testid.png"
-                  alt="Ds"
+                  alt="Profile"
                 />
               </div>
 
