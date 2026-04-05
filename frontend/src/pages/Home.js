@@ -59,8 +59,8 @@ const MyComponent = () => {
         <div className={styles.column}>
         <div className={`${styles.textWrapper} ${styles.fade} ${currentIndex === 0 ? styles.fadeActive : ''}`}>
         <div className={styles.topText}>
-              <h1 style={{  marginBottom:"10%", margin:"10%", color:"white"}}>{textElements[currentIndex][0]}</h1>
-              <p style={{  margin:"10%", color:"white"}}>{textElements[currentIndex][1]}</p>
+              <h1 style={{  marginBottom:"10%", margin:"10%", color:"white", ...(isMobile && { marginTop: '-30%',margin: '-10%' })}}>{textElements[currentIndex][0]}</h1>
+              <p style={{  margin:"10%", color:"white", ...(isMobile && { marginTop: '20%',margin: '0%', marginBottom:'24%' })}}>{textElements[currentIndex][1]}</p>
             </div>
             {/* <div className={styles.bottomText}>
               <p>{textElements[currentIndex][1]}</p>
@@ -109,7 +109,7 @@ const MyComponent = () => {
           <h2 className={styles.headertitle}>University Design Club</h2>
           <a href="/stories" className={styles.allStoriesLink}> Join us </a>
         </header>
-      </section> <video src={"https://elx.onrender.com/udcvideo.mp4"}className={styles.unidesclub} autoPlay muted loop controls/>
+      </section> <video src={"https://elx.onrender.com/udcvideo.mp4"}  className={styles.unidesclub} autoPlay muted loop controls/>
 
       <Blackbords />
 

@@ -134,8 +134,8 @@ function UdcProject() {
         <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
         <div >
             <div className={styles.topText}>
-              <h1 style={{  marginBottom:"10%", margin:"14%", color:"white", marginTop:"17%"}}>{textElements[currentIndex][0]}</h1>
-              <p style={{  margin:"14%", color:"white"}}>{textElements[currentIndex][1]}</p>
+              <h1 style={{  marginBottom:"10%", margin:"14%", color:"white", marginTop:"17%", ...(isMobile && { marginTop: '-5%',margin: '0%' }) }}>{textElements[currentIndex][0]}</h1>
+              <p style={{  margin:"14%", color:"white", ...(isMobile && { marginTop: '10%',margin: '0%', marginBottom:'23%' })}}>{textElements[currentIndex][1]}</p>
             </div>
             {/* <div className={styles.bottomText}>
               <p>{textElements[currentIndex][1]}</p>
@@ -162,7 +162,7 @@ function UdcProject() {
   trailLength={12}    // longer motion trail
   trailDecay={0.8}    // slower decay for smoother trail
   growthFactor={0.2}  // slower particle appearance
-/> */}<img src={"ezgif-com-video-to-gif-converted-2.gif"} style={{ width:'100%', maxWidth: '100%', height: 'auto', objectFit: 'contain', ...(isMobile && { marginRight: '20%' }) }} alt="Placeholder" />
+/> */}<img src={"ezgif-com-video-to-gif-converted-2.gif"} style={{ marginTop: '-5%', width:'100%', maxWidth: '100%', height: 'auto', objectFit: 'contain', ...(isMobile && { marginRight: '20%' }) }} alt="Placeholder" />
 
         </div>
       </div>

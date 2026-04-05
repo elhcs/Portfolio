@@ -29,7 +29,7 @@ function Feed(props) {
 
   if (filteredProjects.length > 0 || !loading) {
     return (
-      <div>
+      <div style={{backgroundColor: "white"}}>
         {filteredProjects.map((project, i) => {
           const isImg = project.imgs.length > 0 ? true : false;
           const isClickImg = project.imgs.length >= 2 ? true : false;

@@ -5,9 +5,7 @@ import Navbar from "../components/Navbar";
 function Layout() {
   return (
     <div>
-      <header>
         <Navbar />
-      </header>
       <Outlet />
     </div>
   );

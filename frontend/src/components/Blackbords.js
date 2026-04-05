@@ -4,7 +4,7 @@ import "./Blackbords.css";
 
 const Blackbords = () => {
   return (
-    <div className="video-list">
+    <div className="video-list" style={{backgroundColor:"white"}}>
       <video controls autoPlay muted>
         <source src="https://elx.onrender.com/elxpod.mp4" type="video/mp4" />
         Your browser does not support the video tag.
