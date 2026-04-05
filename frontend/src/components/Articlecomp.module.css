@@ -1,7 +1,13 @@
 .newReleases {
   background-color: var(--bg-color, #ffffff);
-  padding: 3rem;
+  padding: 1rem;
   font-family: 'Your Font', sans-serif; /* Replace with your font */
+}
+/* Desktop */
+@media (min-width: 768px) {
+  .newReleases {
+    padding: 3rem;
+  }
 }
 
 .header {
@@ -17,45 +23,22 @@
     font-weight: bolder;
     font-size: 40px;
     text-align: left;
+    margin-top: 10px;
+
 
 }
-ul {
-  list-style-type: none; /* Remove default list style */
-  padding-left: 0; /* Remove padding */
-  margin-left: 33px;
-  margin-bottom: 30px; /* Add margin at the bottom */
-}
 
-ul li {
-  font-size: 16px; /* Set font size for list items */
-  color: #000000; /* Keep the original color */
-  margin-bottom: 7px; /* Add some spacing between list items */
-  margin-left: 14px;
-  text-align: left; /* Align text to the left */
-  position: relative;
-}
+
 
 
   
-  .allStoriesLink::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px; /* Height of the underline */
-    bottom: -3px; /* Positioning the underline just below the text */
-    left: 0;
-    background-color: #1DB954; /* Color of the underline */
-    transition: width 0.3s ease-in-out; /* Animation for the underline */
-  }
+
   
   .allStoriesLink:hover {
     color: #1DB954; /* Text color on hover */
   }
   
-  .allStoriesLink:hover::after {
-    width: 100%; /* Full width on hover */
-  }
-  
+
   
 .cardContainer {
 
@@ -141,6 +124,7 @@ ul li {
   font-size: 1rem;
   color: #666;
   text-align: left;
+
 }
 
 .featuredTag {
@@ -177,17 +161,20 @@ ul li {
   color: white;
   position: relative;
   width: auto;
-  box-sizing: border-box;
-  overflow: hidden;
+}
+
+
+
+.bottomText {
+  flex: 1;
+  padding: 15%;
 }
 
 .indicatorContainer {
   position: absolute;
   bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
-  width: auto;
+  width: 100%;
   justifyContent: center;
 }
 
@@ -214,21 +201,15 @@ ul li {
 
 
 @media (max-width: 599px) {
+  
   .container {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
-  
-  .container > div {
-    flex: 1 1 auto;
-    width: 100% !important;
-  }
-  
   .cardContainer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;
-  }
+    justify-content: center; /* Align to the start of the container */
+    align-items: stretch; /* Stretch the items to fill the container */
     gap: 1.5rem; /* Adjust the space between the cards */
   }
 
@@ -238,7 +219,7 @@ ul li {
     max-width: 440px; /* Maximum width of the card */
     /* Rest of your card styling */
   }
-
+}
 
 
 

@@ -178,7 +178,7 @@ function UdcProject() {
       <header className={styles.header}>
 
         <h2 className={styles.headertitle}>Our story</h2>
-        <a href="/stories" className={styles.allStoriesLink}>View all members</a>
+
              </header>
              <p className={styles.cardDescription}>Founded at the exciting Mohammed VI Polytechnic University in 2023, the University Design Club (UDC), previously ELX, began as a small initiative by a group of passionate design enthusiasts led by El Houssaine CHAHBOUN, our first President. Inspired by the need for a collaborative space where creativity, innovation, and learning could thrive, UDC was established to empower students to turn their design dreams into reality.</p>
       
@@ -272,7 +272,7 @@ const gridContainerStyle = {
   display: "grid",
   gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
   gap: "20px",
-  padding: "20px",
+  padding: "1rem",
   marginTop:"-20px",
   marginLeft:"25px"
 };

@@ -1,17 +1,23 @@
 /* Navbar.css */
 
 .navbar {
-  padding-top: max(10px, env(safe-area-inset-top)) !important;
+  padding-top: max(20px, env(safe-area-inset-top)) !important;
   padding-bottom: 1rem !important;
-  margin-top: 0;
+  padding-left: max(1rem, env(safe-area-inset-left)) !important;
+  padding-right: max(1rem, env(safe-area-inset-right)) !important;
+  margin: 0 !important;
   position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: env(safe-area-inset-top);
 }
 
 .navbar-expand-lg .container-fluid {
-  padding-left: max(1rem, env(safe-area-inset-left));
-  padding-right: max(1rem, env(safe-area-inset-right));
+  padding-left: 1rem;
+  padding-right: 1rem;
   padding-top: 0;
   padding-bottom: 0;
+  max-width: 100%;
 }
 
 /* Styling for Logo Text */
