@@ -56,6 +56,7 @@ root.render(
         <Route path="/" element={<Layout />}>
           {aboutOnly ? (
             <>
+              <Route index element={<Navigate to="/about" replace />} />
               <Route path="about" element={<About />} />
               <Route path="*" element={<Navigate to="/about" replace />} />
             </>
