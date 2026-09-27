@@ -1,4 +1,15 @@
-# Emines-Graphic-Design
+# IMPORTANT: Public website temporarily shows ONLY the About page
+
+The full portfolio is being revised locally. Production builds currently redirect
+every URL to `/about` and hide the login link. The other pages remain in the code.
+
+**Read [IMPORTANT — About-only mode and restoring the full website](IMPORTANT-ABOUT-ONLY-MODE.md)
+before deploying or restoring the portfolio.**
+
+Normal local development (`npm start`) still shows the full website. A successful
+Render deployment of a production build enables About-only mode by default.
+
+## Emines-Graphic-Design
 
 Dynamic website of the EMINES Graphic Design club with an administration interface.
 Public Portfolio for EGD Club Student's Projects

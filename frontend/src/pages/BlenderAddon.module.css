@@ -1,0 +1,36 @@
+.page { background: #fff; color: #000; font-family: Helvetica, Arial, sans-serif; }
+.page, .page * { box-sizing: border-box; }
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 88px); padding: clamp(40px, 6vw, 88px) clamp(20px, 5vw, 76px); background: #000; color: #fff; }
+.page .kicker { display: block; margin: 0 0 24px; padding: 0; font-size: 12px; font-weight: 700; line-height: 1.5; text-transform: uppercase; text-align: left; }
+.hero h1 { margin: 0; padding: 0; font-size: clamp(40px, 5.5vw, 80px); font-weight: 300; line-height: 1.04; letter-spacing: -.035em; text-align: left; }
+.heroSummary { align-self: end; }
+.heroSummary p { margin: 0 0 32px; padding: 0; font-size: clamp(18px, 1.8vw, 24px); line-height: 1.5; text-align: left; }
+.heroSummary a { display: flex; justify-content: space-between; padding: 18px 0; border-top: 1px solid #777; color: #fff; text-decoration: none; font-size: 14px; }
+.heroSummary a span { margin: 0; font-size: 24px; line-height: 1; }
+.page .version { display: block; margin: 20px 0 0; font-size: 12px; color: #bbb; text-align: left; }
+.layout { display: grid; grid-template-columns: minmax(150px, .65fr) minmax(0, 2fr); gap: clamp(32px, 6vw, 88px); padding: clamp(36px, 6vw, 80px) clamp(20px, 5vw, 76px); }
+.index { position: sticky; top: 100px; align-self: start; display: flex; flex-direction: column; }
+.index a { padding: 12px 0; border-bottom: 1px solid #ccc; color: #000; font-size: 14px; text-decoration: none; text-align: left; }
+.article { min-width: 0; }
+.article h2 { margin: 48px 0 20px; padding: 24px 0 0; border-top: 1px solid #000; font-size: clamp(25px, 2.8vw, 36px); font-weight: 600; line-height: 1.2; letter-spacing: -.02em; text-align: left; scroll-margin-top: 100px; }
+.article h2:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
+.article p, .article li { font-size: 17px; line-height: 1.7; text-align: left; }
+.article p { margin: 0 0 20px; padding: 0; }
+.article ul { margin: 0 0 24px; padding-left: 22px; }
+.article li { margin-bottom: 10px; }
+.article a { color: #000; text-underline-offset: 4px; overflow-wrap: anywhere; }
+.articleImage { display: block; width: 100%; height: auto; margin: 28px 0; border: 1px solid #000; }
+.article .repository { display: flex; justify-content: space-between; gap: 20px; padding: 20px; border: 1px solid #000; font-size: 15px; text-decoration: none; }
+.repository span { margin: 0; }
+.article code { overflow-wrap: anywhere; }
+.article :global(.code-wrapper) { width: 100%; max-width: 100%; margin: 24px 0; border-radius: 0; }
+.article :global(.code-block) { max-width: 100%; overflow-x: auto; text-align: left; }
+.article :global(.language-label) { margin: 0; }
+.article .note { font-size: 13px; color: #555; }
+.page a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.page a:focus-visible { outline: 2px solid #888; outline-offset: 5px; }
+@media (max-width: 760px) {
+  .hero, .layout { grid-template-columns: minmax(0, 1fr); }
+  .index { position: static; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 20px; }
+  .index .kicker { grid-column: 1 / -1; }
+}

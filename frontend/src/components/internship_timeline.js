@@ -1,8 +1,9 @@
 import React, { useRef, useEffect, useState } from "react";
 
 const GaussianTextBackground = ({
-  width = 750,
-  height = 600,
+  width: initialWidth = 750,
+  height: initialHeight = 600,
+  responsive = false,
   textLines = [],
   pixelSpacing = 50,
   pixelSize = 40, // bigger symbols
@@ -17,8 +18,26 @@ const GaussianTextBackground = ({
   growthFactor = 0.5,
   persistenceFrames = 230, // keep particle even if influence drops
 }) => {
+  const containerRef = useRef(null);
   const canvasRef = useRef(null);
-  const [mousePos, setMousePos] = useState({ x: width / 2, y: height / 2 });
+  const [size, setSize] = useState({ width: initialWidth, height: initialHeight });
+  const width = responsive ? size.width : initialWidth;
+  const height = responsive ? size.height : initialHeight;
+  const mousePos = useRef({ x: width / 2, y: height / 2 });
+
+  useEffect(() => {
+    if (!responsive) return;
+    const observer = new ResizeObserver(([entry]) => {
+      const width = Math.max(1, Math.round(entry.contentRect.width));
+      const height = Math.max(1, Math.round(entry.contentRect.height));
+      setSize({ width, height });
+      mousePos.current = { x: width / 2, y: height / 2 };
+      trailRef.current = [];
+      particleStateRef.current.clear();
+    });
+    observer.observe(containerRef.current);
+    return () => observer.disconnect();
+  }, [responsive]);
 
   const img1Ref = useRef(null);
   const img2Ref = useRef(null);
@@ -38,7 +57,10 @@ const GaussianTextBackground = ({
 
   const handleMouseMove = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
-    setMousePos({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+    mousePos.current = {
+      x: (e.clientX - rect.left) * width / rect.width,
+      y: (e.clientY - rect.top) * height / rect.height,
+    };
   };
 
   useEffect(() => {
@@ -56,10 +78,11 @@ const GaussianTextBackground = ({
     }
 
     let lastTime = 0;
+    let animationFrame;
 
     const render = (time) => {
       if (time - lastTime < updateInterval) {
-        requestAnimationFrame(render);
+        animationFrame = requestAnimationFrame(render);
         return;
       }
       lastTime = time;
@@ -69,12 +92,12 @@ const GaussianTextBackground = ({
       ctx.fillRect(0, 0, width, height);
 
       if (!img1Ref.current || !img2Ref.current) {
-        requestAnimationFrame(render);
+        animationFrame = requestAnimationFrame(render);
         return;
       }
 
       // Update mouse trail
-      trailRef.current.push({ ...mousePos });
+      trailRef.current.push({ ...mousePos.current });
       if (trailRef.current.length > trailLength) trailRef.current.shift();
 
       let particlesThisFrame = 0;
@@ -127,12 +150,12 @@ const GaussianTextBackground = ({
         }
       });
 
-      requestAnimationFrame(render);
+      animationFrame = requestAnimationFrame(render);
     };
 
-    requestAnimationFrame(render);
+    animationFrame = requestAnimationFrame(render);
+    return () => cancelAnimationFrame(animationFrame);
   }, [
-    mousePos,
     width,
     height,
     pixelSpacing,
@@ -151,14 +174,16 @@ const GaussianTextBackground = ({
 
   return (
     <div
+      ref={containerRef}
       style={{
         position: "relative",
-        width,
-        height,
+        width: responsive ? "100%" : width,
+        height: responsive ? "100%" : height,
         overflow: "hidden",
         display: "inline-block",
       }}
-      onMouseMove={handleMouseMove}
+      onPointerMove={handleMouseMove}
+      onPointerDown={handleMouseMove}
     >
       <canvas
         ref={canvasRef}

@@ -1,27 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import "./Project.css";
-import Informationsdesigners from "../components/Informationsdesigners";
-import "../components/Navbar";
-import Contact from "../components/Contact";
-import axios from "axios";
-import { useDispatch } from "react-redux";
-import { setlight, setdark } from "../reducers/themeReducer";
-import image from "./394709091_359688783151169_5143872337014891556_n.mp4";
-import Footer from "../components/footer_new";
-import styles from '../components/Articlecomp.module.css';
-import Card from "../components/Card";
-import Blackbords from "../components/Blackbords";
-import NewReleases from "../components/articlescomponent.js";
-import Articlecomp from "../components/articlescomponent";
-import GaussianTextBackground from "../components/internship_timeline";
-
-
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { setlight } from '../reducers/themeReducer';
+import Footer from '../components/footer_new';
+import styles from './Udc.module.css';
 
 const instagramURLs = [
   "https://www.instagram.com/reel/CgkZG9nDgaN/",
   "https://www.instagram.com/p/ChLVO2rjilt/",
-  "https://www.instagram.com/p/CRHtD4_HbiF/",
   "https://www.instagram.com/p/CTGBzlgjGQD/"
 ];
 
@@ -78,209 +63,101 @@ const cardsData = [
   },
 ];
 function UdcProject() {
-  
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
-  const [imageList, setImageList] = useState([
-    "elxdesign.gif"
-    // Add more image URLs as needed
-  ]);
-
-  const textElements = [
-    ["UM6P UNIVERSITY DESIGN CLUB", "Monetizing students creativity, UM6P's first Graphic Design club: a fresh alternative to traditional design agencies.."]
-
-  ];
-
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % textElements.length);
-    }, 12000); // Changes text every 3000 milliseconds (3 seconds)
-
-    return () => clearInterval(intervalId); // Cleanup the interval on component unmount
-  }, []);
-
-  const navigateTo = index => {
-    setCurrentIndex(index);
-  };
-  
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(setlight());
-    // Load Instagram embed script
     if (window.instgrm) {
       window.instgrm.Embeds.process();
-    } else {
-      const script = document.createElement("script");
-      script.src = "https://www.instagram.com/embed.js";
+    } else if (!document.querySelector('script[src="https://www.instagram.com/embed.js"]')) {
+      const script = document.createElement('script');
+      script.src = 'https://www.instagram.com/embed.js';
       script.async = true;
       document.body.appendChild(script);
     }
-  }, []);
-  
+  }, [dispatch]);
 
- {
-  
-    return (
-      <div>
-       <div className={styles.container}>
-        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-        <div >
-            <div className={styles.topText}>
-              <h1 style={{  marginBottom:"10%", margin:"14%", color:"white", marginTop:"17%", ...(isMobile && { marginTop: '-5%',margin: '0%' }) }}>{textElements[currentIndex][0]}</h1>
-              <p style={{  margin:"14%", color:"white", ...(isMobile && { marginTop: '10%',margin: '0%', marginBottom:'23%' })}}>{textElements[currentIndex][1]}</p>
-            </div>
-            {/* <div className={styles.bottomText}>
-              <p>{textElements[currentIndex][1]}</p>
-            </div> */}
-          </div>
-          <div className={styles.indicatorContainer}>
-            {textElements.map((_, index) => (
-              <div
-                key={index}
-                onClick={() => navigateTo(index)}
-                className={`${styles.indicator} ${index === currentIndex ? styles.indicatorActive : ''}`}
-              ></div>
-            ))}
-          </div>
+  return (
+    <div className={styles.page}>
+      <header className={styles.hero}>
+        <div className={styles.heroText}>
+          <h1>University Design Club</h1>
+          <p>Monetizing students’ creativity. UM6P’s first Graphic Design club: a fresh alternative to traditional design agencies.</p>
+          <a href="#udc-story" className={styles.heroLink}>Discover the club <span aria-hidden="true">↗</span></a>
         </div>
-        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '2%' }}>
-        // Only adjust these props when using the component:
-{/* <GaussianTextBackground
-  width={700}         // container width
-  height={750}        // container height
-  pixelSize={40}      // bigger symbols!
-  pixelSpacing={50}   // spacing between symbol positions
-  sigma={100}         // wider Gaussian spread
-  trailLength={12}    // longer motion trail
-  trailDecay={0.8}    // slower decay for smoother trail
-  growthFactor={0.2}  // slower particle appearance
-/> */}<img src={"ezgif-com-video-to-gif-converted-2.gif"} style={{ marginTop: '-5%', width:'100%', maxWidth: '100%', height: 'auto', objectFit: 'contain', ...(isMobile && { marginRight: '20%' }) }} alt="Placeholder" />
-
-        </div>
-      </div>
-        {/* Conditional rendering based on isMobile state */}
-     <div className={`${styles.additionalColumnsContainer}`}>
-        
-
-
-        </div>
-
-
-           <section className={styles.newReleases}>
+        <div className={styles.heroMedia}><img src="/ezgif-com-video-to-gif-converted-2.gif" alt="University Design Club preview" /></div>
+      </header>
+      <div className={styles.strip}><span>Creativity meets opportunity</span><span>Mohammed VI Polytechnic University</span></div>
+           <section id="udc-story" className={styles.section}>
       <header className={styles.header}>
 
-        <h2 className={styles.headertitle}>Our story</h2>
+        <h2 className={styles.title}>Our story</h2>
 
              </header>
-             <p className={styles.cardDescription}>Founded at the exciting Mohammed VI Polytechnic University in 2023, the University Design Club (UDC), previously ELX, began as a small initiative by a group of passionate design enthusiasts led by El Houssaine CHAHBOUN, our first President. Inspired by the need for a collaborative space where creativity, innovation, and learning could thrive, UDC was established to empower students to turn their design dreams into reality.</p>
-      
-            
+             <p className={styles.description}>Founded at the exciting Mohammed VI Polytechnic University in 2023, the University Design Club (UDC), previously ELX, began as a small initiative by a group of passionate design enthusiasts led by El Houssaine CHAHBOUN, our first President. Inspired by the need for a collaborative space where creativity, innovation, and learning could thrive, UDC was established to empower students to turn their design dreams into reality.</p>
+
+
+      <div className={styles.storyMedia}>
+        <video src="https://elx.onrender.com/udcvideo.mp4" className={styles.film} autoPlay muted loop controls playsInline preload="metadata" aria-label="University Design Club film" />
+        <div className={styles.videoGrid}>
+          {['elxpod', 'elxlunchglw', 'melusino', 'jibit'].map((name, index) => (
+            <figure className={styles.videoCard} key={name}>
+              <video src={`https://elx.onrender.com/${name}.mp4`} autoPlay muted loop controls playsInline preload="metadata" aria-label={`Club project video ${index + 1}`} />
+              <figcaption><span>UDC / Film 0{index + 1}</span><span aria-hidden="true">↗</span></figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
     </section>
-    <video src={"https://elx.onrender.com/udcvideo.mp4"}className={styles.unidesclub} autoPlay muted loop controls/>
-    <section className={styles.newReleases}>
+      <section className={styles.section}>
       <header className={styles.header}>
 
-        <h2 className={styles.headertitle}>Our Purpose</h2>
-                    </header>
-             <p className={styles.cardDescription}>Design is more than aesthetics—it's a tool for solving problems, expressing ideas, and shaping the future. UDC exists to provide a platform for students across all disciplines to explore, develop, and showcase their design skills. By connecting aspiring designers with resources, mentorship, and real-world opportunities, we aim to foster a community that celebrates creativity and innovation.</p>
-      
-            
-    </section>
-      <section className={styles.newReleases}>
-      <header className={styles.header}>
-
-        <h2 className={styles.headertitle}>Club Members</h2>
-        <a href="/stories" className={styles.allStoriesLink}>View all members</a>
+        <h2 className={styles.title}>Club Members</h2>
+        <a href="/stories" className={styles.link}>View all members</a>
       </header>
       <div className={styles.cardContainer}>
         {cardsData.map((card, index) => (
-          <Card key={index} {...card} />
+          <a className={styles.member} href={card.article} key={card.title}>
+            <img src={card.imageUrl} alt={card.title} loading="lazy" />
+            <span className={styles.kicker}>{card.tag}</span>
+            <h3>{card.title}</h3>
+          </a>
         ))}
       </div>
     </section>
-    <section className={styles.newReleases}>
+    <section className={styles.section}>
         <header className={styles.header}>
-          <h2 className={styles.headertitle}>University Design Club</h2>
-          <a href="/stories" className={styles.allStoriesLink}> Join us </a>
+          <h2 className={styles.title}>University Design Club</h2>
+          <a href="/stories" className={styles.link}> Join us </a>
+          <a href="/stories" className={styles.link}> Sponsor us </a>
         </header>
-      </section> <video src={"https://elx.onrender.com/udcvideo.mp4"}className={styles.unidesclub} autoPlay muted loop controls/>
+      </section>
 
-      <Blackbords />
-      <section className={styles.newReleases}>
-      <header className={styles.header}>
 
-        <h2 className={styles.headertitle}>Why UDC Matters</h2>
-        <a href="/stories" className={styles.allStoriesLink}>Sponser Us</a>
-             </header>
-             <p className={styles.cardDescription}>In an era where design is shaping everything from technology to society, UDC plays a crucial role in bridging the gap between academic knowledge and practical application. What sets UDC apart is its ability to transform students’ hobbies into lucrative opportunities. By leveraging their skills to contribute to projects of all scales—from assisting other university clubs with their branding to designing for major campus events and department initiatives—our members gain invaluable experience while creating meaningful, professional-grade work.</p>
-      
-            
+
+
+    <section className={`${styles.section} ${styles.online}`} aria-labelledby="udc-online">
+      <header className={styles.onlineHeader}>
+        <span className={styles.kicker}>From the feed</span>
+        <h2 id="udc-online" className={styles.title}>We're online.</h2>
+        <p>Follow the work as it happens.</p>
+        <a href="https://www.instagram.com/elx.design/" className={styles.socialLink} target="_blank" rel="noreferrer">@elx.design <span aria-hidden="true">↗</span></a>
+      </header>
+      <div className={styles.socialGrid}>
+        {instagramURLs.map((url, index) => (
+          <div className={styles.socialPost} key={url}>
+            <blockquote className="instagram-media" data-instgrm-permalink={url} data-instgrm-version="14">
+              <a href={url} target="_blank" rel="noreferrer">View this post on Instagram ↗</a>
+            </blockquote>
+          </div>
+        ))}
+      </div>
     </section>
 
-    <section className={styles.newReleases}>
-      <header className={styles.header}>
 
-        <h2 className={styles.headertitle}>We're Online</h2>
-        <a href="https://www.instagram.com/elx.design/" className={styles.allStoriesLink}>Follow Us</a>
-             </header>      
-            
-    </section>
-
-    <div style={gridContainerStyle}>
-          {instagramURLs.map((url, index) => (
-            <blockquote
-              key={index}
-              className="instagram-media"
-              data-instgrm-permalink={url}
-              data-instgrm-version="14"
-              style={gridItemStyle}
-            ></blockquote>
-          ))}
-        </div>
-
-        <section className={styles.newReleases}>
-      <header className={styles.header}>
-
-        <h2 className={styles.headertitle}>Join The Club</h2>
-        <a href="/stories" className={styles.allStoriesLink}>Join Us</a>
-             </header>
-             <p className={styles.cardDescription}>Whether you're an experienced designer or just starting your creative journey, UDC welcomes you. Together, we’re shaping the future of design and turning passions into professions.</p>
-
-      
-            
-    </section>
     <Footer />
-    
-
     </div>
-
-
-  
-    );
-  } 
+  );
 }
-// CSS Styles for the matrix layout
-const gridContainerStyle = {
-  display: "grid",
-  gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-  gap: "20px",
-  padding: "1rem",
-  marginTop:"-20px",
-  marginLeft:"25px"
-};
-
-const gridItemStyle = {
-  maxWidth: "100%",
-};
-
-
 
 export default UdcProject;

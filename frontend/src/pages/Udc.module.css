@@ -1,0 +1,57 @@
+.page { --gutter: clamp(20px, 5vw, 76px); background: #fff; color: #000; font-family: Helvetica, Arial, sans-serif; }
+.page * { box-sizing: border-box; }
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); background: #000; color: #fff; }
+.heroText { display: flex; flex-direction: column; align-items: flex-start; padding: clamp(32px, 5vw, 76px) var(--gutter); text-align: left; }
+.page .kicker { display: block; margin: 0 0 24px; font-size: 12px; font-weight: 700; line-height: 1.4; text-transform: uppercase; }
+.hero h1 { margin: 12px 0 28px; padding: 0; font-size: clamp(40px, 5.8vw, 88px); font-weight: 300; line-height: .96; letter-spacing: -.045em; text-transform: uppercase; text-align: left; }
+.hero p { margin: 0 0 40px; padding: 0; max-width: 36ch; font-size: clamp(17px, 1.5vw, 21px); line-height: 1.6; text-align: left; }
+.heroLink { display: flex; justify-content: space-between; width: 100%; gap: 24px; margin-top: auto; padding-top: 18px; border-top: 1px solid #777; color: inherit; font-size: 12px; font-weight: 700; text-transform: uppercase; text-decoration: none; }
+.heroLink span { font-size: 24px; line-height: 1; }
+.heroMedia { display: flex; align-items: center; min-width: 0; }
+.heroMedia img { display: block; width: 100%; height: auto; }
+.strip { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding: 20px var(--gutter); border-bottom: 2px solid #000; font-size: 12px; font-weight: 700; text-transform: uppercase; text-align: left; }
+.strip > span { margin: 0; padding: 0; }
+.section { padding: clamp(36px, 6vw, 80px) var(--gutter); border-bottom: 2px solid #000; text-align: left; scroll-margin-top: 90px; }
+.header { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; margin-bottom: 28px; }
+.page .title { margin: 0; padding: 0; font-size: clamp(26px, 2.8vw, 38px); font-weight: 600; line-height: 1.15; letter-spacing: -.025em; text-transform: none; text-align: left; }
+.page .description { max-width: 75ch; margin: 0; padding: 0; font-size: clamp(17px, 1.5vw, 20px); line-height: 1.7; color: #000; text-align: left; }
+.link { flex-shrink: 0; color: inherit; font-size: 12px; font-weight: 700; text-transform: uppercase; text-underline-offset: 5px; }
+.page a:focus-visible { outline: 3px solid #888; outline-offset: 5px; }
+.storyMedia > .film { display: block; width: 100%; max-width: none; height: auto; max-height: none; margin: 0 0 24px; border: 0; background: #000; }
+.cardContainer { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px 24px; }
+.member { min-width: 0; color: #000; text-decoration: none; }
+.member img { display: block; width: 100%; aspect-ratio: 1; object-fit: contain; background: #f5f5f5; margin-bottom: 20px; }
+.member .kicker { margin-bottom: 10px; }
+.member h3 { margin: 0; padding: 0; font-size: clamp(20px, 1.8vw, 26px); font-weight: 600; line-height: 1.2; text-transform: none; text-align: left; }
+.member:hover h3 { text-decoration: underline; text-underline-offset: 5px; }
+.purpose { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 88px); }
+.purposeTitle { margin: 0; padding: 0; font-size: clamp(32px, 3.8vw, 52px); line-height: 1.1; font-weight: 600; letter-spacing: -.03em; text-align: left; text-transform: none; }
+.purposeBody > p { margin-bottom: 32px !important; }
+.purposeRow { display: grid; grid-template-columns: 40px 1fr; gap: 16px; padding: 24px 0; border-top: 1px solid #000; }
+.purposeRow > span { font-size: 12px; font-weight: 700; padding-top: 5px; }
+.purposeRow h3 { margin: 0 0 8px; padding: 0; font-size: 21px; font-weight: 600; line-height: 1.2; text-transform: none; text-align: left; }
+.purposeRow p, .motionHeader p, .onlineHeader p { margin: 0; padding: 0; font-size: 16px; line-height: 1.6; text-align: left; }
+.storyMedia { margin-top: clamp(28px, 4vw, 48px); }
+.motionHeader { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; padding-bottom: 28px; margin-bottom: 32px; border-bottom: 1px solid #000; }
+.motionHeader p { max-width: 32ch; }
+.videoGrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 36px 24px; align-items: start; }
+.videoCard { min-width: 0; margin: 0; }
+.videoCard video { display: block; width: 100%; max-width: none; height: auto; object-fit: contain; background: #000; }
+.videoCard figcaption { display: flex; justify-content: space-between; margin: 0; padding: 14px 0; border-bottom: 1px solid #aaa; font-size: 12px; font-weight: 700; text-transform: uppercase; }
+.online { display: grid; grid-template-columns: minmax(0, .55fr) minmax(0, 1.65fr); gap: clamp(28px, 5vw, 72px); align-items: start; }
+.onlineHeader { position: sticky; top: 100px; }
+.onlineHeader p { margin-top: 24px; }
+.socialLink { display: flex; justify-content: space-between; gap: 24px; margin-top: 32px; padding: 16px 0; border-top: 1px solid #000; border-bottom: 1px solid #000; color: #000; font-size: 18px; font-weight: 700; text-decoration: none; }
+.socialGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 300px)); gap: 24px 16px; align-items: start; }
+.socialPost { min-width: 0; width: 100%; max-width: 300px; }
+.postLabel { display: block; padding-bottom: 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; }
+.socialGrid :global(.instagram-media) { width: 100% !important; min-width: 0 !important; max-width: 100% !important; margin: 0 !important; border-radius: 0 !important; }
+@media (max-width: 1100px) { .online { grid-template-columns: minmax(0, 1fr); } .onlineHeader { position: static; } .socialLink { max-width: 360px; } }
+@media (max-width: 760px) {
+  .hero, .purpose, .videoGrid, .socialGrid { grid-template-columns: minmax(0, 1fr); }
+  .motionHeader { flex-direction: column; align-items: flex-start; }
+  .hero h1 { font-size: clamp(40px, 10vw, 64px); }
+  .header { flex-direction: column; align-items: flex-start; gap: 18px; }
+  .cardContainer { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 16px; }
+}
+@media (max-width: 420px) { .cardContainer { grid-template-columns: minmax(0, 1fr); } }

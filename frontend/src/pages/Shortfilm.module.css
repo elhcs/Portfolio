@@ -1,0 +1,54 @@
+.page { --page-gutter: clamp(20px, 5vw, 76px); background: #fff; color: #000; font-family: Helvetica, Arial, sans-serif; }
+.page * { box-sizing: border-box; }
+.heroText, .section, .screening, .closingText,
+.heroText h1, .section h2, .section h3, .screening h2,
+.closingText h2, .people figcaption {
+  text-align: left;
+}
+.hero { display: grid; grid-template-columns: 1fr 1fr; background: #000; color: #fff; }
+.heroText { display: flex; flex-direction: column; align-items: flex-start; padding: clamp(28px, 5vw, 76px) var(--page-gutter); }
+.page .kicker { display: block; margin: 0 0 24px; font-size: 12px; line-height: 1.4; font-weight: 700; text-transform: uppercase; }
+.hero h1 { margin: 12px 0 28px; padding: 0; font-size: clamp(40px, 5.3vw, 84px); font-weight: 300; line-height: .96; letter-spacing: -.045em; text-transform: uppercase; }
+.page p { margin: 0; padding: 0; font-size: clamp(17px, 1.5vw, 20px); line-height: 1.65; text-align: left; }
+.hero p { max-width: 38ch; margin-bottom: 40px; }
+.heroLink { display: flex; justify-content: space-between; gap: 24px; width: 100%; margin-top: auto; padding-top: 18px; border-top: 1px solid #777; color: inherit; text-decoration: none; font-size: 12px; font-weight: 700; text-transform: uppercase; }
+.heroLink span { font-size: 24px; line-height: 1; }
+.heroLink:focus-visible { outline: 3px solid #fff; outline-offset: 6px; }
+.heroMedia { display: flex; align-items: center; min-width: 0; }
+.heroMedia img { display: block; width: 100%; height: auto; }
+.articleLabel { display: flex; justify-content: space-between; gap: 20px; padding: 20px var(--page-gutter); border-bottom: 2px solid #000; font-size: 12px; font-weight: 700; text-transform: uppercase; }
+.articleLabel > span { margin: 0; padding: 0; }
+.section, .screening { padding: clamp(36px, 6vw, 88px) var(--page-gutter); border-bottom: 2px solid #000; }
+.sectionHeader { margin-bottom: clamp(28px, 4vw, 56px); }
+.page h2 { margin: 0; padding: 0; font-size: clamp(26px, 2.8vw, 38px); line-height: 1.15; letter-spacing: -.025em; font-weight: 600; text-transform: none; }
+.page h3 { margin: 0 0 18px; padding: 0; font-size: clamp(20px, 1.8vw, 26px); line-height: 1.2; letter-spacing: -.015em; font-weight: 600; text-transform: none; }
+.people, .gallery, .process { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); }
+.people figure { margin: 0; min-width: 0; }
+.people img { display: block; width: 100%; max-width: 320px; height: auto; max-height: 400px; object-fit: contain; object-position: left center; }
+.people figcaption { max-width: 320px; margin: 0; padding-top: 20px; }
+.people p { max-width: 48ch; }
+.gallery { align-items: start; }
+.gallery img { display: block; width: 100%; height: auto; max-height: 420px; object-fit: contain; }
+.story { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); padding-top: clamp(32px, 5vw, 64px); }
+.story h3 { max-width: 28ch; }
+.screening { background: #fff; color: #000; scroll-margin-top: 80px; }
+.screening video { display: block; width: 100%; max-width: none; height: auto; margin: 0; border: 2px solid #000; background: #000; object-fit: contain; }
+.process > img { display: block; width: 100%; height: auto; max-height: 480px; object-fit: contain; object-position: left top; align-self: start; }
+.process { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); align-items: start; }
+.processText { display: flex; flex-direction: column; gap: 24px; max-width: 60ch; }
+.processText > div + div { border-top: 1px solid #000; padding-top: 24px; }
+.people p, .story p, .processText p, .closingText p { font-size: clamp(16px, 1.2vw, 18px); line-height: 1.5; }
+.people h3, .story h3, .processText h3 { font-size: clamp(20px, 1.5vw, 23px); margin-bottom: 12px; }
+.closing { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(24px, 4vw, 56px); padding: clamp(36px, 6vw, 88px) var(--page-gutter); border-bottom: 2px solid #000; align-items: center; }
+.closingText { max-width: 60ch; padding: 0; }
+.closing h2 { margin-bottom: 28px; }
+.closing > img { display: block; width: 100%; max-width: 480px; height: auto; max-height: 480px; object-fit: contain; align-self: center; justify-self: center; }
+@media (max-width: 760px) {
+  .articleLabel { flex-wrap: wrap; gap: 8px; }
+  .hero, .people, .gallery, .story, .process, .closing { grid-template-columns: minmax(0, 1fr); }
+  .hero h1 { font-size: clamp(40px, 9vw, 64px); }
+  .people { gap: 40px; }
+  .gallery img { height: auto; }
+  .story h3 { max-width: none; }
+  .closing > img { height: auto; }
+}

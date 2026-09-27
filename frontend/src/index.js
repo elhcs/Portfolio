@@ -1,11 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { aboutOnly } from "./siteMode";
 import { Provider } from "react-redux";
 import store from "./store";
 import "./index.css";
 import Home from "./pages/Home";
 import Biomed from "./pages/Biomed";
+import Rosalia from "./pages/Rosalia";
 import Udc from "./pages/udc";
 import Rebrand from "./pages/Rebrand";
 
@@ -18,6 +20,7 @@ import Article from "./pages/Article";
 import Shortfilm from "./pages/Shortfilm";
 import About from "./pages/About";
 import Newhome from "./pages/newhome";
+import Clothing from "./pages/Clothing";
 
 import RequireAuth from "./components/auth/RequireAuth";
 import RequireSudo from "./components/auth/RequireSudo";
@@ -43,7 +46,7 @@ const loadInstagramScript = () => {
   document.body.appendChild(script);
 };
 
-loadInstagramScript();
+if (!aboutOnly) loadInstagramScript();
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
@@ -51,6 +54,13 @@ root.render(
     <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
+          {aboutOnly ? (
+            <>
+              <Route path="about" element={<About />} />
+              <Route path="*" element={<Navigate to="/about" replace />} />
+            </>
+          ) : (
+            <>
           <Route index element={<Home />} />
           <Route path="project/:prjId" element={<Project />} />
           <Route path="dynamicproject/:prjId" element={<DynamicProject />} />
@@ -81,16 +91,20 @@ root.render(
           <Route path="login" element={<Login />}></Route>
           <Route path="article" element={<Article />}></Route>
           <Route path="shortfilm" element={<Shortfilm />}></Route>
+          <Route path="clothing" element={<Clothing />}></Route>
           <Route path="udc" element={<Udc />}></Route>
           <Route path="about" element={<About />}></Route>
           <Route path="newhome" element={<Newhome />}></Route>
           <Route path="newhome" element={<Newhome />}></Route>
           <Route path="rebrand" element={<Rebrand />}></Route>
           <Route path="biomed" element={<Biomed />}></Route>
+          <Route path="rosalia" element={<Rosalia />}></Route>
           <Route path="blenderaddon" element={<BlenderAddonProject />}></Route>
 
           <Route path="DynamicProject" element={<DynamicProject />}></Route>
           <Route path="*" element={<Nopage />}></Route>
+            </>
+          )}
         </Route>
       </Routes>
     </BrowserRouter>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './Articlecomp.module.css'; 
 
@@ -12,13 +12,30 @@ const Card = ({
   article,
   textColor = '#333', // default color
 }) => {
+  const frameList = Array.isArray(imageUrl) ? imageUrl : [imageUrl];
+  const [currentFrameIndex, setCurrentFrameIndex] = useState(0);
+
+  useEffect(() => {
+    if (frameList.length < 2) {
+      return undefined;
+    }
+
+    const intervalId = setInterval(() => {
+      setCurrentFrameIndex((previousIndex) => (previousIndex + 1) % frameList.length);
+    }, 1800);
+
+    return () => clearInterval(intervalId);
+  }, [frameList]);
+
+  const thumbnailSource = frameList[currentFrameIndex] || frameList[0];
+
   return (
     <div className={styles.card}>
       <NavLink to={article}>
         <div className={styles.imageWrapper}>
-          {isVideo(imageUrl) ? (
+          {isVideo(thumbnailSource) ? (
             <video
-              src={imageUrl}
+              src={thumbnailSource}
               alt={title}
               className={styles.cardImage}
               autoPlay
@@ -27,7 +44,7 @@ const Card = ({
               controls
             />
           ) : (
-            <img src={imageUrl} alt={title} className={styles.cardImage} />
+            <img src={thumbnailSource} alt={title} className={styles.cardImage} />
           )}
         </div>
         <div className={styles.cardTextContent}>

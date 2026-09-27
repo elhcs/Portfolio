@@ -1,15 +1,14 @@
 /* Navbar.css */
 
 .navbar {
-  padding-top: env(safe-area-inset-top) !important;
-  padding-bottom: 1rem !important;
+  padding-top: calc(1.20rem + env(safe-area-inset-top)) !important;
+  padding-bottom: 1.20rem !important;
   padding-left: max(1rem, env(safe-area-inset-left)) !important;
   padding-right: max(1rem, env(safe-area-inset-right)) !important;
   margin: 0 !important;
   position: relative;
   width: 100%;
   box-sizing: border-box;
-  min-height: env(safe-area-inset-top);
 }
 
 .navbar-expand-lg .container-fluid {
@@ -30,7 +29,7 @@
   display: flex;
   align-items: center;
   margin-left: 10px;
-  margin-top: 10px;
+  margin-top: 0;
 }
 
 /* Styling for Navigation List */
@@ -42,7 +41,17 @@
   line-height: 0px;
   display: flex;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 0;
+}
+
+.navbar .nav-link {
+  padding-top: .2rem;
+  padding-bottom: .2rem;
+}
+
+.navbar .nav-item.p-2 {
+  padding-top: .25rem !important;
+  padding-bottom: .25rem !important;
 }
 
 /* Media Queries for responsiveness */
@@ -51,6 +60,7 @@
     font-size: 18px; /* Adjust logo font size for smaller screens */
     line-height: 25px; /* Adjust logo line height for smaller screens */
     margin-left: 5px; /* Adjust left margin for smaller screens */
+    margin-top: 0;
   }
 
   .nav-list {
@@ -94,7 +104,7 @@
   .navbar-toggler {
     display: block; /* Ensure toggler is displayed */
     margin-left: auto; /* Align toggler to the right */
-    padding: 0.5rem 1rem; /* Adjust padding for better spacing */
+    padding: 0.25rem 0.5rem; /* Adjust padding for better spacing */
   }
 
   .navbar-toggler-icon {

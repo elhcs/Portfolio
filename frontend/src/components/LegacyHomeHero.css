@@ -1,0 +1,128 @@
+.legacy-home-hero {
+  display: flex;
+  width: 100%;
+  min-height: clamp(420px, 58vw, 750px);
+  overflow: hidden;
+  box-sizing: border-box;
+  background: #000;
+  color: #fff;
+}
+
+.legacy-home-hero__text-column,
+.legacy-home-hero__media-column {
+  position: relative;
+  display: flex;
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.legacy-home-hero__text-column {
+  flex-direction: column;
+}
+
+.legacy-home-hero__text-wrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 10%;
+}
+
+.legacy-home-hero__top-text {
+  flex: 1;
+  margin-top: 4%;
+  padding: 10%;
+}
+
+.legacy-home-hero__top-text h1 {
+  margin: 10% 10% 10%;
+  color: #fff;
+  font-size: clamp(1.5rem, 3vw, 3rem);
+  font-weight: 300;
+  line-height: 1.08;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.legacy-home-hero__top-text p {
+  margin: 10%;
+  color: #fff;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.legacy-home-hero__indicator-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0 24px;
+}
+
+.legacy-home-hero__indicator {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  cursor: pointer;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.legacy-home-hero__indicator--active {
+  background: #808080;
+}
+
+.legacy-home-hero__media-column {
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.legacy-home-hero__image,
+.legacy-home-hero__viewer {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  border: 0;
+}
+
+.legacy-home-hero__image {
+  object-fit: cover;
+}
+
+.legacy-home-hero__viewer {
+  min-height: 750px;
+}
+
+@media (max-width: 599px) {
+  .legacy-home-hero {
+    min-height: 0;
+    flex-direction: column-reverse;
+  }
+
+  .legacy-home-hero__top-text {
+    padding: 0 10% 10%;
+  }
+
+  .legacy-home-hero__top-text h1 {
+    margin: 0 0 20%;
+  }
+
+  .legacy-home-hero__top-text p {
+    margin: 0 0 24%;
+  }
+
+  .legacy-home-hero__media-column {
+    width: 100%;
+    min-height: clamp(260px, 78vw, 430px);
+  }
+
+  .legacy-home-hero__image,
+  .legacy-home-hero__viewer {
+    min-height: clamp(260px, 78vw, 430px);
+  }
+
+  .legacy-home-hero__viewer {
+    height: 430px;
+  }
+}

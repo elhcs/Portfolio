@@ -1,127 +1,45 @@
-import React, { useState, useEffect } from 'react';
-import Articlecomp from "../components/articlescomponent";
-import FAQ from "../components/FAQ";
-import Blackbords from "../components/Blackbords";
-import styles from '../components/Articlecomp.module.css';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Articlecomp from '../components/articlescomponent';
 import Footer from '../components/footer_new';
+import shortfilmPreview from './394709091_359688783151169_5143872337014891556_n-ezgif.com-video-to-gif-converter.gif';
+import styles from './Home.module.css';
+import LegacyHomeHero from "../components/LegacyHomeHero";
 
-import shortyy from "./394709091_359688783151169_5143872337014891556_n-ezgif.com-video-to-gif-converter.gif";
-import Feed from "../components/Feed";
 
 
-const isMobilee = window.innerWidth < 768;
+const textElements = [
+  ['Founding a UNIVERSITY DESIGN CLUB', 'An exploration of creative coding as a means of extending the expressive and generative capabilities of visual design tools.'],
+  ['Rosalía and the Art of Transformation', 'An examination of contradiction, transcendence, and Rosalía’s ability to convert deconstruction into a coherent artistic language.'],
+  ['Motion and Visual Design', 'An exploration of creative coding as a means of extending the expressive and generative capabilities of visual design tools.'],
+  ['Short Film Starring Me as a Frog', "Houssaine the frog is stunned by technology, which uses increasingly invasive techniques to get attention. He turns his screen off in an attempt to escape and connect with real life, only to realize it's all under his control."],
+];
+const images = ['/ezgif-com-video-to-gif-converted-2cropped.gif', 'https://i.pinimg.com/1200x/2f/d0/62/2fd062f916481cfb5ffb3d72030e2fcd.jpg', '/elxdesign.gif', shortfilmPreview];
+
 const MyComponent = () => {
-
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768); // Adjust the breakpoint as needed
-    };
-
-    handleResize(); // Call once to set initial state
-
-    window.addEventListener('resize', handleResize);
-
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-
-  
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [imageList, setImageList] = useState([
-    "ezgif-com-video-to-gif-converted-2.gif","","elxdesign.gif"
-    // Add more image URLs as needed
-  ]);
-
-  const textElements = [
-    ["MATHEMATICS, MACHINE LEARNING AND ARTS", "I'm all about mathematics, machine learning, and creative design (in that exact order, because even my passions need a proper sequence)"],
-    ["Tracking by Detection in Computer Vision", "An introduction to tracking objects across frames in video using the Tracking by Detection approach, including pose estimation and tracking algorithms."],
-    ["Making music with LSTM and Transformers", "Training LSTM and Transformer models for generating music sequences (One-to-Many)."]
-
-  ];
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % textElements.length);
-    }, 12000); // Changes text every 3000 milliseconds (3 seconds)
-
-    return () => clearInterval(intervalId); // Cleanup the interval on component unmount
-  }, []);
-
-  const navigateTo = index => {
-    setCurrentIndex(index);
-  };
-
   return (
-    <div>
-      <div className={styles.container} style={{}}>
-        <div className={styles.column}>
-        <div className={`${styles.textWrapper} ${styles.fade} ${currentIndex === 0 ? styles.fadeActive : ''}`}>
-        <div className={styles.topText}>
-              <h1 style={{  marginBottom:"10%", margin:"10%", color:"white", ...(isMobile && { marginTop: '-30%',margin: '-10%' })}}>{textElements[currentIndex][0]}</h1>
-              <p style={{  margin:"10%", color:"white", ...(isMobile && { marginTop: '20%',margin: '0%', marginBottom:'24%' })}}>{textElements[currentIndex][1]}</p>
-            </div>
-            {/* <div className={styles.bottomText}>
-              <p>{textElements[currentIndex][1]}</p>
-            </div> */}
-          </div>
-          <div className={styles.indicatorContainer}>
-            {textElements.map((_, index) => (
-              <div
-                key={index}
-                onClick={() => navigateTo(index)}
-                className={`${styles.indicator} ${index === currentIndex ? styles.indicatorActive : ''}`}
-              ></div>
-            ))}
-          </div>
-        </div>
-        <div className={`${styles.column} ${styles.fade} ${currentIndex === 0 ? styles.fadeActive : ''}`}>
-          {currentIndex === 1 ? (
-            <iframe id="viewer" width="100%" height="750px" allow="fullscreen; xr-spatial-tracking" src="https://superspl.at/s?id=bb29f70a"></iframe>
-          ) : (
-            <img src={imageList[currentIndex]} style={{ width: '100%' }} alt="Placeholder" />
-          )}
-        </div>
-      </div>
-
-     {/* Conditional rendering based on isMobile state */}
-     <div className={`${styles.additionalColumnsContainer} ${isMobile ? styles.hideOnMobile : ''}`}>
-        
-
-
-      </div>
-      
-      <Articlecomp />
-      
-      <section className={styles.newReleases}>
-        <header className={styles.header}>
-          <h2 className={styles.headertitle}>Written Articles</h2>
-          <a href="/stories" className={styles.allStoriesLink}> More Articles </a>
-          
+    <div className={styles.page}>
+      <LegacyHomeHero slides={textElements} images={images} viewerIndex={null} />
+      <div className={styles.projects}><Articlecomp /></div>
+ 
+      <section className={styles.club} aria-labelledby="home-club">
+        <header className={styles.sectionHeader}>
+          <h2 id="home-club">University Design Club</h2>
+          <Link className={styles.textLink} to="/udc">Explore the club ↗</Link>
         </header>
-             </section>
-             <Feed />
-              
-
-      <section className={styles.newReleases}>
-        <header className={styles.header}>
-          <h2 className={styles.headertitle}>University Design Club</h2>
-          <a href="/stories" className={styles.allStoriesLink}> Join us </a>
-        </header>
-      </section> <video src={"https://elx.onrender.com/udcvideo.mp4"}  className={styles.unidesclub} autoPlay muted loop controls/>
-
-      <Blackbords />
-
-      
-
-      <div class="linesection">
-          <Footer />
-</div>
+        <video className={styles.clubFilm} src="https://elx.onrender.com/udcvideo.mp4" autoPlay muted loop controls playsInline preload="metadata" aria-label="University Design Club film" />
+        <div className={styles.videoGrid}>
+          {['elxpod', 'elxlunchglw', 'melusino', 'jibit'].map((name, index) => (
+            <figure className={styles.videoCard} key={name}>
+              <video src={`https://elx.onrender.com/${name}.mp4`} autoPlay muted loop controls playsInline preload="metadata" aria-label={`Club project video ${index + 1}`} />
+              <figcaption><span>UDC / Film 0{index + 1}</span><span aria-hidden="true">↗</span></figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+      <Footer />
     </div>
-
   );
-}
+};
 
 export default MyComponent;
-

@@ -1,0 +1,35 @@
+.page {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  flex-grow: 1;
+  border-top: 1px solid #000;
+  border-bottom: 2px solid #000;
+  background: #fff;
+  color: #000;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.page, .page * { box-sizing: border-box; }
+.biography { padding: clamp(32px, 5vw, 76px); align-self: center; text-align: left; }
+.page .kicker { display: block; margin: 0 0 24px; font-size: 12px; font-weight: 700; line-height: 1.4; text-transform: uppercase; text-align: left; }
+.biography h1 { margin: 0 0 20px; padding: 0; font-size: clamp(36px, 4.3vw, 66px); line-height: 1.05; font-weight: 600; letter-spacing: -.04em; text-align: left; }
+.page .role { margin: 0 0 32px; padding: 0; font-size: 15px; line-height: 1.5; color: #444; text-align: left; }
+.description p { margin: 0; padding: 0; font-size: clamp(17px, 1.4vw, 19px); line-height: 1.75; text-align: left; }
+.description p + p { margin-top: 24px; }
+.page a { color: #000; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+.page a:hover { text-decoration-thickness: 2px; }
+.page a:focus-visible { outline: 2px solid #000; outline-offset: 5px; }
+.contact { margin-top: 40px; padding-top: 24px; border-top: 1px solid #000; }
+.contact .kicker { margin-bottom: 12px; }
+.contact a { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; font-size: 14px; line-height: 1.6; overflow-wrap: anywhere; text-decoration: none; }
+.contact a span { flex-shrink: 0; font-size: 24px; }
+.portraitPanel { display: flex; align-items: center; justify-content: center; min-width: 0; padding: clamp(36px, 5vw, 80px); border-left: 1px solid #000; background: #fff; }
+.portrait { width: 100%; max-width: 340px; margin: 0; }
+.portrait img { display: block; width: 100%; height: auto; }
+.portraitCaption { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 20px; margin: 16px 0 0; padding: 14px 0 0; border-top: 1px solid #000; font-size: 11px; font-weight: 600; line-height: 1.5; text-align: left; }
+.portraitCaption span { margin: 0; padding: 0; color: #555; text-align: left; }
+@media (max-width: 760px) {
+  .page { grid-template-columns: minmax(0, 1fr); }
+  .biography { padding: 40px 20px; }
+  .portraitPanel { border-left: 0; border-top: 1px solid #000; }
+  .portraitPanel { padding: 28px 20px; }
+}

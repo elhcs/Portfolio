@@ -51,7 +51,7 @@ const MyComponent = () => {
         <div className={styles.column}>
         <div className={`${styles.textWrapper} ${styles.fade} ${currentIndex === 0 ? styles.fadeActive : ''}`}>
         <div className={styles.topText}>
-              <h1 style={{  marginBottom:"10%", margin:"10%", color:"white"}}>{textElements[currentIndex][0]}</h1>
+              <h1 style={{ fontWeight: 300, marginBottom:"10%", margin:"10%", color:"white"}}>{textElements[currentIndex][0]}</h1>
               <p style={{  margin:"10%", color:"white"}}>{textElements[currentIndex][1]}</p>
             </div>
             {/* <div className={styles.bottomText}>

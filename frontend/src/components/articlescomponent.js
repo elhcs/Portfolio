@@ -1,20 +1,12 @@
 import React from 'react';
 import styles from './Articlecomp.module.css'; // Adjust the path as necessary
-import { NavLink } from 'react-router-dom';
 import Card from './Card';
-// Helper function to determine if the URL is a video
-const isVideo = (url) => {
-  // Checks for video file extensions
-  return /\.(mp4|webm)$/i.test(url);
-};
-
-
 
 const NewReleases = () => {
   // Example data, this should come from your state or props
   const cardsData = [
     {
-      title: 'University Design Club Founded By Me',
+      title: 'Founding a University Design Club',
       description: "Monetizing students creativity, UM6P's first Graphic Design club: a fresh alternative to traditional design agencies. ",
       tag: 'UNIVERSITY',
       imageUrl: 'https://elx.onrender.com/udcvideo.mp4',
@@ -30,12 +22,15 @@ const NewReleases = () => {
       article : '../biomed'
     }, 
     {
-      title: "Tracking by Detection in Computer Vision",
-      description: 'An introduction to tracking objects across frames in video using the Tracking by Detection approach, including pose estimation and tracking algorithms.',
-      tag: 'DEEP LEARNING',
-      imageUrl: 'https://portfoliox-vdrp.onrender.com/public/images/f987ac3c-0c6b-49b3-b016-52d00a5d755a-1732460993710.png',
+      title: 'Rosalía and the Art of Transformation',
+      description: 'A review of Rosalía’s music through transformation, contradiction, and transcendence.',
+      tag: 'MUSIC',
+      imageUrl: [
+        'https://i.pinimg.com/1200x/2f/d0/62/2fd062f916481cfb5ffb3d72030e2fcd.jpg',
+        'https://i.pinimg.com/1200x/82/f5/94/82f5943c86690cd9e4cfe7f8c82eb01d.jpg',
+      ],
       isFeatured: true,
-      article : '../project/644310db0e626d1b2192ea40'
+      article : '/rosalia'
     },
    
     {
@@ -59,7 +54,7 @@ const NewReleases = () => {
       tag: 'DESIGN',
       imageUrl: 'https://i.ibb.co/kmtqYMh/271682691-1338805246567477-450652492691158394-n.jpg',
       isFeatured: true,
-      article : ''
+      article : '/clothing'
     },
 
   ];
