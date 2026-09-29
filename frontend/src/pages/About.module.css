@@ -9,7 +9,7 @@
   font-family: Helvetica, Arial, sans-serif;
 }
 .page, .page * { box-sizing: border-box; }
-.biography { padding: clamp(32px, 5vw, 76px); align-self: center; text-align: left; }
+.biography { padding: clamp(56px, 10vw, 136px); align-self: center; text-align: left; }
 .page .kicker { display: block; margin: 0 0 24px; font-size: 12px; font-weight: 700; line-height: 1.4; text-transform: uppercase; text-align: left; }
 .biography h1 { margin: 0 0 20px; padding: 0; font-size: clamp(36px, 4.3vw, 66px); line-height: 1.05; font-weight: 600; letter-spacing: -.04em; text-align: left; }
 .page .role { margin: 0 0 32px; padding: 0; font-size: 15px; line-height: 1.5; color: #444; text-align: left; }
